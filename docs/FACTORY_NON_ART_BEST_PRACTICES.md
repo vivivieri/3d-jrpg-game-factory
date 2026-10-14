@@ -15,6 +15,8 @@
 
 ### 0.1 Output contract (every handoff)
 
+After any GO/NO, update tip/hash before the next craft; Grok Bot latches once (Master Plan §2 tip latch, §6 rule 2).
+
 Every exit from a person, agent, or gate must carry:
 
 | Field | Values / meaning |
@@ -41,7 +43,7 @@ Day-to-day craft and role reports route **Stephen ↔ Grok Bot only**. Roles do 
 
 ### 0.5 Paid license = human-only
 
-Agents draft ledgers, cite sources, and flag gaps. They never purchase, sign, or assume commercial rights. License ledger rows that say `licensed` require Stephen attestation before Concept GO and before any art spend.
+Agents draft ledgers, cite sources, and flag gaps. They never purchase, sign, or assume commercial rights. License ledger rows that say `licensed` require Stephen attestation before Concept GO and before any art spend. Paid commission / alternate vendor **Plan B** paths stay **off** unless Stephen explicitly opens them (Master Plan §9, §14).
 
 ### 0.6 ID vocabulary (align Master Plan; do not reinvent)
 

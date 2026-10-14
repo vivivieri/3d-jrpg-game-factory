@@ -4,7 +4,7 @@
 **Product owner:** Stephen Chow  
 **Orchestration mouthpiece:** Grok Bot  
 **Audience:** Stephen + Grok Bot design/docs/art/QA team + Cursor 3.0 PM game.dev factory  
-**Updated:** 2026-10-14 (HKT) — §2.1 leaf map insync with all procedural SOPs; `FACTORY_NON_ART_BEST_PRACTICES.md` v1.1 (§4 dialogue/VO script track); Track A2–A7 leaf pointers; §19 prior-manufactory lessons; §3.7/§4.1 3D pipeline
+**Updated:** 2026-10-14 (HKT) — §2.1 leaf map; `FACTORY_NON_ART_BEST_PRACTICES.md` v1.1 (§4 dialogue/VO); Track A2–A7 pointers; industrial practice woven through §§2–7, §11, §14 (no standalone lessons section); §3.7/§4.1 3D pipeline
 
 ---
 
@@ -49,6 +49,10 @@ Concept → Pre-production → Art production → Game production → QA → Rel
 
 **Phase law:** Later phase does not start until prior exit is **GO** with logged reason. Soft CI, CONDITIONAL, and greybox-as-ship are forbidden as ship gates.
 
+**Milestone latch:** Per SKU, only the board `issue_pack_ref` is live — never stamp every pack as live.
+
+**Tip latch:** After any GO/NO, update tip/hash before the next craft; Grok Bot latches once (no quiet craft that contradicts the last latch).
+
 ### Component exits (detail)
 
 | Step | Exit |
@@ -67,7 +71,7 @@ Concept → Pre-production → Art production → Game production → QA → Rel
 
 ### 2.1 Leaf document map (procedural how-to; laws stay in this plan)
 
-**Rule:** Leaf SOPs are **how-to only** — phase law, pillars, R&R, and hard rules remain here and in [team-knowledge/STANDING_RULES.md](team-knowledge/STANDING_RULES.md). Cite leaves for craft steps; do not duplicate or contradict SSOT laws.
+**Rule:** Leaf SOPs are **how-to only** — phase law, pillars, R&R, and hard rules remain **here** (§§2–7, §11, §14). [team-knowledge/STANDING_RULES.md](team-knowledge/STANDING_RULES.md) is a convenience mirror of §6 (+ pointers); cite leaves for craft steps; do not duplicate or contradict SSOT laws.
 
 | Leaf | Path | Scope | Track A |
 |------|------|-------|---------|
@@ -242,8 +246,10 @@ Placeholders are internal art-factory tools only — never ship gates.
 | Remesh timing | **Never remesh after rig** — destroys bones, weights, bindings |
 | Ship tier | Never ship concept mesh, gait-reference mesh, or greybox as field hero |
 | Live path | One live asset path per hero/prop; alternates stay **concept-only** |
+| Locked identity | Prefer Blender polish on the locked ship mesh over new AI spend when visual identity is fixed |
+| Concept ≠ ship | Never tip-import or field-ship concept or gait-reference binaries |
 | AI 3D | Draft until game-ready checklist + plates + Art Lead GO |
-| External anim/audio HQ | Mixamo / Adobe / Freesound full WAV → human Secure Form only (§4.1, §19) |
+| External anim/audio HQ | Mixamo / Adobe / Freesound full WAV → human Secure Form only (§4.1, §14) |
 
 **Art/audio how-to:** [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) → [AI_ART_BEST_PRACTICES.md](AI_ART_BEST_PRACTICES.md) + `team-knowledge/skills/` (`ai3d-to-godot-pipeline`, `game-ready-3d-guideline`, `coat-hero-anim-polish`, `mixamo-adobe-gate`, `freesound-full-wav-1to1`). **Non-art how-to:** [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) (includes §4 dialogue/VO scripts). Full milestone map: **§2.1**.
 
@@ -252,6 +258,7 @@ Placeholders are internal art-factory tools only — never ship gates.
 | Item | Spec |
 |------|------|
 | **Where** | Cursor 3.0 PM-automated game.dev factory (separate from Grok design/art/QA) |
+| **Start policy** | **IDLE by default** — runs only when Stephen authorizes factory restart after handoff freeze (arts-before-dev) |
 | **Inputs** | Frozen handoff: design pack + art pack + YAML/JSON SSOT + schema version |
 | **Outputs** | Playable builds, logs, tip hashes |
 | **Must not** | Invent story, art, combat lore, or change beat length without new Design GO |
@@ -346,6 +353,8 @@ Stephen Chow (Product Owner)
 **Rooms:** Art Factory (Story + GD + Art) · Manufactory (PM + Tech + QA)  
 **Game-dev agents** live in Cursor factory, not in chat craft loops.
 
+**Communication:** Day-to-day product talk is **Stephen ↔ Grok Bot**; role agents report through Grok Bot. **STOP** parks entire team craft/CAPA until Stephen lifts.
+
 ### 5.2 Full R&R
 
 | Role | Owns | Does | Does **not** own |
@@ -355,7 +364,7 @@ Stephen Chow (Product Owner)
 | **Story Lead** | PD clearance log, story bible, beats, length, cultural fidelity, VO script truth | Selects/adapts cleared tales; maps length to beats; flags distortion risk | Engine code; combat balance numbers; art GO; game.dev |
 | **Game Design Lead** | Pillars, L0–L5 binding, interaction table, combat/gates, MASTER_ASSET_LIST, plan, progression | Binds beats→systems; encounter/gate design; length integrity | Final tale pick; artistic GO; Cursor implementation; legal |
 | **Art Factory Lead** | 2D/3D/anim/VFX/VO-pipeline/BGM packs; GO/NO + why; MASTER_ASSET_LIST fulfillment | Produces & locks art packs; reason-logs artistic GO/NO | Story canon changes; schema design; starting game factory |
-| **PM / Factory Lead** | Board, milestone calendar, gate hygiene, Track A/B/C status, PM automation, Cursor handoff scheduling | One-live-milestone enforcement; cross-team blockers; release checklist | Creative canon; starting game.dev alone; unpaid legal override |
+| **PM / Factory Lead** | Board, milestone calendar, gate hygiene, Track A/B/C status, PM automation, Cursor handoff scheduling | One-live-milestone enforcement; cross-team blockers; release checklist; **idle-safe** doc/rules sync after PM+Tech PASS without re-asking Stephen | Creative canon; starting game.dev alone; unpaid legal override |
 | **Tech Lead** | Engine constraints, SSOT schema, validators, handoff contract, tip/hash discipline | Schema versioning; Cursor contract clarity; build consumption rules | Artistic GO; story text; Stephen’s license calls |
 | **QA Lead** | Task + phase regression; real UAT; evidence standards | Runs/records suites; blocks paper greens; live health triage signal | Inventing scope; changing design to “pass” tests |
 | **Cursor 3.0 PM factory** | Game.dev automation from frozen handoff | Implements playable builds per contract | Story/art invention; opening new milestones; legal |
@@ -377,11 +386,11 @@ Stephen Chow (Product Owner)
 
 | # | Rule | Enforcement |
 |---|------|-------------|
-| 1 | **One live milestone / sprint / phase** per SKU — only board `issue_pack_ref` is live | PM blocks parallel ship tracks |
-| 2 | **One authority chain** — BOOT order wins; indexes only point at it | Grok Bot latch; no dual truths |
-| 3 | **Arts-before-dev** — game factory IDLE until art + handoff lock | No Cursor consumption until Art pack GO |
+| 1 | **One live milestone / sprint / phase** per SKU — only board `issue_pack_ref` is live; never stamp every pack as live | PM blocks parallel ship tracks |
+| 2 | **One authority chain** — BOOT order wins; indexes only point at it; after GO/NO update tip/hash before next craft | Grok Bot latch; no dual truths |
+| 3 | **Arts-before-dev** — game factory IDLE until art + handoff lock; Stephen authorizes Cursor restart | No Cursor consumption until Art pack GO |
 | 4 | **Full GO/NO only** — Soft CI / CONDITIONAL / greybox-as-ship forbidden as exit gates | Phase law |
-| 5 | **Output contract** every handoff: `status · why · paths · next · blocked_on` (+ versioned artifacts / hash/tip) | Reject incomplete exits |
+| 5 | **Output contract** every handoff: `status · why · paths · next · blocked_on` (+ versioned artifacts / hash/tip); field defs in [OUTPUT_CONTRACT.md](team-knowledge/OUTPUT_CONTRACT.md) | Reject incomplete exits; forbidden outputs per contract |
 | 6 | **Human-only gates** — paid license, sign-in, factory restart / STOP, ratings submissions | Stephen (or designated human counsel) |
 | 7 | **SSOT over prose** — Cursor reads YAML/JSON + locked packs; prose is explanatory | Tech Lead schema GO |
 | 8 | **Length from story** — adjust beats, not grind, when duration misses band | GD Lead |
@@ -389,6 +398,8 @@ Stephen Chow (Product Owner)
 | 10 | **Real UAT** — play or video evidence; paper greens = NO | QA Lead |
 | 11 | **No orphan content** — every storyboard frame cites System ID(s) | Design pack GO |
 | 12 | **Cite leaf docs**, not TOC hops; one tool matrix; no dual ship paths | Docs coherence |
+| 13 | **Artistic why on every gate** — Art, Audio, and Design GO/NO log a short **why** | Art Factory Lead / QA Lead |
+| 14 | **MASTER_ASSET_LIST ceiling** — at Design GO the list is scope ceiling; no ship assets invented outside it | GD Lead + Art Factory Lead |
 
 ---
 
@@ -470,6 +481,7 @@ Overview kit steps → tracks:
 - Not Grok Bot writing Cursor 3.0 engine/game.dev implementation.
 - Not shipping on placeholder/greybox art.
 - Not unsupervised paid licensing or rights assumptions.
+- Not paid commission / alternate vendor “Plan B” paths unless Stephen explicitly opens them.
 - Not open-world scope creep beyond tale-faithful spaces.
 - Not Tides of Urashima content, hero IDs, or SKU coupling in this baseline.
 - Not engine-specific code in this plan.
@@ -539,7 +551,7 @@ handoff.lock:
 | Phase | DoD checklist (all required for GO) |
 |-------|-------------------------------------|
 | **Concept** | Country/tale shortlist logged; clearance PD or licensed path; ratings path started; license ledger row; length envelope; Concept pack GO logged |
-| **Preprod** | Story bible + beat sheet GO; storyboard frames cite System IDs; GD pillars + gates/encounters filled; **`dlg.*` script pack GO**; MASTER_ASSET_LIST draft; schema draft; Design pack GO |
+| **Preprod** | Story bible + beat sheet GO; storyboard frames cite System IDs; GD pillars + gates/encounters filled; **`dlg.*` script pack GO**; MASTER_ASSET_LIST draft frozen as **scope ceiling** (no unlisted ship assets); schema draft; Design pack GO |
 | **Art** | 2D/3D/anim/VFX/VO/BGM packs complete; locale text/VO/UI/fonts for target markets; reason-logged Art pack GO + Locale GO; **full lock before game.dev** |
 | **Game prod** | Handoff.lock present (hashes + schema_version); Cursor consumes frozen pack only; playable build tip; Build tip GO |
 | **QA** | Task + phase regression green; real UAT play/video through beat path; 0 orphan frames; soft-lock hunt done; Phase QA GO |
@@ -585,6 +597,9 @@ Measurable bars for **Release GO** (Track B6). Paper greens = NO.
 | **License ledger** | Every paid/cleared asset logged (source, scope, expiry, owner); human maintains |
 | **Handoff secrets** | No credentials in YAML/JSON SSOT or art packs |
 | **Factory restart / STOP** | Stephen (or designated human) only |
+| **Mixamo / Adobe** | Animation download/login = Stephen **1:1 Secure Form** only; no group-room workaround |
+| **Freesound full WAV** | HQ preview GO does not substitute for full WAV — human login; do not tip-import preview as full WAV |
+| **Plan B commissions** | Paid commission / alternate vendor paths stay **off** unless Stephen explicitly opens them |
 
 ---
 
@@ -648,103 +663,10 @@ List only (schema TBD at A6/A7):
 |-------|-------|
 | Path | `docs/FACTORY_MASTER_PLAN.md` |
 | Version | v1 |
-| **Updated** | 2026-10-14 (HKT) — §2.1 leaf map (NON_ART + AI_ART + ART_FACTORY); NON_ART v1.1 §4 dialogue/VO track; Track A2–A7 pointers; B2½ script pack; §19 prior-manufactory lessons; §3.7/§4.1 3D pipeline |
+| **Updated** | 2026-10-14 (HKT) — §2.1 leaf map; NON_ART v1.1 §4 dialogue/VO; B2½ script pack; industrial practice distributed across §§2–7, §11, §14 (removed standalone lessons §); §3.7/§4.1 3D pipeline |
 | **Supersedes** | `JRPG_AUTO_FACTORY_V0.md` (aka Overview / FACTORY_OVERVIEW) and `IMPLEMENTATION_PLAN_AND_GD_ARCHITECTURE.md` — this file is the **single SSOT plan** |
 | Change control | PM + Tech Lead propose; Stephen approves objective/rule changes |
 | Next kit action | Track A2 — content schema `v1` + validators (A4 seed SOP now linked — flesh validators against art pack contract as A2/A5 mature) |
-
----
-
-## 19. Lessons from prior manufactory (genericized)
-
-Promoted from `docs/team-knowledge/` (archived prior-team pack). **This section is SSOT** for factory operating lessons; the archive retains step-by-step skill detail. No title-specific hero IDs or SKU coupling — keep the *lesson*, not the old SKU.
-
-### 19.1 Authority, milestones, and latch
-
-| Lesson | Factory rule |
-|--------|----------------|
-| One live milestone | Only the board `issue_pack_ref` is live per SKU — never stamp every pack as live |
-| One authority chain | BOOT order wins; indexes/README only point at it |
-| Tip latch | After GO/NO, update tip/hash before next craft; Grok Bot latches once |
-| No dual ship paths | One hero / one asset path live; concept and gait-reference meshes stay **concept-only** |
-| Stephen ↔ Grok Bot | Day-to-day product talk is Stephen ↔ Grok Bot; role agents report through Grok Bot |
-| STOP | STOP parks entire team craft/CAPA until Stephen lifts |
-
-### 19.2 Arts, quality, and gates
-
-| Lesson | Factory rule |
-|--------|----------------|
-| Arts-before-dev | Full art/audio GO in docs before Cursor game factory starts |
-| Full GO/NO only | Soft CI, CONDITIONAL, greybox-as-ship forbidden as exit gates |
-| Why on every artistic gate | Art / Audio / Design GO/NO logs a short **why** |
-| No paper greens | QA evidence = real build/runtime play or video; art = real plates where applicable |
-| AI 3D is draft | Generative mesh stays draft until game-ready checklist + Godot plates + **Art Lead GO** |
-| Image gen | Draft-only under Art Lead GO — not sole final ship art |
-
-### 19.3 3D / animation craft (proven failure modes)
-
-| Lesson | Factory rule |
-|--------|----------------|
-| Remesh before rig | Remesh / retopo / UV **before** animate; **never remesh after rig** |
-| Mid-stride plates | Walk + idle GO needs in-engine plates at stride — not A-pose or bind-pose |
-| Cloth / coat proximity | Jacketed cloth clipping/shred is a known anim fail class — fix weights in Blender; do not dual-live a second mesh “variant” |
-| Single live GLB path | Prefer solid Blender polish on the locked ship mesh over new AI spend when identity is locked |
-| Concept ≠ ship | Never tip-import or field-ship concept or gait-reference binaries |
-
-Skill detail: `team-knowledge/skills/ai3d-to-godot-pipeline`, `game-ready-3d-guideline`, `coat-hero-anim-polish` (genericized jacket lesson).
-
-### 19.4 Factory automation and docs
-
-| Lesson | Factory rule |
-|--------|----------------|
-| Game factory IDLE | Cursor 3.0 PM factory runs only when Stephen says restart |
-| Idle-safe docs sync | After PM+Tech PASS, doc-only sync may auto-merge without re-asking Stephen |
-| Cite leaf docs | One tool matrix; strip thin TOC boilerplate |
-| Output contract | Every handoff: `status · why · paths · next · blocked_on` — reject incomplete exits |
-
-Fields (handoff to Grok Bot → Stephen):
-
-| Field | Meaning |
-|-------|---------|
-| `status` | `GO` / `NO` / `IDLE` / `BLOCKED` |
-| `why` | Required for GO/NO |
-| `paths` | Tip/doc/asset paths touched |
-| `next` | Single next action if any |
-| `blocked_on` | `license` / `sign-in` / `Stephen` / empty |
-
-Forbidden in outputs: Soft CI, CONDITIONAL-as-PASS, inventing a second live pack, quiet craft that contradicts the last latch.
-
-### 19.5 Human-only gates (legal / paid / sign-in)
-
-| Lesson | Factory rule |
-|--------|----------------|
-| Paid license & legal | Stephen (or designated human counsel) — not agents |
-| Mixamo / Adobe | Animation download/login = **Stephen 1:1 Secure Form** only; no group-room workaround |
-| Freesound full WAV | Original full WAV after HQ preview GO still needs human login — **do not** tip HQ-preview as full WAV |
-| Plan B commissions | Paid commission / alternate vendor paths stay **off** unless Stephen explicitly opens them |
-
-Skill detail: `team-knowledge/skills/mixamo-adobe-gate`, `freesound-full-wav-1to1`.
-
-### 19.6 QA and content
-
-| Lesson | Factory rule |
-|--------|----------------|
-| Real UAT | Playthrough or recorded video on real build — aligns with §3.9 |
-| Folktale clearance | Public-domain or cleared before art spend (§3.10) |
-| MASTER_ASSET_LIST | No assets invented outside the list at Design GO |
-
-### 19.7 Where to read more
-
-| Need | Location |
-|------|----------|
-| Promoted laws (this section) | §6 Hard operating rules + §19 |
-| Leaf map (all procedural SOPs) | §2.1 |
-| Non-art how-to (clearance → live) | [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) |
-| Art/audio gen how-to (all tracks) | [AI_ART_BEST_PRACTICES.md](AI_ART_BEST_PRACTICES.md) |
-| Art pipeline index | [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) |
-| Step-by-step craft | `docs/team-knowledge/skills/*/SKILL.md` |
-| Standing rules archive | `docs/team-knowledge/STANDING_RULES.md` |
-| Role R&R nuance | `docs/team-knowledge/roles/` (mostly mirrored in §5) |
 
 ---
 

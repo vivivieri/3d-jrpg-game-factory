@@ -1,6 +1,6 @@
 # Art factory SOP (leaf index)
 
-**Status:** Thin index for Track **A4** — gates and laws live in [FACTORY_MASTER_PLAN.md](./FACTORY_MASTER_PLAN.md) (§3.7, §4.1 area 4, §19). **Generation how-to (every art track):** [AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md) · procedural 3D/anim/audio detail also in skill leaf docs below.
+**Status:** Thin index for Track **A4** — gates and laws live in [FACTORY_MASTER_PLAN.md](./FACTORY_MASTER_PLAN.md) (§3.7, §4.1 area 4, §6, §14). **Generation how-to (every art track):** [AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md) · procedural 3D/anim/audio detail also in skill leaf docs below.
 
 **Product owner:** Stephen Chow · **Artistic GO/NO + why:** Art Factory Lead (Art Director seat)
 
@@ -12,7 +12,7 @@
 
 ---
 
-## Seed skills (prior manufactory → generic factory)
+## Seed skills (craft depth)
 
 Use these as the **seed SOP** until title-specific runbooks exist. Full text: `docs/team-knowledge/skills/<folder>/SKILL.md`.
 
@@ -55,7 +55,7 @@ Text / concept brief → 2D draft (AD GO on direction)
 
 ## GO/NO reason log (Art pack)
 
-Every artistic exit uses the factory **output contract**: `status · why · paths · next · blocked_on` (see Master Plan §6 rule 5 and §19).
+Every artistic exit uses the factory **output contract**: `status · why · paths · next · blocked_on` (Master Plan §6 rule 5; [OUTPUT_CONTRACT.md](./team-knowledge/OUTPUT_CONTRACT.md)).
 
 Animation GO requires **mid-stride** walk and idle plates — not bind-pose or A-pose stand-ins.
 
@@ -67,5 +67,5 @@ Animation GO requires **mid-stride** walk and idle plates — not bind-pose or A
 |-----|------|
 | [AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md) | Industrial AI generation SOP — all art/audio tracks |
 | [FACTORY_NON_ART_BEST_PRACTICES.md](./FACTORY_NON_ART_BEST_PRACTICES.md) | Non-art tracks (story, GD, schema, locale, handoff, QA, publish, live ops, PM, Tech) |
-| [FACTORY_MASTER_PLAN.md](./FACTORY_MASTER_PLAN.md) §3.7, §4.1, §19 | Laws + promoted lessons |
+| [FACTORY_MASTER_PLAN.md](./FACTORY_MASTER_PLAN.md) §3.7, §4.1, §6, §14 | Laws + human-only gates |
 | [team-knowledge/README.md](./team-knowledge/README.md) | Archived source detail for skills above |

@@ -16,8 +16,9 @@
 3. **Image-to-3D after design lock; text-to-3D for exploration only.**
 4. **Preserve three files per asset:** approved 2D reference, untouched AI source mesh, generation provenance record.
 5. **Mid-stride plates are anim GO evidence** — still T-poses and turntables are not enough.
-6. **Credit-aware generation:** track API spend per SKU; prefer retexture / local fix over full regenerate.
+6. **Credit-aware generation:** track API spend per SKU; prefer retexture / local fix over full regenerate; when visual identity is locked, prefer **Blender polish on the ship mesh** over new AI spend.
 7. **Legal ledger before build inclusion.** No asset enters `main` without license/provenance row.
+8. **Artistic GO/NO + why** on every gate — mid-stride plates and real engine evidence where applicable; no paper greens.
 
 ### Existing factory spine (characters / props)
 
@@ -731,6 +732,6 @@ Parallelize 5–7 and 11–13 after character locks where staffing allows; do no
 
 ---
 
-**SSOT laws:** [FACTORY_MASTER_PLAN.md](./FACTORY_MASTER_PLAN.md) (§3.7, §4.1, §6, §19) · **Track A4 index:** [ART_FACTORY_SOP.md](./ART_FACTORY_SOP.md)
+**SSOT laws:** [FACTORY_MASTER_PLAN.md](./FACTORY_MASTER_PLAN.md) (§3.7, §4.1, §6, §14) · **Track A4 index:** [ART_FACTORY_SOP.md](./ART_FACTORY_SOP.md)
 
 *Living factory leaf at `docs/AI_ART_BEST_PRACTICES.md` — update citation dates on each quarterly tool review.*
