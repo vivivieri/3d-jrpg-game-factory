@@ -214,7 +214,85 @@ Generic factory language only — no title-specific hero IDs in baseline kits.
 
 ---
 
-## 4. Game design pillars / L0–L5 / interaction binding
+## 4. Dialogue / VO script generation (beat → dlg.* → revise → lock)
+
+Industrial JRPG pattern: beat sheet → dialogue/VO line packs keyed to systems → revise → lock → feed locale/VO. **Not** a Hollywood screenplay pipeline; screenplay prose is never SSOT.
+
+### Workflow
+
+1. **Inputs** — locked beat sheet (`B###` rows); storyboard frames with `INT_*` (especially `INT_TALK` / choice verbs); speaker **roles** from story bible (generic role IDs only — no title-specific hero IDs).  
+2. **Scope** — one **line pack** per beat or beat segment; output is structured dialogue SSOT, not a free Markdown novel.  
+3. **Author rows** — YAML/JSON (or sheet export) with per-line fields below; keys use `dlg.<beat>.*` (e.g. `dlg.B001.open`).  
+4. **AI draft** — model proposes lines from beat description + frame cues; must emit keys, speakers, and `systems[]` in schema shape.  
+5. **Human revise** — Story craft edits text, `max_length`, branch edges, tone; run validators on missing `frame_ref` / beat links.  
+6. **Script pack GO** — Story Lead **GO/NO + why** on the line pack (per beat, chapter roll-up, or PM-scheduled batch).  
+7. **Lock keys** — freeze `dlg.*` IDs and **source-locale** `text` before VO batch recording and before translation / locale expand (see §9 Locale).  
+8. **Handoff** — locked rows in design pack + locale seed; beat rows cite `dialogue_refs: ["dlg.B###.*"]` where applicable.
+
+### Per-line minimum fields
+
+`key | speaker | text | max_length | context | frame_ref | vo_slot_id | branch_edges | systems[]`
+
+| Field | Meaning |
+|-------|---------|
+| `key` | Stable `dlg.<beat>.*` locale/VO ID |
+| `speaker` | Bible role ID (not invented cast) |
+| `text` | Source locale string (ship language for the SKU) |
+| `max_length` | UI/VO budget (chars or seconds policy per SKU) |
+| `context` | Beat/situation note for translators & VO direction |
+| `frame_ref` | Storyboard frame id tying line to `INT_*` moment |
+| `vo_slot_id` | 1:1 with key for batch VO pipeline |
+| `branch_edges` | Choice ids → next beat/key if `INT_TALK` branches |
+| `systems[]` | `INT_*` this line satisfies (must match frame) |
+
+### Branch / choice budget
+
+- Only branches that map to **funded endings** on the locked beat sheet.  
+- Every fail/choice exit must match storyboard success/fail exits — no soft-lock branches.  
+- Unfunded “what if” dialogue is cut at beat sheet, not in line packs.
+
+### Bans (hard)
+
+- Writing full dialogue before beat + systems lock.  
+- Inventing characters or speakers outside story bible roles.  
+- Soft-locking failed branches without story-safe prep/retry in beat/frame SSOT.  
+- Renaming `dlg.*` keys after script lock without migration script + Locale re-QA.
+
+### AI-assisted tips
+
+- Prompt with beat YAML + frame list; require one output row per voiced/UI line, not prose scenes.  
+- Auto-flag lines missing `frame_ref`, `systems[]`, or `max_length`.  
+- Draft branch_edges only where beat sheet lists funded consequences.  
+- Never substitute Fountain/Celtx screenplay exports as SSOT — convert to `dlg.*` rows or reject.
+
+### QC / gates
+
+| Check | Pass |
+|-------|------|
+| Beat lock | Line pack cites only **locked** `B###` |
+| Key shape | All keys match `dlg.<beat>.*` |
+| Frame bind | Every line has `frame_ref` + matching `systems[]` |
+| Speaker | Every `speaker` resolves to bible role |
+| Branch budget | Choices ⊆ funded endings / beat consequences |
+| Lock discipline | No key renames post-lock without migration |
+| GO | Story Lead script pack GO + why logged |
+
+### Common fails
+
+- Screenplay-first drafting that never lands in `dlg.*` tables.  
+- VO recorded against draft keys that change during translation.  
+- Choice trees wider than beat sheet can pay for.  
+- `INT_TALK` lines with empty `branch_edges` on mandatory choices.  
+- Cursor or agents “polishing” locked text without new Script GO.
+
+### Human-only gates
+
+- Story Lead **script pack GO** (line pack acceptance).  
+- Cultural/voice casting disputes escalated to Stephen when they affect clearance or ratings.
+
+---
+
+## 5. Game design pillars / L0–L5 / interaction binding
 
 ### Workflow
 
@@ -254,7 +332,7 @@ Generic factory language only — no title-specific hero IDs in baseline kits.
 
 ---
 
-## 5. Combat / gates / encounter budget (not grind pad)
+## 6. Combat / gates / encounter budget (not grind pad)
 
 ### Workflow
 
@@ -310,7 +388,7 @@ Generic factory language only — no title-specific hero IDs in baseline kits.
 
 ---
 
-## 6. MASTER_ASSET_LIST / content graph
+## 7. MASTER_ASSET_LIST / content graph
 
 ### Workflow
 
@@ -348,7 +426,7 @@ Generic factory language only — no title-specific hero IDs in baseline kits.
 
 ---
 
-## 7. Data model / schema / validators (YAML/JSON SSOT)
+## 8. Data model / schema / validators (YAML/JSON SSOT)
 
 ### Workflow
 
@@ -424,10 +502,11 @@ handoff.lock:
 
 ---
 
-## 8. Locale (strings / VO slots / fonts) multi-country
+## 9. Locale (strings / VO slots / fonts) multi-country
 
 ### Workflow
 
+0. **Script lock first** — source-locale `dlg.*` line packs **locked** (Story Lead script pack GO; see §4) before VO batch recording and before translation / locale expand.  
 1. **i18n architecture early** — all player-facing text as data (`dlg.*`, UI keys); no hard-coded strings in Cursor outputs.  
 2. Stable string IDs; value edits without key renames.  
 3. Metadata per string: speaker, max_length, context, screenshot/frame ref.  
@@ -472,7 +551,7 @@ handoff.lock:
 
 ---
 
-## 9. Handoff pack / tip lock / Cursor contract
+## 10. Handoff pack / tip lock / Cursor contract
 
 ### Workflow
 
@@ -520,7 +599,7 @@ handoff.lock:
 
 ---
 
-## 10. QA (task / phase / real UAT — no paper greens)
+## 11. QA (task / phase / real UAT — no paper greens)
 
 ### Workflow
 
@@ -570,7 +649,7 @@ handoff.lock:
 
 ---
 
-## 11. Publish / stream packaging / ratings (high-level)
+## 12. Publish / stream packaging / ratings (high-level)
 
 ### Workflow
 
@@ -622,7 +701,7 @@ handoff.lock:
 
 ---
 
-## 12. Live ops / telemetry / hotfix vs new-tale queue
+## 13. Live ops / telemetry / hotfix vs new-tale queue
 
 ### Workflow
 
@@ -660,7 +739,7 @@ handoff.lock:
 
 ---
 
-## 13. PM / one-live-milestone / CAPA / STOP-IDLE
+## 14. PM / one-live-milestone / CAPA / STOP-IDLE
 
 ### Workflow
 
@@ -708,7 +787,7 @@ handoff.lock:
 
 ---
 
-## 14. Tech Lead contracts / schema versioning
+## 15. Tech Lead contracts / schema versioning
 
 ### Workflow
 
@@ -754,7 +833,7 @@ handoff.lock:
 
 ---
 
-## 15. Recommended Concept → Release order (one SKU)
+## 16. Recommended Concept → Release order (one SKU)
 
 Aligns Master Plan Track B; arts-before-dev enforced.
 
@@ -763,6 +842,7 @@ B0  Clearance + country/tale pick (Stephen)     → Clearance GO
 B1  Story bible + beat sheet + length band       → Story GO
 B2  Storyboard + pillars/L0–L5 + combat/gates
     + MASTER_ASSET_LIST + SSOT fill              → Design pack GO
+B2½ Dialogue / VO scripts (`dlg.*` lock)         → Script pack GO (Story Lead)
 B3  Art/audio factory + locale packs             → Art pack GO + Locale GO
     (see AI_ART_BEST_PRACTICES.md for art order)
 B4  Handoff.lock freeze → Cursor 3.0 build       → Build tip GO
@@ -771,11 +851,11 @@ B6  Stream packaging + ratings + listings        → Release GO (Stephen)
 →   Live ops health + hotfix/tale queue          → Live health GO
 ```
 
-**Dependency law:** Do not start B4 before B3 full lock. Do not start B3 art spend before B0 Clearance GO. Track C (N SKUs) waits for B6 or Stephen written exception — still one live milestone per SKU.
+**Dependency law:** Do not start B4 before B3 full lock. Do not start B3 **VO batch** or locale expand before **B2½** script pack GO. Do not start B3 art spend before B0 Clearance GO. Track C (N SKUs) waits for B6 or Stephen written exception — still one live milestone per SKU.
 
 ---
 
-## 16. Avoid list (non-art factory)
+## 17. Avoid list (non-art factory)
 
 - Soft CI / CONDITIONAL / greybox-as-ship gates  
 - Paper greens / checklist theater without runtime evidence  
@@ -791,10 +871,11 @@ B6  Stream packaging + ratings + listings        → Release GO (Stephen)
 - Measuring success by documents generated or tickets closed  
 - Quiet craft during STOP  
 - Title-specific hero IDs in baseline kit templates  
+- Hollywood screenplay / Fountain prose as dialogue SSOT (use `dlg.*` line packs)  
 
 ---
 
-## 17. Sources (fetched / consulted 2026-10-14)
+## 18. Sources (fetched / consulted 2026-10-14)
 
 Industrial synthesis; vendor blogs are guidance, not product endorsement. **Factory laws in Master Plan + Standing Rules always win.**
 
@@ -830,13 +911,13 @@ Industrial synthesis; vendor blogs are guidance, not product endorsement. **Fact
 
 ---
 
-## 18. Document control
+## 19. Document control
 
 | Field | Value |
 |-------|-------|
 | Path | `docs/FACTORY_NON_ART_BEST_PRACTICES.md` |
-| Version | v1 |
-| Updated | 2026-10-14 (HKT) |
+| Version | v1.1 |
+| Updated | 2026-10-14 (HKT) — §4 dialogue/VO script track; §9 script-lock before VO/translation; §16 B2½ |
 | Links from | FACTORY_MASTER_PLAN (Track A how-to leaf) · Standing Rules |
 | Change control | PM + Tech Lead + relevant Lead propose; Stephen for policy/spend/STOP |
 | Companion | AI_ART_BEST_PRACTICES.md (art tracks) |
