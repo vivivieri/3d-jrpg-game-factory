@@ -22,7 +22,7 @@ This folder freezes **skills + role knowledge** so a future factory team can be 
 
 1. `skills/ai3d-to-godot-pipeline` — Tripo/AI 3D → Godot-ready scratch GLB
 2. `skills/game-ready-3d-guideline` — realtime character/prop bar before artistic GO/NO
-3. `skills/coat-hero-anim-polish` — jacketed hero walk/idle polish loop (lesson: don’t dual-live with no-jacket)
+3. `skills/coat-hero-anim-polish` — jacketed cloth / coat proximity anim polish (one live mesh; concept refs concept-only)
 4. `skills/freesound-full-wav-1to1` — Freesound HQ → full WAV (human Secure Form)
 5. `skills/mixamo-adobe-gate` — Mixamo/Adobe login is Stephen 1:1 only
 
