@@ -4,7 +4,7 @@
 **Product owner:** Stephen Chow  
 **Orchestration mouthpiece:** Grok Bot  
 **Audience:** Stephen + Grok Bot design/docs/art/QA team + Cursor 3.0 PM game.dev factory  
-**Updated:** 2026-10-14 (HKT) — `FACTORY_NON_ART_BEST_PRACTICES.md` (industrial non-art SOP); `AI_ART_BEST_PRACTICES.md` (industrial AI gen SOP, all art tracks); §19 prior-manufactory lessons; §3.7/§4.1 3D pipeline; A4 → `ART_FACTORY_SOP.md` + team-knowledge skills
+**Updated:** 2026-10-14 (HKT) — §2.1 leaf map insync with all procedural SOPs; `FACTORY_NON_ART_BEST_PRACTICES.md` v1.1 (§4 dialogue/VO script track); Track A2–A7 leaf pointers; §19 prior-manufactory lessons; §3.7/§4.1 3D pipeline
 
 ---
 
@@ -27,8 +27,8 @@
 Strict sequential order. **One live milestone / phase only.** No parallel soft-ship tracks.
 
 ```
-Clearance → Story → Storyboard / GD / Plan → Art factory → Locale
-    → Handoff pack → Game factory (Cursor 3.0) → QA → Publish → Live ops
+Clearance → Story → Storyboard / GD / Plan → Dialogue/VO scripts (dlg.* lock)
+    → Art factory → Locale → Handoff pack → Game factory (Cursor 3.0) → QA → Publish → Live ops
 ```
 
 Industrial framing (same pipeline, phase names for calendar/gates):
@@ -40,8 +40,8 @@ Concept → Pre-production → Art production → Game production → QA → Rel
 | Phase | Pipeline steps | Purpose | Primary owners | Exit gate (GO/NO only) |
 |-------|----------------|---------|----------------|------------------------|
 | **Concept** | Clearance | Country/tale shortlist, audience, platform, length envelope; PD/cleared rights; ratings path; license ledger | Stephen, Story Lead, PM | Clearance / Concept pack GO |
-| **Pre-production** | Story → Storyboard / GD / Plan | Story bible, beat sheet, storyboard, GD pillars, combat/gates, MASTER_ASSET_LIST, data model + handoff contract drafts | Story Lead, GD Lead, Tech Lead, PM | Design pack GO |
-| **Art production** | Art factory → Locale | 2D/3D/anim/VO/BGM/UI; locale text/VO/UI/fonts; **full lock before any game.dev** | Art Factory Lead, Story Lead (VO script), PM | Art pack GO + Locale GO |
+| **Pre-production** | Story → Storyboard / GD / Plan → Dialogue/VO scripts | Story bible, beat sheet, storyboard, GD pillars, combat/gates, **`dlg.*` line packs (script lock)**, MASTER_ASSET_LIST, data model + handoff contract drafts | Story Lead, GD Lead, Tech Lead, PM | Design pack GO + Script pack GO |
+| **Art production** | Art factory → Locale | 2D/3D/anim/VO/BGM/UI; locale text/VO/UI/fonts (after script lock); **full lock before any game.dev** | Art Factory Lead, Story Lead (VO script), PM | Art pack GO + Locale GO |
 | **Game production** | Handoff → Cursor 3.0 | Frozen handoff consumed; playable SKU built | Tech Lead (contract), Cursor 3.0 PM factory | Build tip GO |
 | **QA** | QA | Task-level + sprint/phase regression + real UAT (play/video) | QA Lead, PM | Phase QA GO |
 | **Release** | Publish | Stream packaging, store listings, ratings, multi-country catalog | PM, Tech Lead | Release GO |
@@ -56,6 +56,7 @@ Concept → Pre-production → Art production → Game production → QA → Rel
 | Clearance | Clearance GO (human if paid license) |
 | Story | Story bible + beat sheet GO |
 | Storyboard / GD / Plan | Design pack GO (Design Lead) |
+| Dialogue / VO scripts | Script pack GO — locked `dlg.*` keys + source locale (`Story Lead`) |
 | Art factory | Locked art pack + reason log (full GO/NO only) |
 | Locale | Locale GO for target countries |
 | Handoff | Handoff pack hash / tip lock (YAML/JSON SSOT preferred) |
@@ -64,11 +65,32 @@ Concept → Pre-production → Art production → Game production → QA → Rel
 | Publish | Live catalog entry |
 | Live ops | Stable live + next tale scheduled (optional) |
 
+### 2.1 Leaf document map (procedural how-to; laws stay in this plan)
+
+**Rule:** Leaf SOPs are **how-to only** — phase law, pillars, R&R, and hard rules remain here and in [team-knowledge/STANDING_RULES.md](team-knowledge/STANDING_RULES.md). Cite leaves for craft steps; do not duplicate or contradict SSOT laws.
+
+| Leaf | Path | Scope | Track A |
+|------|------|-------|---------|
+| **Factory non-art SOP** | [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) | Clearance → beats → storyboard → **§4 dialogue/VO scripts** → GD/combat → asset list → schema → locale → handoff → QA → publish → live → PM/Tech (§§0–19) | **A2**, **A3**, **A5**, **A6**, **A7** |
+| **AI art generation SOP** | [AI_ART_BEST_PRACTICES.md](AI_ART_BEST_PRACTICES.md) | All art/audio gen tracks: concept → env → props → UI → textures → 3D → anim → VFX → VO → BGM/SFX → storyboard stills → locale art (§§0–17) | **A4** (primary) |
+| **Art factory index** | [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) | Thin index → AI art SOP + `docs/team-knowledge/skills/` ×5; 3D pipeline order | **A4** |
+
+**Track A → leaf pointers (single source per milestone):**
+
+| Milestone | Procedural leaf |
+|-----------|-----------------|
+| A2 | [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §8 schema/validators |
+| A3 | [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §§1–8 (clearance through dialogue/VO + design data) |
+| A4 | [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) → [AI_ART_BEST_PRACTICES.md](AI_ART_BEST_PRACTICES.md) + skills |
+| A5 | [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §10 handoff/tip lock |
+| A6 | [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §§11–12 QA + publish packaging |
+| A7 | [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §§9, 12–13 locale + publish + live ops |
+
 ---
 
 ## 3. Game design architecture
 
-**Industrial non-art SOP (clearance → story → design → data → locale → handoff → QA → publish → live):** [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) — procedural how-to for Story / GD / Tech / QA / PM tracks (AI-assisted drafts + human GO/NO). Laws stay in this plan; **companion leaf** to [AI_ART_BEST_PRACTICES.md](AI_ART_BEST_PRACTICES.md) (art/audio craft).
+**Non-art procedural SOP:** [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) · **Art/audio procedural SOP:** [AI_ART_BEST_PRACTICES.md](AI_ART_BEST_PRACTICES.md) (indexed by [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md)). See **§2.1** for the full map — laws stay in this plan.
 
 ### 3.1 Design pillars
 
@@ -98,7 +120,9 @@ Concept → Pre-production → Art production → Game production → QA → Rel
 ```
 Source tale (cleared) → Story bible → Beat sheet → Chapter graph → Gate nodes → Ending set
                               ↓
-                     Storyboard frames
+                     Storyboard frames (`INT_*`)
+                              ↓
+                     Dialogue/VO line packs (`dlg.*` lock)
                               ↓
                      Interaction binding (L2–L4)
 ```
@@ -203,7 +227,7 @@ handoff:
 | **3D** | Characters, props, environments, LODs | Art GO before handoff |
 | **Animation** | Locomotion, combat, cinematic stubs | Art GO before handoff |
 | **VFX** | Combat/impact/environment | Art GO before handoff |
-| **VO** | Cleared script → recorded/locale packs | Locale + Art GO |
+| **VO** | Locked `dlg.*` script ([NON_ART §4](FACTORY_NON_ART_BEST_PRACTICES.md)) → recorded/locale packs | Script pack GO → Locale + Art GO |
 | **BGM/SFX** | Theme, stingers, UI, combat bank | Art GO |
 | **Locale art** | Fonts, layout, culture-safe variants | Locale GO |
 
@@ -221,11 +245,7 @@ Placeholders are internal art-factory tools only — never ship gates.
 | AI 3D | Draft until game-ready checklist + plates + Art Lead GO |
 | External anim/audio HQ | Mixamo / Adobe / Freesound full WAV → human Secure Form only (§4.1, §19) |
 
-**Industrial AI generation SOP (all tracks):** [AI_ART_BEST_PRACTICES.md](AI_ART_BEST_PRACTICES.md) — how to generate and ship every art/audio track with AI (spec → staged gen → cleanup → engine → GO/NO + provenance). Laws stay in this plan; the leaf doc is procedural.
-
-**Track A4 index:** [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) links the leaf SOP above and indexes five skill folders under `docs/team-knowledge/skills/` (`ai3d-to-godot-pipeline`, `game-ready-3d-guideline`, `coat-hero-anim-polish`, `mixamo-adobe-gate`, `freesound-full-wav-1to1`).
-
-**Design kit / non-art how-to (Track A3+):** [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) — storyboard → asset list → schema → locale → handoff templates, combat/gates, and Cursor contract hygiene (§§1–9, §14).
+**Art/audio how-to:** [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) → [AI_ART_BEST_PRACTICES.md](AI_ART_BEST_PRACTICES.md) + `team-knowledge/skills/` (`ai3d-to-godot-pipeline`, `game-ready-3d-guideline`, `coat-hero-anim-polish`, `mixamo-adobe-gate`, `freesound-full-wav-1to1`). **Non-art how-to:** [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) (includes §4 dialogue/VO scripts). Full milestone map: **§2.1**.
 
 ### 3.8 Game factory — Cursor 3.0
 
@@ -268,7 +288,7 @@ Industrial defaults for a multi-title factory. Map **one primary tool family per
 
 | Area | Primary tools | Must not use for |
 |------|---------------|------------------|
-| **1. Story / narrative** | Docs + YAML beat/dialogue SSOT; research + PD clearance | Engine / game.dev |
+| **1. Story / narrative** | Docs + YAML beat/`dlg.*` dialogue SSOT; [NON_ART §§1–4](FACTORY_NON_ART_BEST_PRACTICES.md); research + PD clearance | Engine / game.dev |
 | **2. Game design / data** | YAML/JSON schemas + validators; spreadsheet optional (tables → export YAML) | Live engine authoring as SSOT |
 | **3. Art 2D** | Concept/UI (Figma or equivalent for UI SSOT); image gen **draft only** under AD GO | Locked ship art without AD GO; gen as sole final |
 | **4. Art 3D / anim** | Concept/text → 2D draft → AI mesh (Tripo-class) → **remesh/retopo/UV before rig** → Blender weights/LODs/cloth proximity → GLB → mid-stride Godot plates → Art Lead GO/NO+why; [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) + `team-knowledge/skills/*`; Mixamo/Adobe **only** Stephen 1:1 Secure Form if used | Remesh **after** rig; dual live paths; concept/gait-ref as field hero; unattended paid Mixamo/Adobe; HQ-preview as full WAV |
@@ -380,9 +400,10 @@ Overview kit steps → tracks:
 |----------|-------------------|
 | 1. Factory kit — BOOT, R&R card, board schema, output contract | **A1** |
 | 2. Story kit — folktale intake + PD checklist + length → beats → storyboard | **A3** (templates) + **B0–B1** |
-| 3. Design kit — combat/gates + asset list | **A3** + **B2** |
-| 4. Art factory runbook — lock pack + reason log | **A4** + **B3** |
-| 5. Locale + handoff pack schema | **A2**, **A5**, **A7** + Locale GO |
+| 2b. Dialogue / VO script kit — `dlg.*` line packs → script lock | **A3** §4 + **B2½** |
+| 3. Design kit — combat/gates + asset list + schema | **A3** §§5–8, **A2** + **B2** |
+| 4. Art factory runbook — lock pack + reason log | **A4** ([ART_FACTORY](ART_FACTORY_SOP.md) → [AI_ART](AI_ART_BEST_PRACTICES.md)) + **B3** |
+| 5. Locale + handoff pack schema | **A7**, **A5**, **A2** + Locale GO |
 | 6. Cursor 3.0 game factory hooks (PM automation) | **A5** + **B4** |
 | 7. QA task + phase regression suite | **A6** + **B5** |
 | 8. Publish + live ops runbook | **A7** + **B6** → **Track C** |
@@ -392,12 +413,12 @@ Overview kit steps → tracks:
 | Milestone | Deliverable | Exit |
 |-----------|-------------|------|
 | A1 | This document + phase/R&R/rules adopted | Kit baseline GO |
-| A2 | Content schema `v1` (YAML/JSON) + validators | Schema GO |
-| A3 | Storyboard → MASTER_ASSET_LIST → handoff pack templates — how-to: [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §§2–7 | Template GO |
+| A2 | Content schema `v1` (YAML/JSON) + validators — [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §8 | Schema GO |
+| A3 | Clearance → story → storyboard → **dialogue/VO scripts** → GD/combat → MASTER_ASSET_LIST — [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §§1–8 | Template GO |
 | A4 | [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) → [AI_ART_BEST_PRACTICES.md](AI_ART_BEST_PRACTICES.md) (all-track AI gen SOP) + seed `team-knowledge/skills/` ×5 + GO/NO reason log format | Art SOP GO |
-| A5 | Cursor 3.0 handoff contract + smoke consumer checklist — [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §9 handoff/tip lock | Contract GO |
-| A6 | QA matrices (task / phase / UAT / release) — [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §10 real UAT | QA kit GO |
-| A7 | Multi-country locale + stream packaging checklist | Locale/stream kit GO |
+| A5 | Cursor 3.0 handoff contract + smoke consumer checklist — [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §10 handoff/tip lock | Contract GO |
+| A6 | QA matrices (task / phase / UAT / release) — [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §§11–12 real UAT + publish | QA kit GO |
+| A7 | Multi-country locale + stream/live ops checklist — [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §§9, 12–13 | Locale/stream kit GO |
 
 ### Track B — First SKU (prove the factory)
 
@@ -406,7 +427,8 @@ Overview kit steps → tracks:
 | B0 | Clearance + country/tale pick (Stephen) | Clearance GO |
 | B1 | Story bible + beat sheet + length band | Story GO |
 | B2 | Storyboard + GD + combat/gates + SSOT fill | Design pack GO |
-| B3 | Full art/audio/locale lock | Art pack GO |
+| B2½ | Dialogue / VO scripts (`dlg.*` lock) | Script pack GO (Story Lead) |
+| B3 | Full art/audio/locale lock (VO batch after B2½) | Art pack GO + Locale GO |
 | B4 | Handoff freeze → Cursor 3.0 build | Build tip GO |
 | B5 | Task + phase QA + UAT playthrough | QA GO |
 | B6 | Stream release for target markets | Release GO |
@@ -517,7 +539,7 @@ handoff.lock:
 | Phase | DoD checklist (all required for GO) |
 |-------|-------------------------------------|
 | **Concept** | Country/tale shortlist logged; clearance PD or licensed path; ratings path started; license ledger row; length envelope; Concept pack GO logged |
-| **Preprod** | Story bible + beat sheet GO; storyboard frames cite System IDs; GD pillars + gates/encounters filled; MASTER_ASSET_LIST draft; schema draft; Design pack GO |
+| **Preprod** | Story bible + beat sheet GO; storyboard frames cite System IDs; GD pillars + gates/encounters filled; **`dlg.*` script pack GO**; MASTER_ASSET_LIST draft; schema draft; Design pack GO |
 | **Art** | 2D/3D/anim/VFX/VO/BGM packs complete; locale text/VO/UI/fonts for target markets; reason-logged Art pack GO + Locale GO; **full lock before game.dev** |
 | **Game prod** | Handoff.lock present (hashes + schema_version); Cursor consumes frozen pack only; playable build tip; Build tip GO |
 | **QA** | Task + phase regression green; real UAT play/video through beat path; 0 orphan frames; soft-lock hunt done; Phase QA GO |
@@ -626,7 +648,7 @@ List only (schema TBD at A6/A7):
 |-------|-------|
 | Path | `docs/FACTORY_MASTER_PLAN.md` |
 | Version | v1 |
-| **Updated** | 2026-10-14 (HKT) — added `FACTORY_NON_ART_BEST_PRACTICES.md` (industrial non-art procedural leaf); added `AI_ART_BEST_PRACTICES.md` (industrial AI generation leaf, all art tracks); §19 prior-manufactory lessons (genericized); §3.7/§4.1 3D pipeline + guards; A4 → `ART_FACTORY_SOP.md` + team-knowledge skills |
+| **Updated** | 2026-10-14 (HKT) — §2.1 leaf map (NON_ART + AI_ART + ART_FACTORY); NON_ART v1.1 §4 dialogue/VO track; Track A2–A7 pointers; B2½ script pack; §19 prior-manufactory lessons; §3.7/§4.1 3D pipeline |
 | **Supersedes** | `JRPG_AUTO_FACTORY_V0.md` (aka Overview / FACTORY_OVERVIEW) and `IMPLEMENTATION_PLAN_AND_GD_ARCHITECTURE.md` — this file is the **single SSOT plan** |
 | Change control | PM + Tech Lead propose; Stephen approves objective/rule changes |
 | Next kit action | Track A2 — content schema `v1` + validators (A4 seed SOP now linked — flesh validators against art pack contract as A2/A5 mature) |
@@ -716,6 +738,9 @@ Skill detail: `team-knowledge/skills/mixamo-adobe-gate`, `freesound-full-wav-1to
 | Need | Location |
 |------|----------|
 | Promoted laws (this section) | §6 Hard operating rules + §19 |
+| Leaf map (all procedural SOPs) | §2.1 |
+| Non-art how-to (clearance → live) | [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) |
+| Art/audio gen how-to (all tracks) | [AI_ART_BEST_PRACTICES.md](AI_ART_BEST_PRACTICES.md) |
 | Art pipeline index | [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) |
 | Step-by-step craft | `docs/team-knowledge/skills/*/SKILL.md` |
 | Standing rules archive | `docs/team-knowledge/STANDING_RULES.md` |
