@@ -139,3 +139,5 @@ Clearance → Story → Storyboard / GD / Plan → Art factory → Locale
 - Merge Story + GD into one seat?  
 - Keep AD and Audio separate under Art Factory Lead?  
 - Monetization: premium-only vs later IAP (default: premium-only until stated)
+
+Team knowledge pack: [docs/team-knowledge/README.md](team-knowledge/README.md)
