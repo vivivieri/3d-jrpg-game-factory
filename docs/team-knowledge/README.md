@@ -6,7 +6,7 @@
 
 This folder freezes **skills + role knowledge** so a future factory team can be rebuilt without the old chat seats.
 
-**SSOT promotion:** Operating lessons distilled from this pack live in the factory Master Plan as **[§19 Lessons from prior manufactory (genericized)](../FACTORY_MASTER_PLAN.md#19-lessons-from-prior-manufactory-genericized)**. That section is the promoted SSOT; this archive remains the **source detail** (skills, role briefs, standing rules verbatim).
+**SSOT:** Industrial laws and gates live in [FACTORY_MASTER_PLAN.md](../FACTORY_MASTER_PLAN.md) (§§2–7, §11, §14). This archive holds **step-by-step craft** (skills, role briefs); [STANDING_RULES.md](./STANDING_RULES.md) mirrors §6 for convenience.
 
 ## Contents
 
@@ -22,7 +22,7 @@ This folder freezes **skills + role knowledge** so a future factory team can be 
 
 1. `skills/ai3d-to-godot-pipeline` — Tripo/AI 3D → Godot-ready scratch GLB
 2. `skills/game-ready-3d-guideline` — realtime character/prop bar before artistic GO/NO
-3. `skills/coat-hero-anim-polish` — jacketed hero walk/idle polish loop (lesson: don’t dual-live with no-jacket)
+3. `skills/coat-hero-anim-polish` — jacketed cloth / coat proximity anim polish (one live mesh; concept refs concept-only)
 4. `skills/freesound-full-wav-1to1` — Freesound HQ → full WAV (human Secure Form)
 5. `skills/mixamo-adobe-gate` — Mixamo/Adobe login is Stephen 1:1 only
 

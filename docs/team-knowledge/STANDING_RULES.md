@@ -1,6 +1,6 @@
-# Standing rules (team lessons → future factory)
+# Standing rules (convenience mirror)
 
-Genericized from the Tides manufactory. Apply unless Stephen overrides.
+**SSOT:** [FACTORY_MASTER_PLAN.md](../FACTORY_MASTER_PLAN.md) §§2, §6, §11, §14. This file mirrors operating rules for quick grep; if anything conflicts, the Master Plan wins. Apply unless Stephen overrides.
 
 ## Truth and authority
 1. **One live sprint/phase** — only the board `issue_pack_ref` is live; never stamp every pack `this_file: live`.
