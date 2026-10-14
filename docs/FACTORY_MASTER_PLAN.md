@@ -4,7 +4,7 @@
 **Product owner:** Stephen Chow  
 **Orchestration mouthpiece:** Grok Bot  
 **Audience:** Stephen + Grok Bot design/docs/art/QA team + Cursor 3.0 PM game.dev factory  
-**Updated:** 2026-10-14 (HKT)
+**Updated:** 2026-10-14 (HKT) — added §4 Technical stack (right tool, right area)
 
 ---
 
@@ -240,9 +240,54 @@ Placeholders are internal art-factory tools only — never ship gates.
 
 ---
 
-## 4. Team structure & R&R
+## 4. Technical stack (right tool, right area)
 
-### 4.1 Structure
+Industrial defaults for a multi-title factory. Map **one primary tool family per area**. Tech Lead confirms before first SKU freeze. Not title-specific hero/content IDs.
+
+### 4.1 Area → tools
+
+| Area | Primary tools | Must not use for |
+|------|---------------|------------------|
+| **1. Story / narrative** | Docs + YAML beat/dialogue SSOT; research + PD clearance | Engine / game.dev |
+| **2. Game design / data** | YAML/JSON schemas + validators; spreadsheet optional (tables → export YAML) | Live engine authoring as SSOT |
+| **3. Art 2D** | Concept/UI (Figma or equivalent for UI SSOT); image gen **draft only** under AD GO | Locked ship art without AD GO; gen as sole final |
+| **4. Art 3D / anim** | AI mesh (Tripo-class) → remesh/retopo → Blender (weights/LODs/export) → game-ready GLB; Mixamo/Adobe **only** behind human Secure Form if used | Dual live asset paths; unattended paid Mixamo/Adobe |
+| **5. Audio** | VO (ElevenLabs-class or recorded) + BGM/SFX library + **license ledger**; DAW/mix optional; Freesound-style HQ→full WAV needs **human login** | Unlicensed banks; bot-owned paid logins |
+| **6. Game engine** | **Godot 4.x 3D** (default): short JRPG + stream-friendly (light footprint, open license, fast iterate, handoff→build clarity) | Cursor inventing design/art; second parallel engine tip |
+| **7. Game.dev automation** | Cursor 3.0 PM factory; CI for schema/asset refs; git dual or single tip (**Tech decides**) | Design/art/lore invention inside Cursor |
+| **8. QA** | Automated schema/task checks + **real runtime UAT** (Godot play / video) | Paper greens as ship evidence |
+| **9. Locale** | String tables + VO slots per market | Locale GO with missing critical strings/VO |
+| **10. Stream / publish** | Platform packaging **TBD by Stephen**; perf budget defined once | Undefined perf / packaging without owner |
+| **11. Orchestration** | Grok Bot team for design/art/QA; **humans** for paid license / sign-in | Agents on paid license or Secure Form logins |
+
+**3D path law:** Single live path only (AI mesh → remesh/retopo → Blender → GLB). Abandon dual live paths.
+
+**Cursor law:** Cursor 3.0 agents implement **against frozen handoff only**.
+
+### 4.2 Decision defaults
+
+| Decision | Default |
+|----------|---------|
+| Engine | Godot 4.x 3D |
+| 3D / anim pipeline | Single path → game-ready GLB |
+| Image gen | Draft under AD GO only |
+| Mixamo / Adobe / Freesound HQ download | Human Secure Form / login only |
+| Monetization | Premium-only until Stephen states otherwise |
+| Git tip model | Tech Lead chooses dual vs single tip |
+| Perf budget | Defined once per SKU class at Design/Tech GO |
+
+### 4.3 Open decisions (stack)
+
+- Confirm **Godot 4.x 3D** as first-SKU engine (vs alternate)?
+- Monetization: premium-only vs later IAP (default: premium-only)
+- Git: dual tip vs single tip (design packs vs Cursor builds)?
+- Stream platform packaging targets (Stephen)
+
+---
+
+## 5. Team structure & R&R
+
+### 5.1 Structure
 
 ```
 Stephen Chow (Product Owner)
@@ -259,7 +304,7 @@ Stephen Chow (Product Owner)
 **Rooms:** Art Factory (Story + GD + Art) · Manufactory (PM + Tech + QA)  
 **Game-dev agents** live in Cursor factory, not in chat craft loops.
 
-### 4.2 Full R&R
+### 5.2 Full R&R
 
 | Role | Owns | Does | Does **not** own |
 |------|------|------|------------------|
@@ -273,7 +318,7 @@ Stephen Chow (Product Owner)
 | **QA Lead** | Task + phase regression; real UAT; evidence standards | Runs/records suites; blocks paper greens; live health triage signal | Inventing scope; changing design to “pass” tests |
 | **Cursor 3.0 PM factory** | Game.dev automation from frozen handoff | Implements playable builds per contract | Story/art invention; opening new milestones; legal |
 
-### 4.3 Automation handoff summary
+### 5.3 Automation handoff summary
 
 | Stage | Automated drafting | Human / Stephen gate | Factory consumer |
 |-------|--------------------|----------------------|------------------|
@@ -286,7 +331,7 @@ Stephen Chow (Product Owner)
 
 ---
 
-## 5. Hard operating rules
+## 6. Hard operating rules
 
 | # | Rule | Enforcement |
 |---|------|-------------|
@@ -305,7 +350,7 @@ Stephen Chow (Product Owner)
 
 ---
 
-## 6. Implementation tracks (aligned to kit steps)
+## 7. Implementation tracks (aligned to kit steps)
 
 Overview kit steps → tracks:
 
@@ -358,7 +403,7 @@ Overview kit steps → tracks:
 
 ---
 
-## 7. Success metrics
+## 8. Success metrics
 
 | Metric | Target intent | Measured at |
 |--------|---------------|-------------|
@@ -373,7 +418,7 @@ Overview kit steps → tracks:
 
 ---
 
-## 8. Non-goals
+## 9. Non-goals
 
 - Not a live-service grind MMO or infinite battle pass.
 - Not artificially long playtime via repetitive combat.
@@ -388,20 +433,22 @@ Overview kit steps → tracks:
 
 ---
 
-## 9. Open decisions
+## 10. Open decisions
 
 - Merge Story + GD into one seat?
 - Keep AD and Audio separate under Art Factory Lead?
-- Monetization: premium-only vs later IAP (**default: premium-only until stated**)
+- Monetization: premium-only vs later IAP (**default: premium-only until stated**) — also §4.3
+- Engine confirm / git tip / stream packaging — see **§4.3**
 
 ---
 
-## 10. Document control
+## 11. Document control
 
 | Field | Value |
 |-------|-------|
 | Path | `/workspace/factory-kit/FACTORY_MASTER_PLAN.md` |
 | Version | v1 |
+| **Updated** | 2026-10-14 (HKT) — added §4 Technical stack (right tool, right area); renumbered §§5–11 |
 | **Supersedes** | `JRPG_AUTO_FACTORY_V0.md` (aka Overview / FACTORY_OVERVIEW) and `IMPLEMENTATION_PLAN_AND_GD_ARCHITECTURE.md` — this file is the **single SSOT plan** |
 | Change control | PM + Tech Lead propose; Stephen approves objective/rule changes |
 | Next kit action | Track A2 — content schema `v1` + validators |
