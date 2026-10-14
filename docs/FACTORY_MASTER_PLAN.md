@@ -4,7 +4,7 @@
 **Product owner:** Stephen Chow  
 **Orchestration mouthpiece:** Grok Bot  
 **Audience:** Stephen + Grok Bot design/docs/art/QA team + Cursor 3.0 PM game.dev factory  
-**Updated:** 2026-10-14 (HKT) — §19 prior-manufactory lessons; §3.7/§4.1 3D pipeline; A4 → `ART_FACTORY_SOP.md` + team-knowledge skills
+**Updated:** 2026-10-14 (HKT) — `AI_ART_BEST_PRACTICES.md` (industrial AI gen SOP, all art tracks); §19 prior-manufactory lessons; §3.7/§4.1 3D pipeline; A4 → `ART_FACTORY_SOP.md` + team-knowledge skills
 
 ---
 
@@ -219,7 +219,9 @@ Placeholders are internal art-factory tools only — never ship gates.
 | AI 3D | Draft until game-ready checklist + plates + Art Lead GO |
 | External anim/audio HQ | Mixamo / Adobe / Freesound full WAV → human Secure Form only (§4.1, §19) |
 
-**Track A4 seed SOP:** [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) indexes five skill folders under `docs/team-knowledge/skills/` (`ai3d-to-godot-pipeline`, `game-ready-3d-guideline`, `coat-hero-anim-polish`, `mixamo-adobe-gate`, `freesound-full-wav-1to1`).
+**Industrial AI generation SOP (all tracks):** [AI_ART_BEST_PRACTICES.md](AI_ART_BEST_PRACTICES.md) — how to generate and ship every art/audio track with AI (spec → staged gen → cleanup → engine → GO/NO + provenance). Laws stay in this plan; the leaf doc is procedural.
+
+**Track A4 index:** [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) links the leaf SOP above and indexes five skill folders under `docs/team-knowledge/skills/` (`ai3d-to-godot-pipeline`, `game-ready-3d-guideline`, `coat-hero-anim-polish`, `mixamo-adobe-gate`, `freesound-full-wav-1to1`).
 
 ### 3.8 Game factory — Cursor 3.0
 
@@ -388,7 +390,7 @@ Overview kit steps → tracks:
 | A1 | This document + phase/R&R/rules adopted | Kit baseline GO |
 | A2 | Content schema `v1` (YAML/JSON) + validators | Schema GO |
 | A3 | Storyboard → MASTER_ASSET_LIST → handoff pack templates | Template GO |
-| A4 | [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) (seed: `team-knowledge/skills/` ×5) + GO/NO reason log format | Art SOP GO |
+| A4 | [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) → [AI_ART_BEST_PRACTICES.md](AI_ART_BEST_PRACTICES.md) (all-track AI gen SOP) + seed `team-knowledge/skills/` ×5 + GO/NO reason log format | Art SOP GO |
 | A5 | Cursor 3.0 handoff contract + smoke consumer checklist | Contract GO |
 | A6 | QA matrices (task / phase / UAT / release) | QA kit GO |
 | A7 | Multi-country locale + stream packaging checklist | Locale/stream kit GO |
@@ -620,7 +622,7 @@ List only (schema TBD at A6/A7):
 |-------|-------|
 | Path | `docs/FACTORY_MASTER_PLAN.md` |
 | Version | v1 |
-| **Updated** | 2026-10-14 (HKT) — §19 prior-manufactory lessons (genericized); §3.7/§4.1 3D pipeline + guards; A4 linked to `ART_FACTORY_SOP.md` + team-knowledge skills |
+| **Updated** | 2026-10-14 (HKT) — added `AI_ART_BEST_PRACTICES.md` (industrial AI generation leaf, all art tracks); §19 prior-manufactory lessons (genericized); §3.7/§4.1 3D pipeline + guards; A4 → `ART_FACTORY_SOP.md` + team-knowledge skills |
 | **Supersedes** | `JRPG_AUTO_FACTORY_V0.md` (aka Overview / FACTORY_OVERVIEW) and `IMPLEMENTATION_PLAN_AND_GD_ARCHITECTURE.md` — this file is the **single SSOT plan** |
 | Change control | PM + Tech Lead propose; Stephen approves objective/rule changes |
 | Next kit action | Track A2 — content schema `v1` + validators (A4 seed SOP now linked — flesh validators against art pack contract as A2/A5 mature) |

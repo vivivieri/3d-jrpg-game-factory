@@ -1,8 +1,14 @@
 # Art factory SOP (leaf index)
 
-**Status:** Thin index for Track **A4** — procedural detail lives in skill leaf docs; gates and laws live in [FACTORY_MASTER_PLAN.md](./FACTORY_MASTER_PLAN.md) (§3.7, §4.1 area 4, §19).
+**Status:** Thin index for Track **A4** — gates and laws live in [FACTORY_MASTER_PLAN.md](./FACTORY_MASTER_PLAN.md) (§3.7, §4.1 area 4, §19). **Generation how-to (every art track):** [AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md) · procedural 3D/anim/audio detail also in skill leaf docs below.
 
 **Product owner:** Stephen Chow · **Artistic GO/NO + why:** Art Factory Lead (Art Director seat)
+
+---
+
+## Industrial AI generation SOP (all tracks)
+
+**[AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md)** — factory-wide leaf for concept, env kits, props, UI, textures, 3D characters, animation, VFX, VO, BGM/SFX, storyboard, and locale art: spec → staged gen → cleanup → engine test → GO/NO + provenance. Use it alongside the seed skills for track-specific depth.
 
 ---
 
@@ -59,5 +65,6 @@ Animation GO requires **mid-stride** walk and idle plates — not bind-pose or A
 
 | Doc | Role |
 |-----|------|
+| [AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md) | Industrial AI generation SOP — all art/audio tracks |
 | [FACTORY_MASTER_PLAN.md](./FACTORY_MASTER_PLAN.md) §3.7, §4.1, §19 | Laws + promoted lessons |
 | [team-knowledge/README.md](./team-knowledge/README.md) | Archived source detail for skills above |
