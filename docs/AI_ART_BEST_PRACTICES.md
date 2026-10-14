@@ -1,5 +1,7 @@
 # AI Art Best Practices — 3D JRPG / Narrative Game Factory SOP
 
+> **Companion leaf:** [FACTORY_NON_ART_BEST_PRACTICES.md](./FACTORY_NON_ART_BEST_PRACTICES.md) (clearance → design → data → locale → handoff → QA → publish → live).
+
 > **Status:** Research outline ready for factory adoption (Godot 4.x GLB pipeline).  
 > **Scope:** Multi-title auto-factory; AI-assisted first passes + human Secure Form gates. Soft CI / placeholders are **forbidden** as ship gates.  
 > **Language:** Generic factory terms only (no title-specific hero IDs).  

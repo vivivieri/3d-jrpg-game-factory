@@ -66,5 +66,6 @@ Animation GO requires **mid-stride** walk and idle plates — not bind-pose or A
 | Doc | Role |
 |-----|------|
 | [AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md) | Industrial AI generation SOP — all art/audio tracks |
+| [FACTORY_NON_ART_BEST_PRACTICES.md](./FACTORY_NON_ART_BEST_PRACTICES.md) | Non-art tracks (story, GD, schema, locale, handoff, QA, publish, live ops, PM, Tech) |
 | [FACTORY_MASTER_PLAN.md](./FACTORY_MASTER_PLAN.md) §3.7, §4.1, §19 | Laws + promoted lessons |
 | [team-knowledge/README.md](./team-knowledge/README.md) | Archived source detail for skills above |
