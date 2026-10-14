@@ -4,7 +4,7 @@
 **Product owner:** Stephen Chow  
 **Orchestration mouthpiece:** Grok Bot  
 **Audience:** Stephen + Grok Bot design/docs/art/QA team + Cursor 3.0 PM game.dev factory  
-**Updated:** 2026-10-14 (HKT) — added schema stub, DoD, risks, acceptance, security, naming, telemetry, open decisions
+**Updated:** 2026-10-14 (HKT) — §19 prior-manufactory lessons; §3.7/§4.1 3D pipeline; A4 → `ART_FACTORY_SOP.md` + team-knowledge skills
 
 ---
 
@@ -207,6 +207,20 @@ handoff:
 
 Placeholders are internal art-factory tools only — never ship gates.
 
+**Image gen:** draft-only under Art Factory Lead GO — not locked ship art without AD eyes-on.
+
+**3D character pipeline (factory order):** text/concept brief → 2D draft (direction GO) → AI mesh draft (Tripo-class; credit-aware) → **remesh / retopo / UV before rig** → prerig check → rig → retarget presets (`idle`, `walk`, …) → Blender (real meters, apply transforms, weight peel, **cloth/coat proximity**, LODs) → export **GLB** → Godot **mid-stride** plates (walk + idle at 25/50/75%, front + side) → [game-ready checklist](team-knowledge/skills/game-ready-3d-guideline/SKILL.md) → **Art Lead GO/NO + why**.
+
+| Guard | Rule |
+|-------|------|
+| Remesh timing | **Never remesh after rig** — destroys bones, weights, bindings |
+| Ship tier | Never ship concept mesh, gait-reference mesh, or greybox as field hero |
+| Live path | One live asset path per hero/prop; alternates stay **concept-only** |
+| AI 3D | Draft until game-ready checklist + plates + Art Lead GO |
+| External anim/audio HQ | Mixamo / Adobe / Freesound full WAV → human Secure Form only (§4.1, §19) |
+
+**Track A4 seed SOP:** [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) indexes five skill folders under `docs/team-knowledge/skills/` (`ai3d-to-godot-pipeline`, `game-ready-3d-guideline`, `coat-hero-anim-polish`, `mixamo-adobe-gate`, `freesound-full-wav-1to1`).
+
 ### 3.8 Game factory — Cursor 3.0
 
 | Item | Spec |
@@ -251,7 +265,7 @@ Industrial defaults for a multi-title factory. Map **one primary tool family per
 | **1. Story / narrative** | Docs + YAML beat/dialogue SSOT; research + PD clearance | Engine / game.dev |
 | **2. Game design / data** | YAML/JSON schemas + validators; spreadsheet optional (tables → export YAML) | Live engine authoring as SSOT |
 | **3. Art 2D** | Concept/UI (Figma or equivalent for UI SSOT); image gen **draft only** under AD GO | Locked ship art without AD GO; gen as sole final |
-| **4. Art 3D / anim** | AI mesh (Tripo-class) → remesh/retopo → Blender (weights/LODs/export) → game-ready GLB; Mixamo/Adobe **only** behind human Secure Form if used | Dual live asset paths; unattended paid Mixamo/Adobe |
+| **4. Art 3D / anim** | Concept/text → 2D draft → AI mesh (Tripo-class) → **remesh/retopo/UV before rig** → Blender weights/LODs/cloth proximity → GLB → mid-stride Godot plates → Art Lead GO/NO+why; [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) + `team-knowledge/skills/*`; Mixamo/Adobe **only** Stephen 1:1 Secure Form if used | Remesh **after** rig; dual live paths; concept/gait-ref as field hero; unattended paid Mixamo/Adobe; HQ-preview as full WAV |
 | **5. Audio** | VO (ElevenLabs-class or recorded) + BGM/SFX library + **license ledger**; DAW/mix optional; Freesound-style HQ→full WAV needs **human login** | Unlicensed banks; bot-owned paid logins |
 | **6. Game engine** | **Godot 4.x 3D** (default): short JRPG + stream-friendly (light footprint, open license, fast iterate, handoff→build clarity) | Cursor inventing design/art; second parallel engine tip |
 | **7. Game.dev automation** | Cursor 3.0 PM factory; CI for schema/asset refs; git dual or single tip (**Tech decides**) | Design/art/lore invention inside Cursor |
@@ -260,7 +274,9 @@ Industrial defaults for a multi-title factory. Map **one primary tool family per
 | **10. Stream / publish** | Platform packaging **TBD by Stephen**; perf budget defined once | Undefined perf / packaging without owner |
 | **11. Orchestration** | Grok Bot team for design/art/QA; **humans** for paid license / sign-in | Agents on paid license or Secure Form logins |
 
-**3D path law:** Single live path only (AI mesh → remesh/retopo → Blender → GLB). Abandon dual live paths.
+**3D path law:** Single live path only (AI mesh draft → remesh/retopo/UV **before** rig → Blender polish → GLB → plates → GO). Abandon dual live paths; fix jacketed cloth / coat proximity in weights — do not maintain a second “live” mesh variant.
+
+**Anim evidence law:** Locomotion GO requires mid-stride walk + idle plates in-engine — not bind-pose or A-pose stand-ins.
 
 **Cursor law:** Cursor 3.0 agents implement **against frozen handoff only**.
 
@@ -372,7 +388,7 @@ Overview kit steps → tracks:
 | A1 | This document + phase/R&R/rules adopted | Kit baseline GO |
 | A2 | Content schema `v1` (YAML/JSON) + validators | Schema GO |
 | A3 | Storyboard → MASTER_ASSET_LIST → handoff pack templates | Template GO |
-| A4 | Art factory SOP (2D/3D/anim/VO/BGM) + GO/NO reason log format | Art SOP GO |
+| A4 | [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) (seed: `team-knowledge/skills/` ×5) + GO/NO reason log format | Art SOP GO |
 | A5 | Cursor 3.0 handoff contract + smoke consumer checklist | Contract GO |
 | A6 | QA matrices (task / phase / UAT / release) | QA kit GO |
 | A7 | Multi-country locale + stream packaging checklist | Locale/stream kit GO |
@@ -602,12 +618,102 @@ List only (schema TBD at A6/A7):
 
 | Field | Value |
 |-------|-------|
-| Path | `/workspace/factory-kit/FACTORY_MASTER_PLAN.md` |
+| Path | `docs/FACTORY_MASTER_PLAN.md` |
 | Version | v1 |
-| **Updated** | 2026-10-14 (HKT) — schema stub, DoD, risk register, first-SKU acceptance, security, naming, telemetry; open decisions expanded; §§10–18 |
+| **Updated** | 2026-10-14 (HKT) — §19 prior-manufactory lessons (genericized); §3.7/§4.1 3D pipeline + guards; A4 linked to `ART_FACTORY_SOP.md` + team-knowledge skills |
 | **Supersedes** | `JRPG_AUTO_FACTORY_V0.md` (aka Overview / FACTORY_OVERVIEW) and `IMPLEMENTATION_PLAN_AND_GD_ARCHITECTURE.md` — this file is the **single SSOT plan** |
 | Change control | PM + Tech Lead propose; Stephen approves objective/rule changes |
-| Next kit action | Track A2 — content schema `v1` + validators |
+| Next kit action | Track A2 — content schema `v1` + validators (A4 seed SOP now linked — flesh validators against art pack contract as A2/A5 mature) |
+
+---
+
+## 19. Lessons from prior manufactory (genericized)
+
+Promoted from `docs/team-knowledge/` (archived prior-team pack). **This section is SSOT** for factory operating lessons; the archive retains step-by-step skill detail. No title-specific hero IDs or SKU coupling — keep the *lesson*, not the old SKU.
+
+### 19.1 Authority, milestones, and latch
+
+| Lesson | Factory rule |
+|--------|----------------|
+| One live milestone | Only the board `issue_pack_ref` is live per SKU — never stamp every pack as live |
+| One authority chain | BOOT order wins; indexes/README only point at it |
+| Tip latch | After GO/NO, update tip/hash before next craft; Grok Bot latches once |
+| No dual ship paths | One hero / one asset path live; concept and gait-reference meshes stay **concept-only** |
+| Stephen ↔ Grok Bot | Day-to-day product talk is Stephen ↔ Grok Bot; role agents report through Grok Bot |
+| STOP | STOP parks entire team craft/CAPA until Stephen lifts |
+
+### 19.2 Arts, quality, and gates
+
+| Lesson | Factory rule |
+|--------|----------------|
+| Arts-before-dev | Full art/audio GO in docs before Cursor game factory starts |
+| Full GO/NO only | Soft CI, CONDITIONAL, greybox-as-ship forbidden as exit gates |
+| Why on every artistic gate | Art / Audio / Design GO/NO logs a short **why** |
+| No paper greens | QA evidence = real build/runtime play or video; art = real plates where applicable |
+| AI 3D is draft | Generative mesh stays draft until game-ready checklist + Godot plates + **Art Lead GO** |
+| Image gen | Draft-only under Art Lead GO — not sole final ship art |
+
+### 19.3 3D / animation craft (proven failure modes)
+
+| Lesson | Factory rule |
+|--------|----------------|
+| Remesh before rig | Remesh / retopo / UV **before** animate; **never remesh after rig** |
+| Mid-stride plates | Walk + idle GO needs in-engine plates at stride — not A-pose or bind-pose |
+| Cloth / coat proximity | Jacketed cloth clipping/shred is a known anim fail class — fix weights in Blender; do not dual-live a second mesh “variant” |
+| Single live GLB path | Prefer solid Blender polish on the locked ship mesh over new AI spend when identity is locked |
+| Concept ≠ ship | Never tip-import or field-ship concept or gait-reference binaries |
+
+Skill detail: `team-knowledge/skills/ai3d-to-godot-pipeline`, `game-ready-3d-guideline`, `coat-hero-anim-polish` (genericized jacket lesson).
+
+### 19.4 Factory automation and docs
+
+| Lesson | Factory rule |
+|--------|----------------|
+| Game factory IDLE | Cursor 3.0 PM factory runs only when Stephen says restart |
+| Idle-safe docs sync | After PM+Tech PASS, doc-only sync may auto-merge without re-asking Stephen |
+| Cite leaf docs | One tool matrix; strip thin TOC boilerplate |
+| Output contract | Every handoff: `status · why · paths · next · blocked_on` — reject incomplete exits |
+
+Fields (handoff to Grok Bot → Stephen):
+
+| Field | Meaning |
+|-------|---------|
+| `status` | `GO` / `NO` / `IDLE` / `BLOCKED` |
+| `why` | Required for GO/NO |
+| `paths` | Tip/doc/asset paths touched |
+| `next` | Single next action if any |
+| `blocked_on` | `license` / `sign-in` / `Stephen` / empty |
+
+Forbidden in outputs: Soft CI, CONDITIONAL-as-PASS, inventing a second live pack, quiet craft that contradicts the last latch.
+
+### 19.5 Human-only gates (legal / paid / sign-in)
+
+| Lesson | Factory rule |
+|--------|----------------|
+| Paid license & legal | Stephen (or designated human counsel) — not agents |
+| Mixamo / Adobe | Animation download/login = **Stephen 1:1 Secure Form** only; no group-room workaround |
+| Freesound full WAV | Original full WAV after HQ preview GO still needs human login — **do not** tip HQ-preview as full WAV |
+| Plan B commissions | Paid commission / alternate vendor paths stay **off** unless Stephen explicitly opens them |
+
+Skill detail: `team-knowledge/skills/mixamo-adobe-gate`, `freesound-full-wav-1to1`.
+
+### 19.6 QA and content
+
+| Lesson | Factory rule |
+|--------|----------------|
+| Real UAT | Playthrough or recorded video on real build — aligns with §3.9 |
+| Folktale clearance | Public-domain or cleared before art spend (§3.10) |
+| MASTER_ASSET_LIST | No assets invented outside the list at Design GO |
+
+### 19.7 Where to read more
+
+| Need | Location |
+|------|----------|
+| Promoted laws (this section) | §6 Hard operating rules + §19 |
+| Art pipeline index | [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) |
+| Step-by-step craft | `docs/team-knowledge/skills/*/SKILL.md` |
+| Standing rules archive | `docs/team-knowledge/STANDING_RULES.md` |
+| Role R&R nuance | `docs/team-knowledge/roles/` (mostly mirrored in §5) |
 
 ---
 

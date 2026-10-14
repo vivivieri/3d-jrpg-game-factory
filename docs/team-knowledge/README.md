@@ -6,6 +6,8 @@
 
 This folder freezes **skills + role knowledge** so a future factory team can be rebuilt without the old chat seats.
 
+**SSOT promotion:** Operating lessons distilled from this pack live in the factory Master Plan as **[§19 Lessons from prior manufactory (genericized)](../FACTORY_MASTER_PLAN.md#19-lessons-from-prior-manufactory-genericized)**. That section is the promoted SSOT; this archive remains the **source detail** (skills, role briefs, standing rules verbatim).
+
 ## Contents
 
 | Path | What |
