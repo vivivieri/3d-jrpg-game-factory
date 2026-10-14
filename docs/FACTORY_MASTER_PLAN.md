@@ -4,7 +4,7 @@
 **Product owner:** Stephen Chow  
 **Orchestration mouthpiece:** Grok Bot  
 **Audience:** Stephen + Grok Bot design/docs/art/QA team + Cursor 3.0 PM game.dev factory  
-**Updated:** 2026-10-14 (HKT) — added §4 Technical stack (right tool, right area)
+**Updated:** 2026-10-14 (HKT) — added schema stub, DoD, risks, acceptance, security, naming, telemetry, open decisions
 
 ---
 
@@ -433,22 +433,178 @@ Overview kit steps → tracks:
 
 ---
 
-## 10. Open decisions
+## 10. Content schema v1 stub
 
-- Merge Story + GD into one seat?
-- Keep AD and Audio separate under Art Factory Lead?
-- Monetization: premium-only vs later IAP (**default: premium-only until stated**) — also §4.3
-- Engine confirm / git tip / stream packaging — see **§4.3**
+Illustrative YAML only — **no live SKU data**. Machines consume this shape; prose elsewhere explains.
+
+```yaml
+# schema_version: "1.0.0"
+tale:
+  sku_id: "sku_<country>_<tale_slug>_v<semver>"
+  country: "<ISO>"
+  source_name: "<canonical tale>"
+  clearance: "PD|licensed"
+  target_play_minutes: { min: 0, max: 0 }
+  markets: ["<stream/store>"]
+
+beats:
+  - id: "B001"
+    chapter: 1
+    weight: 1.0
+    systems: ["INT_TALK", "INT_GATE"]
+    scene: "SCN_01"
+    art_refs: ["storyboard/B001"]
+    dialogue_refs: ["dlg.B001.*"]
+    locale_keys: ["dlg.B001.*"]
+
+gates:
+  - id: "G_CH1_END"
+    type: "story|combat|skill|locale"
+    requires: ["B001"]
+    unlocks: ["B002"]
+
+scenes:
+  - id: "SCN_01"
+    pois: [{ id: "POI_A", systems: ["INT_EXAMINE"] }]
+
+encounters:
+  - id: "E_CH1_BOSS"
+    beat: "B00N"
+    kit: "kit_standard_jrpg"
+    budget_minutes: 3
+
+dialogue:
+  - key: "dlg.B001.open"
+    speaker: "<role_id>"
+    lines: ["<locale_key>"]
+
+handoff.lock:
+  art_pack_hash: "<sha>"
+  design_pack_hash: "<sha>"
+  schema_version: "1.0.0"
+  tip: "<git tip or content tip id>"
+  locked_at: "<ISO8601>"
+```
+
+**Rules:** Cursor 3.0 reads SSOT + locked art only. Schema bumps need Tech Lead GO. See also §3.6.
 
 ---
 
-## 11. Document control
+## 11. Definition of Done per phase
+
+| Phase | DoD checklist (all required for GO) |
+|-------|-------------------------------------|
+| **Concept** | Country/tale shortlist logged; clearance PD or licensed path; ratings path started; license ledger row; length envelope; Concept pack GO logged |
+| **Preprod** | Story bible + beat sheet GO; storyboard frames cite System IDs; GD pillars + gates/encounters filled; MASTER_ASSET_LIST draft; schema draft; Design pack GO |
+| **Art** | 2D/3D/anim/VFX/VO/BGM packs complete; locale text/VO/UI/fonts for target markets; reason-logged Art pack GO + Locale GO; **full lock before game.dev** |
+| **Game prod** | Handoff.lock present (hashes + schema_version); Cursor consumes frozen pack only; playable build tip; Build tip GO |
+| **QA** | Task + phase regression green; real UAT play/video through beat path; 0 orphan frames; soft-lock hunt done; Phase QA GO |
+| **Release** | Stream packaging; store listings; ratings filed; locale critical = 0; Release GO (Stephen) |
+| **Live** | Telemetry live; crash/session health within band; hotfix vs new-tale queue clear; Live health GO |
+
+---
+
+## 12. Risk register
+
+| Risk | Likelihood | Impact | Mitigation |
+|------|------------|--------|------------|
+| **Clearance** (rights/PD fail late) | M | H | Clearance GO before Preprod; human license ledger; no tale invent |
+| **Art slip** (pack incomplete at lock) | M | H | Arts-before-dev; full GO/NO only; no greybox ship |
+| **Stream cert** (packaging/perf reject) | M | H | Perf budget at Design/Tech GO; Stephen owns platform target |
+| **Locale gap** (critical string/VO miss) | M | H | Locale GO blocks Release; string/VO slot checklist |
+| **Dual-path** (two live asset or tip truths) | L | H | Single 3D path; one live milestone; one authority chain |
+| **Soft CI drift** (CONDITIONAL as ship gate) | M | H | Phase law: Soft CI / CONDITIONAL / greybox-as-ship forbidden |
+
+---
+
+## 13. First-SKU acceptance criteria
+
+Measurable bars for **Release GO** (Track B6). Paper greens = NO.
+
+| Criterion | Pass bar |
+|-----------|----------|
+| **Completion band** | Median UAT completion within SKU `target_play_minutes` min–max |
+| **Orphan frames** | **0** storyboard frames without System ID at Design GO and at Release |
+| **Locale critical** | **0** missing critical strings/VO for target markets |
+| **UAT evidence** | Real play **or** recorded video through primary beat path required |
+| **Handoff lock** | `handoff.lock` hashes match shipped art/design packs |
+| **Crash / soft-lock** | No known soft-lock on primary path; crash-free UAT session |
+
+---
+
+## 14. Security / secrets
+
+| Rule | Spec |
+|------|------|
+| **Paid API keys** | Humans hold and rotate; agents never store or own paid keys |
+| **Secure Form / paid logins** | Mixamo, Adobe, Freesound HQ, store consoles — **human login only**; agents never own these sessions |
+| **License ledger** | Every paid/cleared asset logged (source, scope, expiry, owner); human maintains |
+| **Handoff secrets** | No credentials in YAML/JSON SSOT or art packs |
+| **Factory restart / STOP** | Stephen (or designated human) only |
+
+---
+
+## 15. Asset naming + folder convention
+
+| Token | Pattern | Example |
+|-------|---------|---------|
+| SKU | `sku_<country>_<tale_slug>_v<semver>` | `sku_jp_example_v0.1.0` |
+| Beat | `B###` | `B001` |
+| Scene | `SCN_##` | `SCN_01` |
+| Encounter | `E_<chapter>_<role>` | `E_CH1_BOSS` |
+| Gate | `G_<scope>` | `G_CH1_END` |
+| Dialogue key | `dlg.<beat>.*` | `dlg.B001.open` |
+
+**Art pack layout (sketch):**
+
+```
+art_packs/<sku_id>/
+  2d/          # UI, icons, storyboard
+  3d/          # characters, props, envs → GLB
+  anim/        # locomotion, combat, cinematics
+  vfx/
+  audio/       # bgm, sfx, vo/<locale>
+  locale/      # fonts, layout variants
+  MANIFEST.yaml
+```
+
+No title-specific hero IDs in baseline names.
+
+---
+
+## 16. Telemetry events
+
+List only (schema TBD at A6/A7):
+
+- `session_start`
+- `beat_enter`
+- `gate_fail`
+- `combat_end`
+- `ending`
+- `crash`
+
+---
+
+## 17. Open decisions
+
+| Decision | Status |
+|----------|--------|
+| **Engine** — confirm Godot 4.x 3D as first-SKU (vs alternate) | Defaulted Godot 4.x 3D; confirm before freeze (§4.2–4.3) |
+| **Git tip** — dual tip vs single tip (design packs vs Cursor builds) | **Undecided** — Tech Lead chooses |
+| **Stream packaging** — platform targets | **Undecided** — Stephen |
+| **Monetization** — premium-only vs later IAP | Defaulted **premium-only** until Stephen states otherwise |
+| Merge Story + GD into one seat? | Undecided |
+| Keep AD and Audio separate under Art Factory Lead? | Undecided |
+
+---
+
+## 18. Document control
 
 | Field | Value |
 |-------|-------|
 | Path | `/workspace/factory-kit/FACTORY_MASTER_PLAN.md` |
 | Version | v1 |
-| **Updated** | 2026-10-14 (HKT) — added §4 Technical stack (right tool, right area); renumbered §§5–11 |
+| **Updated** | 2026-10-14 (HKT) — schema stub, DoD, risk register, first-SKU acceptance, security, naming, telemetry; open decisions expanded; §§10–18 |
 | **Supersedes** | `JRPG_AUTO_FACTORY_V0.md` (aka Overview / FACTORY_OVERVIEW) and `IMPLEMENTATION_PLAN_AND_GD_ARCHITECTURE.md` — this file is the **single SSOT plan** |
 | Change control | PM + Tech Lead propose; Stephen approves objective/rule changes |
 | Next kit action | Track A2 — content schema `v1` + validators |
