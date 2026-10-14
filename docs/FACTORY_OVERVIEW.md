@@ -5,6 +5,8 @@
 **Audience:** Stephen + Grok Bot team  
 **Updated:** 2026-10-14
 
+**Note:** [Master Plan v1](FACTORY_MASTER_PLAN.md) at `docs/FACTORY_MASTER_PLAN.md` is now the **single SSOT plan** for the factory. This Overview remains a short map; use the Master Plan for phases, R&R, rules, and tracks.
+
 ---
 
 ## Objective
