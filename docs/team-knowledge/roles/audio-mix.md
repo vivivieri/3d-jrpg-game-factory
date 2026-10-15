@@ -30,3 +30,15 @@ Every exit uses [OUTPUT_CONTRACT.md](../OUTPUT_CONTRACT.md): `status · why · p
 
 - [AI_ART_BEST_PRACTICES.md](../../AI_ART_BEST_PRACTICES.md) §§9–11 (VO, BGM/SFX)
 - Dialogue keys: [schemas/dialogue.schema.json](../../schemas/dialogue.schema.json)
+- VO slots: [DIALOGUE_VO_LINE_PACK.md](../../templates/DIALOGUE_VO_LINE_PACK.md) · locale: [LOCALE_READINESS_CHECKLIST.md](../../templates/LOCALE_READINESS_CHECKLIST.md)
+
+## Day-run checklist (Master Plan §5.2)
+
+- Do not record VO until Story Lead **script pack GO** and `dlg.*` keys frozen.
+- Map `vo_slot_id` 1:1 to dialogue keys; no post-lock renames without migration.
+- Log audio GO/NO with why; flag non-PD sources in clearance ledger.
+- Human-only Secure Form for paid audio tools (Freesound full WAV, etc.).
+- Mix against dialogue/UI timing from locked line packs.
+- Partner Art Factory Lead on ship gates; do not start engine implementation.
+- Add locale VO paths under `audio/vo/<locale>/` per locale checklist.
+- Escalate paid license needs to Stephen — no agent logins.

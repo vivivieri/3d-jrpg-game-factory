@@ -13,6 +13,21 @@
 | Cloud save | Expect cloud/session resume for stream targets — **implementation TBD** |
 | Offline | Define per SKU at Design/Tech GO if a market requires offline play |
 
+## Per-SKU policy table (fill)
+
+| Policy item | Choice | Notes |
+|-------------|--------|-------|
+| Save granularity | beat / gate / chapter checkpoint | |
+| Primary checkpoint beat ids | | |
+| Autosave: beat enter | on / off | |
+| Autosave: gate pass | on / off | |
+| Autosave: combat end | on / off | |
+| Pause during dialogue | | platform TBD |
+| Pause during combat | | platform TBD |
+| Stream disconnect UX | | no soft-lock on resume |
+| Offline play required? | yes / no / market-specific | Stephen markets TBD |
+| Save blob schema version | ties to `schema_version` | Tech Lead |
+
 ## Checklist (fill per SKU)
 
 - [ ] Save granularity defined (beat / gate / chapter checkpoint)
@@ -21,6 +36,8 @@
 - [ ] Stream disconnect / resume UX specified (no soft-lock on resume)
 - [ ] Save migration policy tied to `schema_version` bumps (Tech Lead)
 - [ ] No credentials in save blobs or YAML SSOT
+- [ ] `INT_STREAM` beat coverage noted in beat sheet / storyboard
+- [ ] QA spot-check linked in [QA_MATRICES.md](./QA_MATRICES.md) phase regression
 
 ## Forbidden
 

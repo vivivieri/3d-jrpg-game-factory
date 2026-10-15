@@ -1,0 +1,29 @@
+# EXAMPLE ONLY — not CI-validated, not a live SKU.
+# Authors: copy field shapes into a full content pack; run validate.mjs before GO.
+# See docs/templates/README.md and fixtures/content-packs/pass/minimal-pack.yaml.
+
+schema_version: "1.0.0"
+
+tale:
+  sku_id: "sku_xx_example_tale_v0.0.0-example"
+  country: "XX"
+  source_name: "Example folktale (stub)"
+  clearance: "PD"
+  target_play_minutes: { min: 0, max: 0 }
+  markets: ["<stream/store TBD>"]
+
+# Minimal beat columns — expand per docs/templates/STORY_BIBLE_BEAT_SHEET.md
+beats:
+  - id: "B001"
+    chapter: 1
+    weight: 1.0
+    systems: ["INT_TALK"]
+    scene: "SCN_01"
+    locale_keys: ["dlg.B001.open"]
+
+dialogue:
+  - key: "dlg.B001.open"
+    speaker: "role_narrator"
+    lines: ["dlg.B001.open.line1"]
+
+# Intentionally incomplete — do not use as handoff.lock target

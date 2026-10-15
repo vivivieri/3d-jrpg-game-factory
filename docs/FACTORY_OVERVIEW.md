@@ -138,7 +138,8 @@ Full R&R: Master Plan [§5.2](FACTORY_MASTER_PLAN.md#52-full-rr).
 | 8. QA task + phase regression suite | **A6** | Partial |
 | 9. Publish + live ops runbook | **A7** | Partial |
 
-Schemas: [docs/schemas/](schemas/) · validators: `tools/validate-content-pack/` (root [README.md](../README.md)).
+Schemas: [docs/schemas/](schemas/) · validators: `tools/validate-content-pack/` (root [README.md](../README.md)).  
+Fillable kits: [docs/templates/README.md](templates/README.md) (Track A3–A7 — **GO stamps not in templates**).
 
 ---
 

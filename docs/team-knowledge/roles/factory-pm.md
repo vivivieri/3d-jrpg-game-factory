@@ -33,3 +33,15 @@ Every exit uses [OUTPUT_CONTRACT.md](../OUTPUT_CONTRACT.md): `status · why · p
 
 - [FACTORY_NON_ART_BEST_PRACTICES.md](../../FACTORY_NON_ART_BEST_PRACTICES.md) §§14–19 (PM, publish, live ops)
 - [BOARD_SCHEMA.md](../../BOARD_SCHEMA.md)
+- Templates index: [templates/README.md](../../templates/README.md) · [KIT_STATUS.md](../../KIT_STATUS.md)
+
+## Day-run checklist (Master Plan §5.2)
+
+- Enforce one live `issue_pack_ref` — no parallel soft-ship milestones.
+- Update [KIT_STATUS.md](../../KIT_STATUS.md) when Track A landing state changes.
+- Schedule handoff only after Art + Locale GO and lock (arts-before-dev).
+- Keep [STREAM_PACKAGING_CHECKLIST.md](../../templates/STREAM_PACKAGING_CHECKLIST.md) platform rows **TBD** until Stephen picks targets.
+- Coordinate Release checklist with QA — Stephen owns Release GO.
+- Route blockers through Grok Bot latch; no quiet conflicting craft.
+- Propose CAPA when docs drift from [BOOT.md](../../BOOT.md) / Master Plan.
+- Log every milestone exit with output contract fields.

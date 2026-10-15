@@ -2,22 +2,28 @@
 
 **Not a legal compliance claim** — minimum factory bar for multi-country stream SKUs. Expand per market counsel and platform requirements.
 
-## Checklist
+## Per-SKU fillable matrix
 
-| Area | Baseline |
-|------|----------|
-| Subtitles | On by default for voiced dialogue; readable contrast |
-| Text scale | UI supports at least one larger text step where engine UI allows |
-| Color | Avoid sole reliance on red/green for critical gameplay state; document known gaps |
-| Input | Remappable controls where platform and engine support it |
-| Audio | Separate sliders or mix groups for VO / SFX / BGM when applicable |
-| Motion | Note any camera shake / flash; provide reduce option if implemented |
-| Pause | L0 pause-safe expectations — see [L0_SESSION_SAVE_POLICY.md](./L0_SESSION_SAVE_POLICY.md) |
+| Area | Baseline | SKU implementation | known gap | owner |
+|------|----------|-------------------|-----------|-------|
+| Subtitles | On by default for voiced dialogue; readable contrast | | | |
+| Text scale | ≥1 larger UI step where engine allows | | | |
+| Color | No sole red/green for critical state | | | |
+| Input | Remap where platform + engine support | | | |
+| Audio | VO / SFX / BGM separate where applicable | | | |
+| Motion | Shake/flash documented; reduce if implemented | | | |
+| Pause | L0 pause-safe — [L0_SESSION_SAVE_POLICY.md](./L0_SESSION_SAVE_POLICY.md) | | | |
 
-## Evidence at QA
+## Evidence at QA (required — no paper green)
+
+| test | build/tip | evidence path (play or video) | pass/fail | date (HKT) |
+|------|-----------|---------------------------------|-----------|------------|
+| Subtitle legibility on primary beat path | | | | |
+| Text scale step exercised | | | | |
+| Critical combat/state readable without color-only cue | | | | |
 
 - Real UAT or video through primary beat path (Master Plan §6 rule 10)
-- Output contract on accessibility GO/NO: `status · why · paths · next · blocked_on`
+- Output contract on accessibility review: `status · why · paths · next · blocked_on`
 
 ## Forbidden
 

@@ -31,4 +31,16 @@ Every exit uses [OUTPUT_CONTRACT.md](../OUTPUT_CONTRACT.md): `status · why · p
 ## Procedural how-to
 
 - [FACTORY_NON_ART_BEST_PRACTICES.md](../../FACTORY_NON_ART_BEST_PRACTICES.md) §§11–12 (QA, publish packaging checks)
+- Matrices: [QA_MATRICES.md](../../templates/QA_MATRICES.md) · smoke: [HANDOFF_SMOKE_CONSUMER.md](../../templates/HANDOFF_SMOKE_CONSUMER.md)
 - First-SKU acceptance bars: Master Plan §13
+
+## Day-run checklist (Master Plan §5.2)
+
+- Fill build/tip + HKT header on every [QA_MATRICES.md](../../templates/QA_MATRICES.md) evidence pack.
+- Run `npm run validate:pass` (or locked pack path) in phase regression — schema failures block phase GO.
+- Reject paper greens; require play or runtime video for UAT rows.
+- Exercise fail/retry paths on combat and gates — not happy-path only.
+- Spot [ACCESSIBILITY_BASELINE.md](../../templates/ACCESSIBILITY_BASELINE.md) with in-build evidence.
+- Release rows: cross-check [RATINGS_CONTENT_MATRIX.md](../../templates/RATINGS_CONTENT_MATRIX.md) vs build before Release QA.
+- Block Soft CI / CONDITIONAL-as-PASS; escalate defects with artifact paths.
+- Post-release: feed signals into [LIVE_OPS_HOTFIX_TALE_QUEUE.md](../../templates/LIVE_OPS_HOTFIX_TALE_QUEUE.md) triage.

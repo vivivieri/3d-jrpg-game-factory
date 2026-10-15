@@ -32,3 +32,15 @@ Every exit uses [OUTPUT_CONTRACT.md](../OUTPUT_CONTRACT.md): `status · why · p
 
 - [AI_ART_BEST_PRACTICES.md](../../AI_ART_BEST_PRACTICES.md) · [ART_FACTORY_SOP.md](../../ART_FACTORY_SOP.md)
 - Storyboard / beat refs tie to [schemas/storyboard-frame.schema.json](../../schemas/storyboard-frame.schema.json)
+- Scope list: [MASTER_ASSET_LIST.md](../../templates/MASTER_ASSET_LIST.md)
+
+## Day-run checklist (Master Plan §5.2)
+
+- Fulfill only rows on MASTER_ASSET_LIST at **ship** tier — no unlisted heroes/props.
+- One live ship mesh per character; concept/gait refs stay concept-only.
+- Require mid-stride walk/idle plates before locomotion GO — not bind-pose stand-ins.
+- Block game factory start until art pack full GO + handoff lock.
+- Log every artistic GO/NO with **why** (output contract).
+- Tie frame `art_refs` to storyboard index — partner Design Lead on orphans.
+- No greybox or concept mesh as field ship tier.
+- VO/BGM work follows Story Lead script pack GO (`dlg.*` lock).
