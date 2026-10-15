@@ -34,3 +34,15 @@ Every exit uses [OUTPUT_CONTRACT.md](../OUTPUT_CONTRACT.md): `status · why · p
 
 - [FACTORY_NON_ART_BEST_PRACTICES.md](../../FACTORY_NON_ART_BEST_PRACTICES.md) §§3, 5–7 (storyboard/GD, combat, asset list)
 - Content shape: [schemas/content-pack.schema.json](../../schemas/content-pack.schema.json) (validate before GO)
+- Templates: [STORYBOARD_FRAME_INDEX.md](../../templates/STORYBOARD_FRAME_INDEX.md), [COMBAT_GATES_ENCOUNTER_BUDGET.md](../../templates/COMBAT_GATES_ENCOUNTER_BUDGET.md), [MASTER_ASSET_LIST.md](../../templates/MASTER_ASSET_LIST.md)
+
+## Day-run checklist (Master Plan §5.2)
+
+- Lint storyboard frames for **0 orphans** (`systems[]` non-empty) per Master Plan §3.4.
+- Bind beats → `INT_*` in content pack; gates/encounters in [COMBAT_GATES_ENCOUNTER_BUDGET.md](../../templates/COMBAT_GATES_ENCOUNTER_BUDGET.md).
+- Keep combat minutes inside beat tags — reject grind padding (NON_ART §6).
+- Maintain [MASTER_ASSET_LIST.md](../../templates/MASTER_ASSET_LIST.md) as scope ceiling; no unlisted ship assets.
+- Validate YAML against schemas before Design slice review (`tools/validate-content-pack/`).
+- Co-sign length band with Story Lead; do not own `dlg.*` script text.
+- Log Design GO/NO with **why** via output contract.
+- Block greybox-as-ship or parallel soft-ship tracks.

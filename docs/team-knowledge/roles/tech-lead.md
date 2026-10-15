@@ -35,3 +35,15 @@ Every exit uses [OUTPUT_CONTRACT.md](../OUTPUT_CONTRACT.md): `status · why · p
 - [FACTORY_NON_ART_BEST_PRACTICES.md](../../FACTORY_NON_ART_BEST_PRACTICES.md) §8 (data model / schema / validators)
 - [BOARD_SCHEMA.md](../../BOARD_SCHEMA.md) · [schemas/board.issue_pack.schema.json](../../schemas/board.issue_pack.schema.json)
 - [ART_FACTORY_SOP.md](../../ART_FACTORY_SOP.md) → skills for enforceable 3D/anim gates
+- Handoff smoke: [HANDOFF_SMOKE_CONSUMER.md](../../templates/HANDOFF_SMOKE_CONSUMER.md) · lock schema: [handoff-lock.schema.json](../../schemas/handoff-lock.schema.json)
+
+## Day-run checklist (Master Plan §5.2)
+
+- Keep `schema_version` and JSON Schema in [docs/schemas/](../../schemas/) aligned with validators.
+- CI parity: local `npm run validate:pass` matches GitHub workflow.
+- Run [HANDOFF_SMOKE_CONSUMER.md](../../templates/HANDOFF_SMOKE_CONSUMER.md) before authorizing Cursor intake on a frozen pack.
+- Fail on hash mismatch — never quiet-edit `handoff.lock`.
+- Document save migration notes when bumping schema (see [L0_SESSION_SAVE_POLICY.md](../../templates/L0_SESSION_SAVE_POLICY.md)).
+- **Schema GO** is human — validators on disk ≠ stamped GO.
+- Git tip model (dual vs single): remain undecided until Stephen authorizes policy.
+- Log output contract on schema/handoff exits.
