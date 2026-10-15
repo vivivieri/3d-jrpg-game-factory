@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vivivieri.github.io/3d-jrpg-game-factory/schemas/tale.schema.json",
+  "title": "Tale / SKU header",
+  "type": "object",
+  "required": [
+    "sku_id",
+    "country",
+    "source_name",
+    "clearance",
+    "target_play_minutes",
+    "markets"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "sku_id": { "$ref": "common.defs.json#/$defs/skuId" },
+    "country": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 3,
+      "description": "ISO country code"
+    },
+    "source_name": { "type": "string", "minLength": 1 },
+    "clearance": { "$ref": "common.defs.json#/$defs/clearance" },
+    "target_play_minutes": { "$ref": "common.defs.json#/$defs/playMinutes" },
+    "markets": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "description": "Stream/store targets — owner decides; placeholder strings allowed in drafts"
+    },
+    "pillars": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

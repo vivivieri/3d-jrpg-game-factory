@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vivivieri.github.io/3d-jrpg-game-factory/schemas/board.issue_pack.schema.json",
+  "title": "Board issue pack (one live milestone per SKU)",
+  "type": "object",
+  "required": [
+    "sku_id",
+    "issue_pack_ref",
+    "phase",
+    "status",
+    "paths",
+    "blocked_on"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "sku_id": { "$ref": "common.defs.json#/$defs/skuId" },
+    "issue_pack_ref": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Single live pack pointer for this SKU"
+    },
+    "phase": {
+      "type": "string",
+      "enum": [
+        "Concept",
+        "Pre-production",
+        "Art production",
+        "Game production",
+        "QA",
+        "Release",
+        "Live ops"
+      ]
+    },
+    "status": { "$ref": "common.defs.json#/$defs/outputStatus" },
+    "why": { "type": "string" },
+    "paths": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "next": { "type": "string" },
+    "blocked_on": { "$ref": "common.defs.json#/$defs/blockedOn" }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "status": { "enum": ["GO", "NO"] } },
+        "required": ["status"]
+      },
+      "then": { "required": ["why"] }
+    }
+  ]
+}

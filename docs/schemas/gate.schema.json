@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vivivieri.github.io/3d-jrpg-game-factory/schemas/gate.schema.json",
+  "title": "Gate",
+  "type": "object",
+  "required": ["id", "type", "requires", "unlocks"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "$ref": "common.defs.json#/$defs/gateId" },
+    "type": { "$ref": "common.defs.json#/$defs/gateType" },
+    "requires": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "common.defs.json#/$defs/beatId" }
+    },
+    "unlocks": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "common.defs.json#/$defs/beatId" }
+    }
+  }
+}

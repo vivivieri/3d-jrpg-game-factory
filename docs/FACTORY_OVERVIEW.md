@@ -1,8 +1,9 @@
 # 3D JRPG Auto Game Factory — High-Level Plan (v0)
 
 **Status:** Draft for future titles (not Tides of Urashima)  
-**Owner mouthpiece:** Grok Bot  
-**Audience:** Stephen + Grok Bot team  
+**Product orchestration mouthpiece:** Grok Bot (day-to-day latch)  
+**Factory-kit craft (this repo):** Game Factory (Cursor Cloud Agent) — schemas, validators, idle-safe docs  
+**Audience:** Stephen + Grok Bot team + Game Factory on kit PRs  
 **Updated:** 2026-10-14
 
 **Note:** [Master Plan v1](FACTORY_MASTER_PLAN.md) at `docs/FACTORY_MASTER_PLAN.md` is now the **single SSOT plan** for the factory. This Overview remains a short map; use the Master Plan for phases, R&R, rules, and tracks.
@@ -91,7 +92,8 @@ Clearance → Story → Storyboard / GD / Plan → Art factory → Locale
 | Seat | Owns | Does not own |
 |------|------|----------------|
 | **Stephen** | Tale/country pick, markets, paid licenses, STOP / restart factories | Day-to-day craft |
-| **Grok Bot** | Mouthpiece; single latch; block dual truths | Quiet conflicting craft |
+| **Grok Bot** | Product mouthpiece; single latch; block dual truths | Quiet conflicting craft |
+| **Game Factory** | Factory-kit craft in this repo (schemas, validators, docs) | Product latch; engine code |
 | **Story Lead** | PD clearance log, story bible, beats, length | Engine code, art GO |
 | **Game Design Lead** | Systems, combat/gates, MASTER_ASSET_LIST, plan | Artistic GO |
 | **Art Factory Lead** | 2D/3D/anim + VO/BGM; GO/NO + why | Starting game factory |

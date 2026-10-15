@@ -22,7 +22,7 @@
 13. **Cite leaf docs**, not TOC hops; one tool matrix; strip thin pointer boilerplate.
 
 ## Communication
-14. **Stephen ↔ Grok Bot only** for day-to-day; roles report through Grok Bot.
+14. **Stephen ↔ Grok Bot** for day-to-day **product** craft; roles report through Grok Bot for that latch. **Stephen ↔ Game Factory** for factory-kit work in this repo (schemas/validators/docs CAPAs). Roles do not open parallel truths with Stephen.
 15. **Output contract** on every handoff (see `OUTPUT_CONTRACT.md`).
 16. **STOP means STOP** — entire team parks craft/CAPA until Stephen lifts.
 

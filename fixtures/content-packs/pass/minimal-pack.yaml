@@ -1,0 +1,71 @@
+schema_version: "1.0.0"
+
+tale:
+  sku_id: "sku_xx_example_tale_v0.1.0"
+  country: "XX"
+  source_name: "Example folktale (fixture only)"
+  clearance: "PD"
+  target_play_minutes: { min: 30, max: 45 }
+  markets: ["<stream/store TBD>"]
+  pillars:
+    - tale_fidelity
+    - story_paced_length
+
+beats:
+  - id: "B001"
+    chapter: 1
+    weight: 1.0
+    systems: ["INT_TALK", "INT_GATE"]
+    scene: "SCN_01"
+    art_refs: ["storyboard/B001"]
+    dialogue_refs: ["dlg.B001.open"]
+    locale_keys: ["dlg.B001.open"]
+  - id: "B002"
+    chapter: 1
+    weight: 1.0
+    systems: ["INT_COMBAT"]
+    scene: "SCN_01"
+
+gates:
+  - id: "G_CH1_END"
+    type: "story"
+    requires: ["B001"]
+    unlocks: ["B002"]
+
+scenes:
+  - id: "SCN_01"
+    pois:
+      - id: "POI_A"
+        systems: ["INT_EXAMINE"]
+
+encounters:
+  - id: "E_CH1_BOSS"
+    beat: "B002"
+    kit: "kit_standard_jrpg"
+    budget_minutes: 3
+
+dialogue:
+  - key: "dlg.B001.open"
+    speaker: "role_narrator"
+    lines: ["dlg.B001.open.line1"]
+
+progression:
+  endings: ["END_CANON"]
+
+storyboard:
+  - frame_id: "FRM_B001_A"
+    beat: "B001"
+    scene: "SCN_01"
+    systems: ["INT_TALK"]
+    art_refs: ["storyboard/B001"]
+  - frame_id: "FRM_B002_A"
+    beat: "B002"
+    scene: "SCN_01"
+    systems: ["INT_COMBAT"]
+
+handoff.lock:
+  art_pack_hash: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  design_pack_hash: "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  schema_version: "1.0.0"
+  tip: "fixture-tip-pass"
+  locked_at: "2026-10-15T12:00:00Z"

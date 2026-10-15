@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vivivieri.github.io/3d-jrpg-game-factory/schemas/content-pack.schema.json",
+  "title": "Factory content pack root",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "tale",
+    "beats",
+    "gates",
+    "scenes",
+    "encounters",
+    "dialogue",
+    "progression",
+    "storyboard",
+    "handoff.lock"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "$ref": "common.defs.json#/$defs/semver" },
+    "tale": { "$ref": "tale.schema.json" },
+    "beats": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "beat.schema.json" }
+    },
+    "gates": {
+      "type": "array",
+      "items": { "$ref": "gate.schema.json" }
+    },
+    "scenes": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "scene.schema.json" }
+    },
+    "encounters": {
+      "type": "array",
+      "items": { "$ref": "encounter.schema.json" }
+    },
+    "dialogue": {
+      "type": "array",
+      "items": { "$ref": "dialogue.schema.json" }
+    },
+    "progression": { "$ref": "progression.schema.json" },
+    "storyboard": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "storyboard-frame.schema.json" }
+    },
+    "handoff.lock": { "$ref": "handoff-lock.schema.json" }
+  }
+}

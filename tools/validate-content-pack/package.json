@@ -1,0 +1,19 @@
+{
+  "name": "@vivivieri/validate-content-pack",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Factory content pack validator (JSON Schema + graph checks)",
+  "type": "module",
+  "bin": {
+    "validate-content-pack": "./validate.mjs"
+  },
+  "scripts": {
+    "validate": "node validate.mjs",
+    "test": "node validate.mjs ../../fixtures/content-packs/pass/minimal-pack.yaml && node validate.mjs ../../fixtures/content-packs/fail/orphan-and-handoff.yaml; test $? -ne 0"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "yaml": "^2.6.0"
+  }
+}

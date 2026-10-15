@@ -1,0 +1,11 @@
+{
+  "name": "3d-jrpg-game-factory",
+  "private": true,
+  "description": "Multi-title 3D JRPG factory kit (docs, schemas, validators)",
+  "scripts": {
+    "validate": "npm run validate --prefix tools/validate-content-pack",
+    "validate:pass": "node tools/validate-content-pack/validate.mjs fixtures/content-packs/pass/minimal-pack.yaml",
+    "validate:fail": "node tools/validate-content-pack/validate.mjs fixtures/content-packs/fail/orphan-and-handoff.yaml",
+    "test:validators": "npm run validate:pass && npm run validate:fail; test $? -eq 1"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vivivieri.github.io/3d-jrpg-game-factory/schemas/storyboard-frame.schema.json",
+  "title": "Storyboard frame",
+  "type": "object",
+  "required": ["frame_id", "beat", "scene", "systems"],
+  "additionalProperties": true,
+  "properties": {
+    "frame_id": { "type": "string", "pattern": "^FRM_[A-Z0-9_]+$" },
+    "beat": { "$ref": "common.defs.json#/$defs/beatId" },
+    "scene": { "$ref": "common.defs.json#/$defs/sceneId" },
+    "systems": {
+      "type": "array",
+      "items": { "$ref": "common.defs.json#/$defs/systemId" }
+    },
+    "art_refs": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

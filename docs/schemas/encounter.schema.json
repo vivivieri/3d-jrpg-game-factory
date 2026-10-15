@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vivivieri.github.io/3d-jrpg-game-factory/schemas/encounter.schema.json",
+  "title": "Encounter",
+  "type": "object",
+  "required": ["id", "beat", "kit", "budget_minutes"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "$ref": "common.defs.json#/$defs/encounterId" },
+    "beat": { "$ref": "common.defs.json#/$defs/beatId" },
+    "kit": { "type": "string", "minLength": 1 },
+    "budget_minutes": { "type": "number", "exclusiveMinimum": 0 }
+  }
+}

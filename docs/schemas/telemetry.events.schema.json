@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vivivieri.github.io/3d-jrpg-game-factory/schemas/telemetry.events.schema.json",
+  "title": "Telemetry event envelope (factory baseline)",
+  "description": "Event names from Master Plan §16. Store destinations and SDK wiring are platform TBD (Stephen / Tech).",
+  "type": "object",
+  "required": ["event", "sku_id", "occurred_at"],
+  "additionalProperties": false,
+  "properties": {
+    "event": {
+      "type": "string",
+      "enum": [
+        "session_start",
+        "beat_enter",
+        "gate_fail",
+        "combat_end",
+        "ending",
+        "crash"
+      ]
+    },
+    "sku_id": { "$ref": "common.defs.json#/$defs/skuId" },
+    "occurred_at": { "type": "string", "format": "date-time" },
+    "session_id": { "type": "string" },
+    "beat_id": { "$ref": "common.defs.json#/$defs/beatId" },
+    "gate_id": { "$ref": "common.defs.json#/$defs/gateId" },
+    "encounter_id": { "$ref": "common.defs.json#/$defs/encounterId" },
+    "ending_id": {
+      "type": "string",
+      "pattern": "^END_[A-Z0-9_]+$"
+    },
+    "build_tip": { "type": "string" },
+    "locale": { "type": "string" },
+    "payload": {
+      "type": "object",
+      "description": "Engine-specific optional fields; keep PII out of SSOT docs"
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "event": { "const": "beat_enter" } } },
+      "then": { "required": ["beat_id"] }
+    },
+    {
+      "if": { "properties": { "event": { "const": "gate_fail" } } },
+      "then": { "required": ["gate_id"] }
+    },
+    {
+      "if": { "properties": { "event": { "const": "combat_end" } } },
+      "then": { "required": ["encounter_id"] }
+    },
+    {
+      "if": { "properties": { "event": { "const": "ending" } } },
+      "then": { "required": ["ending_id"] }
+    }
+  ]
+}
