@@ -2,7 +2,7 @@
 
 **Source:** Tides of Urashima Grok Bot manufactory team (archived 2026-10-14)  
 **Destination product:** future multi-title kit in this repo (`docs/FACTORY_OVERVIEW.md`)  
-**Mouthpiece:** Grok Bot only (Stephen does not talk to role agents day-to-day)
+**Mouthpieces:** **Grok Bot** — day-to-day product orchestration / latch. **Game Factory** (Cursor on `vivivieri/3d-jrpg-game-factory`) — factory-kit docs, schemas, validators. Stephen does not talk to dismissed role seats day-to-day; roles report through the active mouthpiece.
 
 This folder freezes **skills + role knowledge** so a future factory team can be rebuilt without the old chat seats.
 
@@ -22,13 +22,14 @@ This folder freezes **skills + role knowledge** so a future factory team can be 
 
 1. `skills/ai3d-to-godot-pipeline` — Tripo/AI 3D → Godot-ready scratch GLB
 2. `skills/game-ready-3d-guideline` — realtime character/prop bar before artistic GO/NO
-3. `skills/coat-hero-anim-polish` — jacketed cloth / coat proximity anim polish (one live mesh; concept refs concept-only)
+3. `skills/coat-hero-anim-polish` — generic jacketed cloth / coat-proximity anim (one live ship mesh; concept refs concept-only)
 4. `skills/freesound-full-wav-1to1` — Freesound HQ → full WAV (human Secure Form)
 5. `skills/mixamo-adobe-gate` — Mixamo/Adobe login is Stephen 1:1 only
 
-## Role inventory (dismissed seats)
+## Role inventory
 
-- Design Lead — GDD, storyboard, systems, asset list
+- **Story Lead** — [roles/story-lead.md](roles/story-lead.md) (factory brief; seat rebuild TBD)
+- Design Lead — GDD, storyboard, systems, asset list (dismissed seat)
 - Art Director — visual GO/NO + why; presentation bar
 - Audio Mix — VO/BGM/SFX GO/NO + why
 - Factory PM — board, freeze/IDLE, CAPA orchestration, Cursor factory handoff
@@ -37,4 +38,4 @@ This folder freezes **skills + role knowledge** so a future factory team can be 
 
 Groups (also dismiss): Manufactory Studio · Manufactory QA
 
-**Keep:** Grok Bot (mouthpiece). Optional unrelated bots (e.g. shopping) are out of scope.
+**Keep:** Grok Bot (product mouthpiece). Game Factory agent for this repo kit. Optional unrelated bots (e.g. shopping) are out of scope.

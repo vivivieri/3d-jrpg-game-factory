@@ -1,0 +1,30 @@
+name: Validate content packs
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install validator dependencies
+        run: npm ci --prefix tools/validate-content-pack
+      - name: Validate pass fixture
+        run: npm run validate:pass
+      - name: Validate fail fixture (expect non-zero)
+        run: |
+          set +e
+          npm run validate:fail
+          code=$?
+          set -e
+          if [ "$code" -eq 0 ]; then
+            echo "Expected fail fixture to exit non-zero"
+            exit 1
+          fi
+          echo "Fail fixture correctly rejected (exit $code)"

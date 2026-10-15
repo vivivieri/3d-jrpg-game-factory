@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vivivieri.github.io/3d-jrpg-game-factory/schemas/handoff-lock.schema.json",
+  "title": "handoff.lock",
+  "type": "object",
+  "required": [
+    "art_pack_hash",
+    "design_pack_hash",
+    "schema_version",
+    "tip",
+    "locked_at"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "art_pack_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "SHA-256 hex"
+    },
+    "design_pack_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "SHA-256 hex"
+    },
+    "schema_version": { "$ref": "common.defs.json#/$defs/semver" },
+    "tip": { "type": "string", "minLength": 1 },
+    "locked_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

@@ -18,7 +18,8 @@ Deleting is permanent (right-click agent → Delete). This pack is the rebuild s
 | Group: Manufactory QA | `83937b42-0b4a-4f7c-85ce-0d3a202af7b0` |
 
 ## Kept
-- **Grok Bot** — mouthpiece / coordinator
+- **Grok Bot** — product orchestration mouthpiece / coordinator (day-to-day latch)
+- **Game Factory** — Cursor Cloud Agent on `vivivieri/3d-jrpg-game-factory` for multi-title factory-kit craft (schemas, validators, idle-safe docs)
 - Unrelated helpers (e.g. HKTV Mall) — not part of this dismiss
 
 ## Rebuild later

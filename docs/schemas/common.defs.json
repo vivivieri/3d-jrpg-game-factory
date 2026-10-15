@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vivivieri.github.io/3d-jrpg-game-factory/schemas/common.defs.json",
+  "title": "Factory content common definitions",
+  "$defs": {
+    "semver": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "skuId": {
+      "type": "string",
+      "pattern": "^sku_[a-z]{2}_[a-z0-9_]+_v\\d+\\.\\d+\\.\\d+$",
+      "description": "sku_<country>_<tale_slug>_v<semver>"
+    },
+    "beatId": {
+      "type": "string",
+      "pattern": "^B\\d{3}$"
+    },
+    "sceneId": {
+      "type": "string",
+      "pattern": "^SCN_\\d{2}$"
+    },
+    "encounterId": {
+      "type": "string",
+      "pattern": "^E_[A-Z0-9_]+$"
+    },
+    "gateId": {
+      "type": "string",
+      "pattern": "^G_[A-Z0-9_]+$"
+    },
+    "dialogueKey": {
+      "type": "string",
+      "pattern": "^dlg\\.B\\d{3}\\.[a-z0-9_.]+$"
+    },
+    "systemId": {
+      "type": "string",
+      "enum": [
+        "INT_MOVE",
+        "INT_TALK",
+        "INT_EXAMINE",
+        "INT_GATE",
+        "INT_COMBAT",
+        "INT_PUZZLE",
+        "INT_MENU",
+        "INT_STREAM"
+      ]
+    },
+    "clearance": {
+      "type": "string",
+      "enum": ["PD", "licensed"]
+    },
+    "gateType": {
+      "type": "string",
+      "enum": ["story", "combat", "skill", "locale"]
+    },
+    "playMinutes": {
+      "type": "object",
+      "required": ["min", "max"],
+      "additionalProperties": false,
+      "properties": {
+        "min": { "type": "number", "minimum": 0 },
+        "max": { "type": "number", "minimum": 0 }
+      }
+    },
+    "outputStatus": {
+      "type": "string",
+      "enum": ["GO", "NO", "IDLE", "BLOCKED"]
+    },
+    "blockedOn": {
+      "type": "string",
+      "enum": ["", "license", "sign-in", "Stephen"]
+    }
+  }
+}

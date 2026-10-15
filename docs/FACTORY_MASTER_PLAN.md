@@ -2,9 +2,9 @@
 
 **Status:** Single SSOT industrial plan (future titles; not Tides of Urashima)  
 **Product owner:** Stephen Chow  
-**Orchestration mouthpiece:** Grok Bot  
-**Audience:** Stephen + Grok Bot design/docs/art/QA team + Cursor 3.0 PM game.dev factory  
-**Updated:** 2026-10-14 (HKT) — §2.1 leaf map; `FACTORY_NON_ART_BEST_PRACTICES.md` v1.1 (§4 dialogue/VO); Track A2–A7 pointers; industrial practice woven through §§2–7, §11, §14 (no standalone lessons section); §3.7/§4.1 3D pipeline
+**Orchestration mouthpiece:** Grok Bot (product latch) · **Factory-kit mouthpiece (this repo):** Game Factory (Cursor) — multi-title kit docs/schemas without inventing Stephen decisions  
+**Audience:** Stephen + Grok Bot design/docs/art/QA team + Game Factory on `vivivieri/3d-jrpg-game-factory` + Cursor 3.0 PM game.dev factory  
+**Updated:** 2026-10-15 (HKT) — Track A2 schemas+validators on disk; BOOT/board/output contract kit; mouthpiece routing clarified; prior 2026-10-14 leaf map / NON_ART §4 / 3D pipeline notes retained
 
 ---
 
@@ -83,7 +83,7 @@ Concept → Pre-production → Art production → Game production → QA → Rel
 
 | Milestone | Procedural leaf |
 |-----------|-----------------|
-| A2 | [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §8 schema/validators |
+| A2 | [schemas/content-pack.schema.json](schemas/content-pack.schema.json) + `tools/validate-content-pack/` · procedural [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §8 |
 | A3 | [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §§1–8 (clearance through dialogue/VO + design data) |
 | A4 | [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) → [AI_ART_BEST_PRACTICES.md](AI_ART_BEST_PRACTICES.md) + skills |
 | A5 | [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §10 handoff/tip lock |
@@ -353,7 +353,7 @@ Stephen Chow (Product Owner)
 **Rooms:** Art Factory (Story + GD + Art) · Manufactory (PM + Tech + QA)  
 **Game-dev agents** live in Cursor factory, not in chat craft loops.
 
-**Communication:** Day-to-day product talk is **Stephen ↔ Grok Bot**; role agents report through Grok Bot. **STOP** parks entire team craft/CAPA until Stephen lifts.
+**Communication:** Day-to-day **product** talk is **Stephen ↔ Grok Bot**; role agents report through Grok Bot for that latch. **Factory-kit** work in this repo (schemas, validators, idle-safe doc CAPAs) routes **Stephen ↔ Game Factory** on PRs; roles still do not open parallel truths. **STOP** parks entire team craft/CAPA until Stephen lifts.
 
 ### 5.2 Full R&R
 
@@ -424,7 +424,7 @@ Overview kit steps → tracks:
 | Milestone | Deliverable | Exit |
 |-----------|-------------|------|
 | A1 | This document + phase/R&R/rules adopted | Kit baseline GO |
-| A2 | Content schema `v1` (YAML/JSON) + validators — [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §8 | Schema GO |
+| A2 | Content schema `v1` (YAML/JSON) + validators — [schemas/](schemas/) + [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §8 | Schema GO (**validators on disk; Tech Lead Schema GO pending**) |
 | A3 | Clearance → story → storyboard → **dialogue/VO scripts** → GD/combat → MASTER_ASSET_LIST — [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §§1–8 | Template GO |
 | A4 | [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) → [AI_ART_BEST_PRACTICES.md](AI_ART_BEST_PRACTICES.md) (all-track AI gen SOP) + seed `team-knowledge/skills/` ×5 + GO/NO reason log format | Art SOP GO |
 | A5 | Cursor 3.0 handoff contract + smoke consumer checklist — [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §10 handoff/tip lock | Contract GO |
@@ -489,9 +489,11 @@ Overview kit steps → tracks:
 
 ---
 
-## 10. Content schema v1 stub
+## 10. Content schema v1
 
-Illustrative YAML only — **no live SKU data**. Machines consume this shape; prose elsewhere explains.
+**Machine artifacts:** [schemas/content-pack.schema.json](schemas/content-pack.schema.json) (composes tale, beats, gates, scenes, encounters, dialogue, progression, storyboard, `handoff.lock`). Validators: `tools/validate-content-pack/` (see root `README.md`). **Tech Lead Schema GO** still required before treating v1 as frozen contract.
+
+Illustrative YAML below — **no live SKU data**. Machines consume the JSON Schema shape; prose elsewhere explains.
 
 ```yaml
 # schema_version: "1.0.0"
@@ -633,7 +635,7 @@ No title-specific hero IDs in baseline names.
 
 ## 16. Telemetry events
 
-List only (schema TBD at A6/A7):
+Event envelope schema: [schemas/telemetry.events.schema.json](schemas/telemetry.events.schema.json) (store/SDK wiring **TBD**).
 
 - `session_start`
 - `beat_enter`
@@ -663,10 +665,10 @@ List only (schema TBD at A6/A7):
 |-------|-------|
 | Path | `docs/FACTORY_MASTER_PLAN.md` |
 | Version | v1 |
-| **Updated** | 2026-10-14 (HKT) — §2.1 leaf map; NON_ART v1.1 §4 dialogue/VO; B2½ script pack; industrial practice distributed across §§2–7, §11, §14 (removed standalone lessons §); §3.7/§4.1 3D pipeline |
+| **Updated** | 2026-10-15 (HKT) — A2 schemas+validators landed; BOOT/board/output contract; mouthpiece routing; §10/§16 schema pointers |
 | **Supersedes** | `JRPG_AUTO_FACTORY_V0.md` (aka Overview / FACTORY_OVERVIEW) and `IMPLEMENTATION_PLAN_AND_GD_ARCHITECTURE.md` — this file is the **single SSOT plan** |
 | Change control | PM + Tech Lead propose; Stephen approves objective/rule changes |
-| Next kit action | Track A2 — content schema `v1` + validators (A4 seed SOP now linked — flesh validators against art pack contract as A2/A5 mature) |
+| Next kit action | Tech Lead **Schema GO** on content pack v1; mature handoff smoke consumer (A5) and QA telemetry wiring (A6/A7) against [schemas/](schemas/) |
 
 ---
 

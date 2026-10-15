@@ -1,0 +1,44 @@
+schema_version: "1.0.0"
+
+tale:
+  sku_id: "sku_xx_example_tale_v0.1.0"
+  country: "XX"
+  source_name: "Example folktale (fixture only)"
+  clearance: "PD"
+  target_play_minutes: { min: 30, max: 45 }
+  markets: ["<stream/store TBD>"]
+
+beats:
+  - id: "B001"
+    chapter: 1
+    weight: 1.0
+    systems: ["INT_TALK"]
+    scene: "SCN_99"
+
+scenes:
+  - id: "SCN_01"
+    pois:
+      - id: "POI_A"
+        systems: ["INT_EXAMINE"]
+
+encounters: []
+
+dialogue: []
+
+progression:
+  endings: ["END_CANON"]
+
+gates: []
+
+storyboard:
+  - frame_id: "FRM_ORPHAN"
+    beat: "B001"
+    scene: "SCN_01"
+    systems: []
+
+handoff.lock:
+  art_pack_hash: "not-a-hash"
+  design_pack_hash: ""
+  schema_version: "9.9.9"
+  tip: ""
+  locked_at: "2026-10-15T12:00:00Z"

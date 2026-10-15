@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vivivieri.github.io/3d-jrpg-game-factory/schemas/dialogue.schema.json",
+  "title": "Dialogue line pack entry",
+  "type": "object",
+  "required": ["key", "speaker", "lines"],
+  "additionalProperties": false,
+  "properties": {
+    "key": { "$ref": "common.defs.json#/$defs/dialogueKey" },
+    "speaker": { "type": "string", "minLength": 1 },
+    "lines": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    }
+  }
+}

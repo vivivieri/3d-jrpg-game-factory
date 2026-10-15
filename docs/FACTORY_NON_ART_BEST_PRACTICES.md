@@ -37,9 +37,9 @@ Incomplete exits are rejected. Soft CI, CONDITIONAL-as-PASS, and inventing a sec
 
 Game factory stays **IDLE** until Art pack GO + Locale GO + handoff freeze. Cursor 3.0 must not consume unlocked art, invented lore, or mutable design prose. Placeholders are internal art-factory tools only — never ship gates.
 
-### 0.4 Stephen ↔ Grok Bot
+### 0.4 Mouthpiece routing
 
-Day-to-day craft and role reports route **Stephen ↔ Grok Bot only**. Roles do not open parallel truths with Stephen. Paid license, Secure Form / paid sign-in, STOP / factory restart, and Release GO are **human-only** (Stephen or designated counsel).
+Day-to-day **product** craft and role reports route **Stephen ↔ Grok Bot**. Factory-kit CAPAs in `vivivieri/3d-jrpg-game-factory` route **Stephen ↔ Game Factory** on PRs. Roles do not open parallel truths with Stephen. Paid license, Secure Form / paid sign-in, STOP / factory restart, and Release GO are **human-only** (Stephen or designated counsel).
 
 ### 0.5 Paid license = human-only
 
@@ -430,9 +430,11 @@ Industrial JRPG pattern: beat sheet → dialogue/VO line packs keyed to systems 
 
 ## 8. Data model / schema / validators (YAML/JSON SSOT)
 
+**On-disk schemas (Track A2):** [schemas/content-pack.schema.json](./schemas/content-pack.schema.json) and composed leaf schemas under [schemas/](./schemas/). CLI: `tools/validate-content-pack/` (root `README.md`). **Tech Lead Schema GO** still required — do not stamp Schema GO from validators alone.
+
 ### Workflow
 
-1. Author **schema_version** (semver) + JSON Schema (draft 2020-12 recommended) for tale, beats, gates, scenes, encounters, dialogue, progression, handoff.lock.  
+1. Author **schema_version** (semver) + JSON Schema (draft 2020-12 recommended) for tale, beats, gates, scenes, encounters, dialogue, progression, handoff.lock — use repo schemas as baseline.  
 2. Humans/agents edit **YAML/JSON SSOT**; Markdown is explanatory only.  
 3. Validators in layers:  
    - **Shape** — required fields, types, ranges  
