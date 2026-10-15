@@ -1,8 +1,8 @@
 # Team knowledge pack (consolidated)
 
 **Source:** Tides of Urashima Grok Bot manufactory team (archived 2026-10-14)  
-**Destination product:** future multi-title kit in this repo (`docs/FACTORY_OVERVIEW.md`)  
-**Mouthpieces:** **Grok Bot** — day-to-day product orchestration / latch. **Game Factory** (Cursor on `vivivieri/3d-jrpg-game-factory`) — factory-kit docs, schemas, validators. Stephen does not talk to dismissed role seats day-to-day; roles report through the active mouthpiece.
+**Destination product:** future multi-title factory kit in `vivivieri/3d-jrpg-game-factory` — laws in [FACTORY_MASTER_PLAN.md](../FACTORY_MASTER_PLAN.md), navigation in [BOOT.md](../BOOT.md); [FACTORY_OVERVIEW.md](../FACTORY_OVERVIEW.md) is a short map only.  
+**Mouthpieces:** **Grok Bot** — day-to-day product orchestration / latch. **Game Factory** (Cursor on this repo) — factory-kit docs, schemas, validators. Stephen does not talk to dismissed role seats day-to-day; roles report through the active mouthpiece (Grok Bot for product; Game Factory for kit PRs).
 
 This folder freezes **skills + role knowledge** so a future factory team can be rebuilt without the old chat seats.
 
@@ -28,13 +28,17 @@ This folder freezes **skills + role knowledge** so a future factory team can be 
 
 ## Role inventory
 
-- **Story Lead** — [roles/story-lead.md](roles/story-lead.md) (factory brief; seat rebuild TBD)
-- Design Lead — GDD, storyboard, systems, asset list (dismissed seat)
-- Art Director — visual GO/NO + why; presentation bar
-- Audio Mix — VO/BGM/SFX GO/NO + why
-- Factory PM — board, freeze/IDLE, CAPA orchestration, Cursor factory handoff
-- Tech Lead — Godot gates, architecture, enforceability
-- QA Lead — task + phase regression; no paper greens; real UAT
+| Seat | Brief |
+|------|-------|
+| **Story Lead** | [roles/story-lead.md](roles/story-lead.md) (kit-native) |
+| Game Design Lead | [roles/design-lead.md](roles/design-lead.md) |
+| Art Director / Art Factory Lead | [roles/art-director.md](roles/art-director.md) |
+| Audio Mix | [roles/audio-mix.md](roles/audio-mix.md) |
+| Factory PM | [roles/factory-pm.md](roles/factory-pm.md) |
+| Tech Lead | [roles/tech-lead.md](roles/tech-lead.md) |
+| QA Lead | [roles/qa-lead.md](roles/qa-lead.md) |
+
+All briefs align to Master Plan §5.2; archived Tides chat prose is not authoritative.
 
 Groups (also dismiss): Manufactory Studio · Manufactory QA
 

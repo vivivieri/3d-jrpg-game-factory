@@ -67,5 +67,8 @@ Animation GO requires **mid-stride** walk and idle plates — not bind-pose or A
 |-----|------|
 | [AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md) | Industrial AI generation SOP — all art/audio tracks |
 | [FACTORY_NON_ART_BEST_PRACTICES.md](./FACTORY_NON_ART_BEST_PRACTICES.md) | Non-art tracks (story, GD, schema, locale, handoff, QA, publish, live ops, PM, Tech) |
-| [FACTORY_MASTER_PLAN.md](./FACTORY_MASTER_PLAN.md) §3.7, §4.1, §6, §14 | Laws + human-only gates |
-| [team-knowledge/README.md](./team-knowledge/README.md) | Archived source detail for skills above |
+| [FACTORY_MASTER_PLAN.md](./FACTORY_MASTER_PLAN.md) §2.1, §3.7, §4.1, §6, §14 | Laws + leaf map + human-only gates |
+| [schemas/](./schemas/) | Content pack + `storyboard-frame` / `dialogue` keys art refs must honor |
+| [templates/](./templates/) | Ratings, accessibility, L0 save baselines (locale/stream prep) |
+| `tools/validate-content-pack/` | Same validators CI runs — art handoff still needs Art pack GO |
+| [team-knowledge/README.md](./team-knowledge/README.md) | Role briefs + skills inventory |

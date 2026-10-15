@@ -5,7 +5,7 @@
 **Companion leaf:** [AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md) (art/audio craft)  
 **Audience:** Story / GD / Tech / QA / PM via Grok Bot · Product owner Stephen Chow  
 **Engine default:** Godot 4.x · **Game.dev:** Cursor 3.0 PM factory consumes **frozen handoff only**  
-**Updated:** 2026-10-14 (HKT)
+**Updated:** 2026-10-15 (HKT) — §8 on-disk schema pointers (A2); mouthpiece routing matches BOOT
 
 **Core industrial rule:** AI accelerates *drafts* (beat sheets, schemas, test matrices, locale stubs). Shipping still needs brief → draft → validate → human GO/NO + why → tip/hash lock. Measure **accepted/shipped** packs and **real UAT evidence**, not document volume or paper greens.
 
