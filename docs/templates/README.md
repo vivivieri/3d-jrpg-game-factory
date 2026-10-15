@@ -31,11 +31,19 @@ Use generic SKU language only: `sku_<country>_<tale_slug>_v<semver>`.
 |----------|-------|---------|--------|
 | [HANDOFF_SMOKE_CONSUMER.md](./HANDOFF_SMOKE_CONSUMER.md) | Game production · Cursor 3.0 intake | **A5** | [handoff-lock.schema.json](../schemas/handoff-lock.schema.json) |
 
+## Art task QA (A4)
+
+| Template / leaf | Phase | Track A | Notes |
+|-----------------|-------|---------|-------|
+| [ART_QA_BEST_PRACTICES.md](../ART_QA_BEST_PRACTICES.md) | Art production · task QA | **A4** | Procedural leaf — numbered cases, evidence law |
+| [ART_QA_TEST_CASES.md](./ART_QA_TEST_CASES.md) | Art production · L1 execution | **A4** | Checklist table (detail in leaf) |
+| [ART_QA_SCORECARD.md](./ART_QA_SCORECARD.md) | Art production · pack roll-up | **A4** | Per-asset + Art Factory Lead roll-up |
+
 ## QA (A6)
 
 | Template | Phase | Track A | Master Plan |
 |----------|-------|---------|-------------|
-| [QA_MATRICES.md](./QA_MATRICES.md) | QA → Release | **A6** | §3.9 · NON_ART §11 |
+| [QA_MATRICES.md](./QA_MATRICES.md) | QA → Release | **A6** | §3.9 · NON_ART §11 — art L1 rows link **ART_QA** kit |
 
 ## Locale + publish + live ops (A7)
 

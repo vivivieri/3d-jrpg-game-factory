@@ -20,6 +20,8 @@
 7. **Legal ledger before build inclusion.** No asset enters `main` without license/provenance row.
 8. **Artistic GO/NO + why** on every gate — mid-stride plates and real engine evidence where applicable; no paper greens.
 
+**Executable art QA test cases** (IDs, steps, scorecard, pack roll-up): [ART_QA_BEST_PRACTICES.md](./ART_QA_BEST_PRACTICES.md) + [templates/ART_QA_TEST_CASES.md](./templates/ART_QA_TEST_CASES.md). Craft QC gates in §§1–12 below align with those cases; phase/UAT matrices stay in [FACTORY_NON_ART_BEST_PRACTICES.md](./FACTORY_NON_ART_BEST_PRACTICES.md) §11.
+
 ### Existing factory spine (characters / props)
 
 ```
@@ -546,6 +548,8 @@ Integration modes: batch offline (factory default), HTTP stream (preview), WebSo
 ---
 
 ## 13. Cross-cutting industrial practices
+
+**QA execution:** Map each gate below to [ART_QA_BEST_PRACTICES.md](./ART_QA_BEST_PRACTICES.md) §4 (AI_ART § → ART-QA ID table). Fill [templates/ART_QA_SCORECARD.md](./templates/ART_QA_SCORECARD.md) per SKU before Art pack GO request.
 
 ### 13.1 Reference boards / style locks
 - Golden set per SKU + per biome/family before mass generation.

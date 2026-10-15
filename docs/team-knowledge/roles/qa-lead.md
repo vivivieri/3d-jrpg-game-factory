@@ -32,6 +32,7 @@ Every exit uses [OUTPUT_CONTRACT.md](../OUTPUT_CONTRACT.md): `status · why · p
 
 - [FACTORY_NON_ART_BEST_PRACTICES.md](../../FACTORY_NON_ART_BEST_PRACTICES.md) §§11–12 (QA, publish packaging checks)
 - Matrices: [QA_MATRICES.md](../../templates/QA_MATRICES.md) · smoke: [HANDOFF_SMOKE_CONSUMER.md](../../templates/HANDOFF_SMOKE_CONSUMER.md)
+- Art **task** QA (L1 cases, scorecard, pack roll-up): [ART_QA_BEST_PRACTICES.md](../../ART_QA_BEST_PRACTICES.md) — spot-check evidence paths; phase/UAT still owned here
 - First-SKU acceptance bars: Master Plan §13
 
 ## Day-run checklist (Master Plan §5.2)

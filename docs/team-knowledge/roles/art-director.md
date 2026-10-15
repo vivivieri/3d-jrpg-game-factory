@@ -31,6 +31,7 @@ Every exit uses [OUTPUT_CONTRACT.md](../OUTPUT_CONTRACT.md): `status · why · p
 ## Procedural how-to
 
 - [AI_ART_BEST_PRACTICES.md](../../AI_ART_BEST_PRACTICES.md) · [ART_FACTORY_SOP.md](../../ART_FACTORY_SOP.md)
+- Art task QA + pack scorecard: [ART_QA_BEST_PRACTICES.md](../../ART_QA_BEST_PRACTICES.md) · [templates/ART_QA_SCORECARD.md](../../templates/ART_QA_SCORECARD.md)
 - Storyboard / beat refs tie to [schemas/storyboard-frame.schema.json](../../schemas/storyboard-frame.schema.json)
 - Scope list: [MASTER_ASSET_LIST.md](../../templates/MASTER_ASSET_LIST.md)
 

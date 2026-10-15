@@ -21,9 +21,21 @@
 
 **Scope:** Single asset or system ticket (Master Plan §3.9 Task).
 
+### Non-art / schema tasks
+
 | task_id | criterion | steps | expected | evidence artifact path | pass/fail | defect link |
 |---------|-----------|-------|----------|------------------------|-----------|-------------|
 | | | | | | | |
+
+### Art / audio tasks (L1 kit — do not duplicate case text here)
+
+For each **MASTER_ASSET_LIST** art row, execute cases from [ART_QA_TEST_CASES.md](./ART_QA_TEST_CASES.md) (full steps in [ART_QA_BEST_PRACTICES.md](../ART_QA_BEST_PRACTICES.md) §3) and roll up in [ART_QA_SCORECARD.md](./ART_QA_SCORECARD.md).
+
+| asset_slug | track | ART-QA case IDs (see ART_QA §4 map) | scorecard path | pass/fail |
+|------------|-------|-------------------------------------|----------------|-----------|
+| | | | | |
+
+**Art vs non-art:** Art L1 uses engine plates, mid-stride anim evidence, listen logs, and license rows. Phase, UAT, and release below stay **NON_ART** — art task QA does not substitute for Phase QA GO.
 
 **Task GO:** checklist + artifact on disk — not verbal OK.
 
@@ -108,4 +120,5 @@
 
 - Master Plan §3.9 · §6 rule 10  
 - [HANDOFF_SMOKE_CONSUMER.md](./HANDOFF_SMOKE_CONSUMER.md) (pre-Cursor smoke)  
+- [ART_QA_BEST_PRACTICES.md](../ART_QA_BEST_PRACTICES.md) · [ART_QA_SCORECARD.md](./ART_QA_SCORECARD.md) · [ART_QA_TEST_CASES.md](./ART_QA_TEST_CASES.md) (art L1 task QA)  
 - [schemas/telemetry.events.schema.json](../schemas/telemetry.events.schema.json)
