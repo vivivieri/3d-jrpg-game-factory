@@ -39,3 +39,17 @@ node tools/validate-content-pack/validate.mjs path/to/pack.yaml
 
 - **Grok Bot** — product orchestration / chat latch  
 - **Game Factory** (this repo agent) — idle-safe factory-kit docs, schemas, validators
+
+## Doc sync log
+
+**Last full sync:** 2026-10-15 (HKT) — branch `cursor/doc-sync-kit-a1-a2-9e77`
+
+| Area | Aligned |
+|------|---------|
+| [FACTORY_OVERVIEW.md](./FACTORY_OVERVIEW.md) | Pipeline + components include Dialogue/VO (`dlg.*`); Track A table (A1/A2/2b); open decisions §17; date 2026-10-15 |
+| [team-knowledge/roles/*.md](./team-knowledge/roles/) | R&R + output contract vs Master Plan §5.2; Tech Lead → schemas + Schema GO gate |
+| [team-knowledge/README.md](./team-knowledge/README.md) · [DISMISSAL.md](./team-knowledge/DISMISSAL.md) | Rebuild pointers → Master Plan + BOOT (not Overview-only) |
+| [ART_FACTORY_SOP.md](./ART_FACTORY_SOP.md) | §2.1 leaf map + `schemas/` + `templates/` + validators |
+| [mixamo-adobe-gate skill](./team-knowledge/skills/mixamo-adobe-gate/SKILL.md) | Generic coat path (no title-specific mesh IDs) |
+
+**Residual (intentional):** Stephen decisions in §17; Schema GO / Design GO / Art GO unstamped; Tides archival mention in team-knowledge source line only.

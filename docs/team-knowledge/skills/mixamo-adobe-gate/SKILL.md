@@ -7,7 +7,7 @@ description: >-
 # Mixamo Adobe gate
 
 ## Standing
-- Coat hero movement polish prefers Tripo Studio Presets + Blender (Mixamo coat path **abandoned** for Urashima field mesh per 2026-10-14).
+- Jacketed cloth / coat locomotion prefers Tripo Studio Presets + Blender weight polish on the **single live ship mesh** (see `coat-hero-anim-polish`); abandon a second “fix” mesh path instead of Mixamo coat swaps.
 - If Mixamo is still required for other characters: Adobe login = **Stephen 1:1 only**.
 - Never start Secure Form / device-code login from a group room.
 

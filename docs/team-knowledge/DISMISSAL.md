@@ -23,4 +23,11 @@ Deleting is permanent (right-click agent → Delete). This pack is the rebuild s
 - Unrelated helpers (e.g. HKTV Mall) — not part of this dismiss
 
 ## Rebuild later
-Use `docs/FACTORY_OVERVIEW.md` + this `docs/team-knowledge/` pack to recreate seats with clean R&R (Story / GD / Art Factory / PM / Tech / QA).
+
+1. **Laws:** [FACTORY_MASTER_PLAN.md](../FACTORY_MASTER_PLAN.md) §5.2 R&R + §6 rules  
+2. **BOOT:** [BOOT.md](../BOOT.md) authority chain  
+3. **Roles:** `roles/*.md` (factory-aligned briefs; Story Lead already kit-native)  
+4. **Skills:** `skills/*/SKILL.md`  
+5. **Short map only:** [FACTORY_OVERVIEW.md](../FACTORY_OVERVIEW.md) — not a second law book  
+
+Track A kit state: [KIT_STATUS.md](../KIT_STATUS.md).
