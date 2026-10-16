@@ -73,6 +73,8 @@ Concept → Pre-production → Art production → Game production → QA → Rel
 
 **Rule:** Leaf SOPs are **how-to only** — phase law, pillars, R&R, and hard rules remain **here** (§§2–7, §11, §14). [team-knowledge/STANDING_RULES.md](team-knowledge/STANDING_RULES.md) is a convenience mirror of §6 (+ pointers); cite leaves for craft steps; do not duplicate or contradict SSOT laws.
 
+**Operating entry (day-one runbook — indexes leaves; not SSOT):** [FACTORY_OPERATING_SOP.md](FACTORY_OPERATING_SOP.md)
+
 | Leaf | Path | Scope | Track A |
 |------|------|-------|---------|
 | **Factory non-art SOP** | [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) | Clearance → beats → storyboard → **§4 dialogue/VO scripts** → GD/combat → asset list → schema → locale → handoff → QA → publish → live → PM/Tech (§§0–19) | **A2**, **A3**, **A5**, **A6**, **A7** |

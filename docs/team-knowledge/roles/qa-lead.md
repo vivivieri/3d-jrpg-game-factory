@@ -32,12 +32,15 @@ Every exit uses [OUTPUT_CONTRACT.md](../OUTPUT_CONTRACT.md): `status · why · p
 
 - [FACTORY_NON_ART_BEST_PRACTICES.md](../../FACTORY_NON_ART_BEST_PRACTICES.md) §§11–12 (QA, publish packaging checks)
 - Matrices: [QA_MATRICES.md](../../templates/QA_MATRICES.md) · smoke: [HANDOFF_SMOKE_CONSUMER.md](../../templates/HANDOFF_SMOKE_CONSUMER.md)
+- **Day-run:** [FACTORY_OPERATING_SOP.md](../../FACTORY_OPERATING_SOP.md) §3 (open scorecard → run validators → `build_ref` runtime → UAT video path → GO/NO)
+- Game QA (non-art L1 + L2–L5): [GAME_QA_BEST_PRACTICES.md](../../GAME_QA_BEST_PRACTICES.md) · [templates/GAME_QA_SCORECARD.md](../../templates/GAME_QA_SCORECARD.md) · [templates/GAME_QA_TEST_CASES.md](../../templates/GAME_QA_TEST_CASES.md)
 - Art **task** QA (L1 cases, scorecard, pack roll-up): [ART_QA_BEST_PRACTICES.md](../../ART_QA_BEST_PRACTICES.md) — spot-check evidence paths; phase/UAT still owned here
 - First-SKU acceptance bars: Master Plan §13
 
 ## Day-run checklist (Master Plan §5.2)
 
-- Fill build/tip + HKT header on every [QA_MATRICES.md](../../templates/QA_MATRICES.md) evidence pack.
+- Fill build/tip + HKT + `build_ref` on every [GAME_QA_SCORECARD.md](../../templates/GAME_QA_SCORECARD.md) and [QA_MATRICES.md](../../templates/QA_MATRICES.md) evidence pack.
+- Run `node tools/validate-content-pack/validate.mjs <locked-pack>` (GAME-QA-SCH-*) before runtime suite.
 - Run `npm run validate:pass` (or locked pack path) in phase regression — schema failures block phase GO.
 - Reject paper greens; require play or runtime video for UAT rows.
 - Exercise fail/retry paths on combat and gates — not happy-path only.

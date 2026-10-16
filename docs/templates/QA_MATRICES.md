@@ -23,9 +23,11 @@
 
 ### Non-art / schema tasks
 
-| task_id | criterion | steps | expected | evidence artifact path | pass/fail | defect link |
-|---------|-----------|-------|----------|------------------------|-----------|-------------|
-| | | | | | | |
+Execute numbered cases from [GAME_QA_TEST_CASES.md](./GAME_QA_TEST_CASES.md) (steps in [GAME_QA_BEST_PRACTICES.md](../GAME_QA_BEST_PRACTICES.md) §3) and roll up in [GAME_QA_SCORECARD.md](./GAME_QA_SCORECARD.md). Day-run: [FACTORY_OPERATING_SOP.md](../FACTORY_OPERATING_SOP.md) §3.
+
+| task_id | criterion | GAME-QA case IDs | evidence artifact path | pass/fail | defect link |
+|---------|-----------|------------------|------------------------|-----------|-------------|
+| | | SCH-*, HOFF-* | `content/<SKU>/qa/schema/...` | | |
 
 ### Art / audio tasks (L1 kit — do not duplicate case text here)
 
@@ -43,17 +45,19 @@ For each **MASTER_ASSET_LIST** art row, execute cases from [ART_QA_TEST_CASES.md
 
 ## Level 2 — Sprint / phase regression
 
-**Scope:** Integration across L0–L5 (automated + manual).
+**Scope:** Integration across L0–L5 (automated + manual). **Executable kit:** [GAME_QA_BEST_PRACTICES.md](../GAME_QA_BEST_PRACTICES.md) §3 + [GAME_QA_SCORECARD.md](./GAME_QA_SCORECARD.md) L2 block · **Day-run:** [FACTORY_OPERATING_SOP.md](../FACTORY_OPERATING_SOP.md) §3.2.
 
-| area | test case | L-layer | automated? | manual? | pass/fail | notes |
-|------|-----------|---------|------------|---------|-----------|-------|
-| Schema / pack | `npm run validate:pass` on locked pack | data | yes | | | |
-| Load | Tale loads; start beat reachable | L2–L3 | | yes | | |
-| Combat | Fail → story-safe retry | L4 | | yes | | |
-| Locale critical | 0 missing critical keys/VO | L1/L3 | | yes | | |
-| Session | Pause/resume per [L0_SESSION_SAVE_POLICY.md](./L0_SESSION_SAVE_POLICY.md) | L0 | | yes | | |
-| Soft-lock hunt | No dead-end on canonical path | L2–L4 | | yes | | |
-| Accessibility spot | [ACCESSIBILITY_BASELINE.md](./ACCESSIBILITY_BASELINE.md) spot checks | L1 | | yes | | |
+| area | GAME-QA IDs | L-layer | automated? | manual? | pass/fail | notes |
+|------|-------------|---------|------------|---------|-----------|-------|
+| Schema / pack | SCH-001…008 | data | yes (`validate.mjs`) | | | |
+| Handoff smoke | HOFF-001…006 | data | partial | yes | | [HANDOFF_SMOKE_CONSUMER.md](./HANDOFF_SMOKE_CONSUMER.md) |
+| Load | LOAD-001…002 | L2–L3 | | yes (`build_ref`) | | |
+| Combat | CMB-001…003 | L4 | | yes | | |
+| Locale critical | LOC-001…003 | L1/L3 | | yes | | [LOCALE_READINESS_CHECKLIST.md](./LOCALE_READINESS_CHECKLIST.md) |
+| Session | SES-001…002 | L0 | | yes | | [L0_SESSION_SAVE_POLICY.md](./L0_SESSION_SAVE_POLICY.md) |
+| Soft-lock hunt | CMB-003 | L2–L4 | | yes | | |
+| Accessibility spot | A11Y-001…002 | L1 | | yes | | [ACCESSIBILITY_BASELINE.md](./ACCESSIBILITY_BASELINE.md) |
+| Narrative spine | NAR-001…004 | L2–L3 | | yes | | |
 
 **Phase QA GO:** suite pass + logged why — _not stamped in kit repo_
 
@@ -61,15 +65,16 @@ For each **MASTER_ASSET_LIST** art row, execute cases from [ART_QA_TEST_CASES.md
 
 ## Level 3 — UAT (real play / video)
 
-**Scope:** Primary beat path through canonical ending or chapter milestone.
+**Scope:** Primary beat path through canonical ending or chapter milestone. **Cases:** GAME-QA-UAT-001…006 · **Reject paper greens:** no `.png`/`.mp4` under `content/<SKU>/qa/uat/` = **Fail** (GAME-QA-UAT-001).
 
-| criterion | acceptance bar | evidence type | path / URL | pass/fail |
-|-----------|----------------|---------------|------------|-----------|
-| Viewport | Real build branch — not editor mock or slide deck | play **or** video | | |
-| Beat path | Covers locked spine beats listed below | play/video | | |
-| Dialogue | `dlg.*` matches locked script | play/video | | |
-| Combat budget | No mandatory grind to progress | play/video | | |
-| Fail paths | At least one retry/fail case exercised | play/video | | |
+| criterion | GAME-QA ID | evidence type | path / URL | pass/fail |
+|-----------|------------|---------------|------------|-----------|
+| Viewport | UAT-001 | `.png` or `.mp4` from `build_ref` | | |
+| Beat path | UAT-002, NAR-001 | play/video | | |
+| Dialogue | UAT-004, NAR-002 | play/video | | |
+| Combat budget | UAT-005, CMB-002 | play/video | | |
+| Fail paths | UAT-003, CMB-001 | play/video | | |
+| Defect gate | UAT-006 | checklist | | |
 
 ### Spine beats under test
 
@@ -82,15 +87,15 @@ For each **MASTER_ASSET_LIST** art row, execute cases from [ART_QA_TEST_CASES.md
 
 ## Level 4 — Release QA
 
-**Scope:** Packaging, locale store parity, ratings disclosure (NON_ART §11–§12).
+**Scope:** Packaging, locale store parity, ratings disclosure (NON_ART §11–§12). **Cases:** GAME-QA-REL-001…005 · **Day-run:** [FACTORY_OPERATING_SOP.md](../FACTORY_OPERATING_SOP.md) §3.4.
 
-| check | evidence | pass/fail |
-|-------|----------|-----------|
-| [STREAM_PACKAGING_CHECKLIST.md](./STREAM_PACKAGING_CHECKLIST.md) complete | | |
-| [RATINGS_CONTENT_MATRIX.md](./RATINGS_CONTENT_MATRIX.md) matches build | | |
-| Store strings / locale parity for target markets | _markets TBD_ | |
-| Perf within frozen Design/Tech budget | | |
-| No under-disclosed mature / AI-generated content | | |
+| check | GAME-QA ID | evidence path | pass/fail |
+|-------|------------|---------------|-----------|
+| [STREAM_PACKAGING_CHECKLIST.md](./STREAM_PACKAGING_CHECKLIST.md) complete | REL-001 | `content/<SKU>/qa/release/...` | |
+| [RATINGS_CONTENT_MATRIX.md](./RATINGS_CONTENT_MATRIX.md) matches build | REL-002 | | |
+| Store strings / locale parity for target markets | REL-003 | _markets TBD_ | |
+| Perf within frozen Design/Tech budget | REL-004 | | |
+| No under-disclosed mature / AI-generated content | REL-005 | | |
 
 **Release GO:** human platform controls — Stephen
 
@@ -98,14 +103,15 @@ For each **MASTER_ASSET_LIST** art row, execute cases from [ART_QA_TEST_CASES.md
 
 ## Level 5 — Live health
 
-**Scope:** Post-release telemetry + triage ([LIVE_OPS_HOTFIX_TALE_QUEUE.md](./LIVE_OPS_HOTFIX_TALE_QUEUE.md)).
+**Scope:** Post-release telemetry + triage ([LIVE_OPS_HOTFIX_TALE_QUEUE.md](./LIVE_OPS_HOTFIX_TALE_QUEUE.md)). **Cases:** GAME-QA-LIVE-001…004.
 
-| signal | threshold band | current | action |
-|--------|----------------|---------|--------|
-| Crash-free sessions | TBD | | |
-| Session start success | TBD | | |
-| Locale error rate | TBD | | |
-| Beat drop-off anomalies | TBD | | |
+| signal | GAME-QA ID | threshold band | current | action / triage row |
+|--------|------------|----------------|---------|---------------------|
+| Crash-free sessions | LIVE-003 | TBD | | |
+| Session start success | LIVE-002 | TBD | | |
+| Locale error rate | LIVE-004 | TBD | | |
+| Beat drop-off anomalies | LIVE-004 | TBD | | |
+| Telemetry shape | LIVE-001 | schema pass | | |
 
 ---
 
@@ -121,4 +127,5 @@ For each **MASTER_ASSET_LIST** art row, execute cases from [ART_QA_TEST_CASES.md
 - Master Plan §3.9 · §6 rule 10  
 - [HANDOFF_SMOKE_CONSUMER.md](./HANDOFF_SMOKE_CONSUMER.md) (pre-Cursor smoke)  
 - [ART_QA_BEST_PRACTICES.md](../ART_QA_BEST_PRACTICES.md) · [ART_QA_SCORECARD.md](./ART_QA_SCORECARD.md) · [ART_QA_TEST_CASES.md](./ART_QA_TEST_CASES.md) (art L1 task QA)  
+- [GAME_QA_BEST_PRACTICES.md](../GAME_QA_BEST_PRACTICES.md) · [GAME_QA_SCORECARD.md](./GAME_QA_SCORECARD.md) · [GAME_QA_TEST_CASES.md](./GAME_QA_TEST_CASES.md) (non-art L1 + L2–L5) · [FACTORY_OPERATING_SOP.md](../FACTORY_OPERATING_SOP.md) §3  
 - [schemas/telemetry.events.schema.json](../schemas/telemetry.events.schema.json)

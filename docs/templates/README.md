@@ -1,6 +1,7 @@
 # Factory templates index (Track A)
 
-**Laws:** [FACTORY_MASTER_PLAN.md](../FACTORY_MASTER_PLAN.md) · **Procedural SOP:** [FACTORY_NON_ART_BEST_PRACTICES.md](../FACTORY_NON_ART_BEST_PRACTICES.md)  
+**Day-one runbook:** [FACTORY_OPERATING_SOP.md](../FACTORY_OPERATING_SOP.md) (pipeline → leaf → template → exit — whole factory).  
+**Laws:** [FACTORY_MASTER_PLAN.md](../FACTORY_MASTER_PLAN.md) · **Craft SOP:** [FACTORY_NON_ART_BEST_PRACTICES.md](../FACTORY_NON_ART_BEST_PRACTICES.md)  
 **Status:** Fillable kits — **no GO stamps** in this folder. Stephen-only decisions stay **TBD** where noted.
 
 Use generic SKU language only: `sku_<country>_<tale_slug>_v<semver>`.
@@ -41,9 +42,13 @@ Use generic SKU language only: `sku_<country>_<tale_slug>_v<semver>`.
 
 ## QA (A6)
 
-| Template | Phase | Track A | Master Plan |
-|----------|-------|---------|-------------|
-| [QA_MATRICES.md](./QA_MATRICES.md) | QA → Release | **A6** | §3.9 · NON_ART §11 — art L1 rows link **ART_QA** kit |
+| Template / leaf | Phase | Track A | Master Plan |
+|-----------------|-------|---------|-------------|
+| [QA_MATRICES.md](./QA_MATRICES.md) | QA → Release | **A6** | §3.9 · NON_ART §11 — L1 art → **ART_QA**; L1 non-art + L2–L5 → **GAME_QA** |
+| [GAME_QA_BEST_PRACTICES.md](../GAME_QA_BEST_PRACTICES.md) | QA · phase/UAT/release/live | **A6** | Procedural leaf — numbered GAME-QA cases, evidence law |
+| [GAME_QA_TEST_CASES.md](./GAME_QA_TEST_CASES.md) | QA · execution | **A6** | Checklist table (detail in leaf) |
+| [GAME_QA_SCORECARD.md](./GAME_QA_SCORECARD.md) | QA · SKU roll-up | **A6** | L1–L5 + evidence integrity |
+| [FACTORY_OPERATING_SOP.md](../FACTORY_OPERATING_SOP.md) | Factory day-run | **A6** | §3 QA Lead do-this-next (not a GO stamp) |
 
 ## Locale + publish + live ops (A7)
 
