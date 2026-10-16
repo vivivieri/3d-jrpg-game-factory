@@ -15,7 +15,7 @@ Obey [BOOT.md](./BOOT.md) — lower items never override higher items.
 | 1 | [FACTORY_MASTER_PLAN.md](./FACTORY_MASTER_PLAN.md) | SSOT laws and gates |
 | 2 | [BOOT.md](./BOOT.md) | Navigation / latch |
 | 3 | [team-knowledge/OUTPUT_CONTRACT.md](./team-knowledge/OUTPUT_CONTRACT.md) | Handoff fields |
-| 4 | Leaf SOPs (NON_ART, AI_ART, ART_FACTORY, ART_QA, GAME_QA, this file) | How-to only |
+| 4 | Leaf SOPs (NON_ART, AI_ART, ART_FACTORY, ART_QA, GAME_DEV, GAME_QA, this file) | How-to only |
 | 5 | Indexes ([FACTORY_OVERVIEW.md](./FACTORY_OVERVIEW.md), [KIT_STATUS.md](./KIT_STATUS.md), [templates/README.md](./templates/README.md)) | Pointers only |
 
 **Operating entry:** Start here for day-one routing; cite Master Plan when a gate is in dispute.
@@ -51,7 +51,7 @@ Copy fillable templates from [templates/README.md](./templates/README.md) into `
 | **Art task QA (L1)** | Per-asset evidence | [ART_QA_BEST_PRACTICES.md](./ART_QA_BEST_PRACTICES.md) | [ART_QA_SCORECARD.md](./templates/ART_QA_SCORECARD.md), [ART_QA_TEST_CASES.md](./templates/ART_QA_TEST_CASES.md) | Per-track GO/NO | Art + QA spot-check |
 | **Locale** | Locked `dlg.*`, art | NON_ART §9 | [LOCALE_READINESS_CHECKLIST.md](./templates/LOCALE_READINESS_CHECKLIST.md) | Locale GO | Art / Story |
 | **Handoff pack** | Art GO + design YAML | NON_ART §10 | [HANDOFF_SMOKE_CONSUMER.md](./templates/HANDOFF_SMOKE_CONSUMER.md) · `handoff.lock` in pack | **Contract GO** — **not stamped here** | Tech Lead / PM |
-| **Cursor game.dev** | Frozen handoff + lock | Master Plan §3.8 · HANDOFF smoke | — (engine in Cursor factory) | Playable build / tip | PM + Tech |
+| **Cursor game.dev** | Frozen handoff + lock + smoke GO + Stephen open | [GAME_DEV_BEST_PRACTICES.md](./GAME_DEV_BEST_PRACTICES.md) · Master Plan §3.8 · [HANDOFF_SMOKE_CONSUMER.md](./templates/HANDOFF_SMOKE_CONSUMER.md) | [GAME_DEV_SCORECARD.md](./templates/GAME_DEV_SCORECARD.md), [GAME_DEV_TEST_CASES.md](./templates/GAME_DEV_TEST_CASES.md) | Playable build / tip — **Build tip GO not stamped here** | PM + Tech |
 | **QA task (L1 non-art)** | Locked pack | [GAME_QA_BEST_PRACTICES.md](./GAME_QA_BEST_PRACTICES.md) §3.1–3.2 | [GAME_QA_SCORECARD.md](./templates/GAME_QA_SCORECARD.md) | Task GO/NO | QA Lead |
 | **QA phase (L2)** | `build_ref` player | GAME_QA §3.3–3.8 · §9 below | [QA_MATRICES.md](./templates/QA_MATRICES.md) L2 | **Phase QA GO** — **not stamped here** | QA Lead |
 | **UAT (L3)** | RC build | GAME_QA §3.9 · §9.3 | QA_MATRICES L3 | **UAT GO** (Stephen path) — **not stamped here** | QA Lead + PM |
@@ -69,6 +69,7 @@ Copy fillable templates from [templates/README.md](./templates/README.md) into `
 |-------|-------------------|--------|----------------|
 | **Art / audio craft** | [AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md) · index [ART_FACTORY_SOP.md](./ART_FACTORY_SOP.md) · skills `team-knowledge/skills/*` | [ART_QA_BEST_PRACTICES.md](./ART_QA_BEST_PRACTICES.md) (L1 task + art pack roll-up) | Phase UAT, schema, handoff hash law |
 | **Non-art craft** | [FACTORY_NON_ART_BEST_PRACTICES.md](./FACTORY_NON_ART_BEST_PRACTICES.md) §§0–19 | [GAME_QA_BEST_PRACTICES.md](./GAME_QA_BEST_PRACTICES.md) (L1 schema/handoff + L2–L5) | Mid-stride anim law, LICENSE.json art rows |
+| **Cursor implementer** | [GAME_DEV_BEST_PRACTICES.md](./GAME_DEV_BEST_PRACTICES.md) (after smoke GO) | [GAME_QA_BEST_PRACTICES.md](./GAME_QA_BEST_PRACTICES.md) on `build_ref` | Art L1 task QA, schema authoring |
 | **Matrices shell** | — | [QA_MATRICES.md](./templates/QA_MATRICES.md) links both kits | Case text (live in ART_QA / GAME_QA leaves) |
 
 ---
@@ -173,6 +174,7 @@ Index: [team-knowledge/README.md](./team-knowledge/README.md) · R&R SSOT: Maste
 | [AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md) | Art/audio craft |
 | [ART_FACTORY_SOP.md](./ART_FACTORY_SOP.md) | Art index + pipeline order |
 | [ART_QA_BEST_PRACTICES.md](./ART_QA_BEST_PRACTICES.md) | Art L1 QA cases |
+| [GAME_DEV_BEST_PRACTICES.md](./GAME_DEV_BEST_PRACTICES.md) | Cursor game.dev implementer cases (A5/B4) |
 | [GAME_QA_BEST_PRACTICES.md](./GAME_QA_BEST_PRACTICES.md) | Game L1 + L2–L5 QA cases |
 | [KIT_STATUS.md](./KIT_STATUS.md) | Track A landed vs partial |
 | [templates/README.md](./templates/README.md) | Fillable kits A3–A7 |
@@ -236,3 +238,41 @@ UAT-001 first: require `.png`/`.mp4` under `content/<SKU>/qa/uat/`. UAT-002 prim
 
 - **Tech:** `npm run validate:pass`; `npm run validate:fail` must exit non-zero.  
 - **PM:** Single `issue_pack_ref`; GAME-QA-EVD-001 clean before gate requests.
+
+---
+
+## Appendix B — Game dev day-run (Track A5 + B4 detail)
+
+**Prerequisite:** [HANDOFF_SMOKE_CONSUMER.md](./templates/HANDOFF_SMOKE_CONSUMER.md) GO + Stephen factory open (arts-before-dev). Do not start IMP-* without AUTH-001/002.
+
+### B.1 Open order
+
+| Step | File | Action |
+|------|------|--------|
+| 1 | [GAME_DEV_SCORECARD.md](./templates/GAME_DEV_SCORECARD.md) | Copy to `content/<SKU>/dev/GAME_DEV_SCORECARD_<YYYYMMDD>.md`; fill header (`sku_id`, `pack_path`, `tip`, `schema_version`, `godot_project_ref`, factory open ref). |
+| 2 | [GAME_DEV_BEST_PRACTICES.md](./GAME_DEV_BEST_PRACTICES.md) §2.1 | Workability bar + command crib. |
+| 3 | [GAME_DEV_TEST_CASES.md](./templates/GAME_DEV_TEST_CASES.md) | Execute rows; P/F/N + evidence path. |
+| 4 | [GAME_QA_BEST_PRACTICES.md](./GAME_QA_BEST_PRACTICES.md) | After PACK-002, same `build_ref` for QA L1/L2. |
+
+### B.2 Intake (re-verify frozen pack)
+
+```bash
+cd <repo-root>
+npm ci --prefix tools/validate-content-pack
+node tools/validate-content-pack/validate.mjs <pack_path>
+```
+
+1. Save log → `content/<SKU>/dev/intake/GAME-DEV-INTAKE-008_<date>_validate_pass.log`.  
+2. `sha256sum` vs `handoff.lock` (INTAKE-003/004).  
+3. Link prior smoke GO (INTAKE-001).
+
+### B.3 Implement + export
+
+Run IMP → SCN → DLG → INT → CMB → SES → LOC per §3. Record Godot export log under `content/<SKU>/dev/build/` (BLD-005). Set `build_ref` before BLD-006.
+
+**Exit:** Implementer pack `GO`/`NO` + why — **not** Build tip GO stamp.
+
+### B.4 Tech / PM quick checks
+
+- **Tech:** Hash parity; no `handoff.lock` edits in game repo; `npm run validate:pass` on kit repo when touching validators.  
+- **PM:** GAME-DEV-PM-001/002; handoff to QA via PM-005.

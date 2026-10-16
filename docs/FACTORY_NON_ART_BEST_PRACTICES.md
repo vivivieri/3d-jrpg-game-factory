@@ -603,6 +603,8 @@ handoff.lock:
 - Stephen: START / STOP / restart game factory.  
 - Tech Lead: tip model (dual vs single) decision.
 
+**Executable implementer kit (numbered cases, scorecard, day-run):** [GAME_DEV_BEST_PRACTICES.md](./GAME_DEV_BEST_PRACTICES.md) + [templates/GAME_DEV_SCORECARD.md](./templates/GAME_DEV_SCORECARD.md) + [FACTORY_OPERATING_SOP.md](./FACTORY_OPERATING_SOP.md) Appendix B. Intake smoke remains [HANDOFF_SMOKE_CONSUMER.md](./templates/HANDOFF_SMOKE_CONSUMER.md) — GAME_DEV starts **after** smoke GO.
+
 ---
 
 ## 11. QA (task / phase / real UAT — no paper greens)

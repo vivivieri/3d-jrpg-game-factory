@@ -32,6 +32,15 @@ Use generic SKU language only: `sku_<country>_<tale_slug>_v<semver>`.
 |----------|-------|---------|--------|
 | [HANDOFF_SMOKE_CONSUMER.md](./HANDOFF_SMOKE_CONSUMER.md) | Game production · Cursor 3.0 intake | **A5** | [handoff-lock.schema.json](../schemas/handoff-lock.schema.json) |
 
+## Game dev implementer (A5 + B4)
+
+| Template / leaf | Phase | Track A | Notes |
+|-----------------|-------|---------|-------|
+| [GAME_DEV_BEST_PRACTICES.md](../GAME_DEV_BEST_PRACTICES.md) | Game production · Cursor 3.0 build | **A5**, **B4** | After smoke GO; procedural leaf — numbered GAME-DEV cases |
+| [GAME_DEV_TEST_CASES.md](./GAME_DEV_TEST_CASES.md) | Game production · execution | **A5**, **B4** | Checklist table (detail in leaf) |
+| [GAME_DEV_SCORECARD.md](./GAME_DEV_SCORECARD.md) | Game production · build roll-up | **A5**, **B4** | Per tip / `build_ref`; **Build tip GO not stamped** |
+| [FACTORY_OPERATING_SOP.md](../FACTORY_OPERATING_SOP.md) | Factory day-run | **A5**, **B4** | Appendix B (game dev) |
+
 ## Art task QA (A4)
 
 | Template / leaf | Phase | Track A | Notes |

@@ -137,7 +137,7 @@ Full R&R: Master Plan [§5.2](FACTORY_MASTER_PLAN.md#52-full-rr).
 | 5. Handoff contract + smoke consumer | **A5** | **Checklist landed** — [HANDOFF_SMOKE](templates/HANDOFF_SMOKE_CONSUMER.md); **Contract GO not stamped** |
 | 6. QA matrices + game QA executable kit | **A6** | **Template + GAME_QA landed** — [GAME_QA](GAME_QA_BEST_PRACTICES.md), [QA_MATRICES](templates/QA_MATRICES.md); **Phase QA GO not stamped** |
 | 7. Locale + stream/live ops templates | **A7** | **Template kit landed** |
-| 8. Cursor 3.0 game factory hooks (PM automation) | **A5** + **B4** | Partial |
+| 8. Cursor 3.0 game factory hooks (PM automation) | **A5** + **B4** | **GAME_DEV kit landed** — [GAME_DEV](GAME_DEV_BEST_PRACTICES.md); **Build tip GO not stamped** |
 | 9. **Operating SOP** (whole-factory day-run) | **A1–A7** | [FACTORY_OPERATING_SOP.md](FACTORY_OPERATING_SOP.md) |
 
 Schemas: [docs/schemas/](schemas/) · validators: `tools/validate-content-pack/` (root [README.md](../README.md)).  

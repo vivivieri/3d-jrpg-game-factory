@@ -3,7 +3,8 @@
 **Status:** Procedural leaf — **not** a GO stamp. Laws remain in [FACTORY_MASTER_PLAN.md](./FACTORY_MASTER_PLAN.md) (§3.9, §6, §14).  
 **Scope:** Non-art **task QA** (schema, handoff smoke, systems tickets) plus **phase regression**, **UAT**, **release**, and **live** evidence cases — SKU / build roll-up before Phase QA GO request, UAT, and Release QA (human Stephen gates stay unstamped here).  
 **Craft SOP (design / tech):** [FACTORY_NON_ART_BEST_PRACTICES.md](./FACTORY_NON_ART_BEST_PRACTICES.md) · **Matrices shell:** [templates/QA_MATRICES.md](./templates/QA_MATRICES.md)  
-**Art L1 task QA:** [ART_QA_BEST_PRACTICES.md](./ART_QA_BEST_PRACTICES.md) — art/audio rows on MASTER_ASSET_LIST only; this kit does **not** replace ART-QA cases.
+**Art L1 task QA:** [ART_QA_BEST_PRACTICES.md](./ART_QA_BEST_PRACTICES.md) — art/audio rows on MASTER_ASSET_LIST only; this kit does **not** replace ART-QA cases.  
+**Implementer (upstream):** [GAME_DEV_BEST_PRACTICES.md](./GAME_DEV_BEST_PRACTICES.md) — build tip evidence; this kit tests `build_ref` after GAME_DEV handoff.
 
 ---
 
