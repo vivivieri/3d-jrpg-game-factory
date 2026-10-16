@@ -76,10 +76,10 @@ Clearance → Story → Storyboard / GD / Plan → Dialogue/VO scripts (dlg.* lo
 **Exit:** Playable build(s)
 
 ### 9. QA
-- **Task-level** checks
-- **Sprint / phase regression** to catch integration breaks
+- **Task-level** checks — art L1: [ART_QA_BEST_PRACTICES.md](ART_QA_BEST_PRACTICES.md); non-art L1 + phase/UAT/release/live: [GAME_QA_BEST_PRACTICES.md](GAME_QA_BEST_PRACTICES.md)
+- **Sprint / phase regression** — matrices: [templates/QA_MATRICES.md](templates/QA_MATRICES.md); day-run: [FACTORY_OPERATING_SOP.md](FACTORY_OPERATING_SOP.md) §3
 - Real UAT (real game run / video — no paper greens)  
-**Exit:** Phase QA GO
+**Exit:** Phase QA GO _(human gate — not stamped in kit repo)_
 
 ### 10. Publish
 - Stream platform packaging, multi-country store listing  

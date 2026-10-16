@@ -12,7 +12,7 @@ Read and obey in this order. **Lower items never override higher items.**
 | 2 | **BOOT** | This file | How to navigate authority; no new laws |
 | 3 | **Output contract** | [team-knowledge/OUTPUT_CONTRACT.md](./team-knowledge/OUTPUT_CONTRACT.md) | Required handoff fields (Master Plan §6 rule 5) |
 | 4 | **Standing rules (mirror)** | [team-knowledge/STANDING_RULES.md](./team-knowledge/STANDING_RULES.md) | Convenience mirror of §6 (+ pointers); Master Plan wins on conflict |
-| 5 | **Leaf SOPs (how-to only)** | [FACTORY_NON_ART_BEST_PRACTICES.md](./FACTORY_NON_ART_BEST_PRACTICES.md), [AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md), [ART_FACTORY_SOP.md](./ART_FACTORY_SOP.md), `team-knowledge/skills/*` | Craft steps; cite Master Plan for gates |
+| 5 | **Leaf SOPs (how-to only)** | [FACTORY_NON_ART_BEST_PRACTICES.md](./FACTORY_NON_ART_BEST_PRACTICES.md), [FACTORY_OPERATING_SOP.md](./FACTORY_OPERATING_SOP.md), [AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md), [ART_FACTORY_SOP.md](./ART_FACTORY_SOP.md), [GAME_QA_BEST_PRACTICES.md](./GAME_QA_BEST_PRACTICES.md), [ART_QA_BEST_PRACTICES.md](./ART_QA_BEST_PRACTICES.md), `team-knowledge/skills/*` | Craft steps; cite Master Plan for gates |
 | 6 | **Indexes / maps (pointers only)** | [FACTORY_OVERVIEW.md](./FACTORY_OVERVIEW.md), [TEAM_KNOWLEDGE_INDEX.md](./TEAM_KNOWLEDGE_INDEX.md), [team-knowledge/README.md](./team-knowledge/README.md), [KIT_STATUS.md](./KIT_STATUS.md) | Short maps; do not restate laws |
 
 **Rule:** Indexes and README files **point** at the Master Plan. They are not a second law book.

@@ -1,7 +1,7 @@
 # Factory kit status (Track A)
 
 **SSOT laws:** [FACTORY_MASTER_PLAN.md](./FACTORY_MASTER_PLAN.md)  
-**Updated:** 2026-10-15 — Track A3–A7 template kit gap-fill + A4 art QA kit
+**Updated:** 2026-10-16 — Track A6 game QA executable kit + operating SOP day-run
 
 ## Track A milestones
 
@@ -12,7 +12,7 @@
 | **A3** Clearance → design templates | **Template kit landed** | Fillable kits: [templates/README.md](./templates/README.md) (clearance ledger, bible/beat, storyboard, `dlg.*`, MASTER_ASSET_LIST, combat/gates) + deepened ratings/L0/a11y/SLA shells |
 | **A4** Art factory SOP + skills | Partial | [ART_FACTORY_SOP.md](./ART_FACTORY_SOP.md), [ART_QA_BEST_PRACTICES.md](./ART_QA_BEST_PRACTICES.md) + `templates/ART_QA_*` (art QA kit landed); `team-knowledge/skills/` — **Art SOP GO not stamped** |
 | **A5** Handoff contract + smoke consumer | **Checklist landed** | [HANDOFF_SMOKE_CONSUMER.md](./templates/HANDOFF_SMOKE_CONSUMER.md) — **Contract GO not stamped** |
-| **A6** QA matrices | **Template kit landed** | [QA_MATRICES.md](./templates/QA_MATRICES.md) (task / phase / UAT / release / live); art L1 tasks → ART_QA kit |
+| **A6** QA matrices | **Template + GAME_QA kit landed** | [QA_MATRICES.md](./templates/QA_MATRICES.md); art L1 → ART_QA; non-art L1 + L2–L5 → [GAME_QA_BEST_PRACTICES.md](./GAME_QA_BEST_PRACTICES.md) + `templates/GAME_QA_*` + [FACTORY_OPERATING_SOP.md](./FACTORY_OPERATING_SOP.md) §3 — **Phase QA GO not stamped** |
 | **A7** Locale + stream/live ops | **Template kit landed** | [LOCALE_READINESS_CHECKLIST.md](./templates/LOCALE_READINESS_CHECKLIST.md), [STREAM_PACKAGING_CHECKLIST.md](./templates/STREAM_PACKAGING_CHECKLIST.md), [LIVE_OPS_HOTFIX_TALE_QUEUE.md](./templates/LIVE_OPS_HOTFIX_TALE_QUEUE.md) |
 
 ## Validators
@@ -44,12 +44,15 @@ Example-only stub (not CI): `fixtures/content-packs/example/design-pack-fields-s
 
 ## Doc sync log
 
-**Last gap-fill:** 2026-10-15 (HKT) — branch `cursor/track-a3-a7-template-kits-ce3a` + art QA kit (`cursor/art-qa-best-practices-07db`)
+**Last gap-fill:** 2026-10-16 (HKT) — branch `cursor/game-qa-best-practices-a6-1c16` (GAME_QA kit + FACTORY_OPERATING_SOP)
+
+**Prior gap-fill:** 2026-10-15 (HKT) — branch `cursor/track-a3-a7-template-kits-ce3a` + art QA kit (`cursor/art-qa-best-practices-07db`)
 
 | Area | Change |
 |------|--------|
 | [templates/](./templates/) | A3–A7 fillable kits + [README.md](./templates/README.md) index |
 | [ART_QA_BEST_PRACTICES.md](./ART_QA_BEST_PRACTICES.md) | A4 executable art task QA cases + scorecard templates |
+| [GAME_QA_BEST_PRACTICES.md](./GAME_QA_BEST_PRACTICES.md) · [FACTORY_OPERATING_SOP.md](./FACTORY_OPERATING_SOP.md) | A6 game QA cases + QA day-run SOP |
 | Role briefs | Day-run checklists (Master Plan §5.2 + leaf SOP pointers) |
 | [FACTORY_OVERVIEW.md](./FACTORY_OVERVIEW.md) · [ART_FACTORY_SOP.md](./ART_FACTORY_SOP.md) | Template index + ART_QA pointers |
 | Example stub | `fixtures/content-packs/example/design-pack-fields-stub.yaml` |

@@ -607,6 +607,8 @@ handoff.lock:
 
 ## 11. QA (task / phase / real UAT — no paper greens)
 
+**Executable game QA kit (numbered cases, scorecard, day-run):** [GAME_QA_BEST_PRACTICES.md](./GAME_QA_BEST_PRACTICES.md) + [templates/GAME_QA_SCORECARD.md](./templates/GAME_QA_SCORECARD.md) + [FACTORY_OPERATING_SOP.md](./FACTORY_OPERATING_SOP.md) §3. Art L1 task rows stay on [ART_QA_BEST_PRACTICES.md](./ART_QA_BEST_PRACTICES.md). Matrices shell: [templates/QA_MATRICES.md](./templates/QA_MATRICES.md).
+
 ### Workflow
 
 1. **Task QA** — every factory task has a test case (or N/A + why); evidence artifact required.  
