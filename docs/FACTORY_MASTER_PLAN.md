@@ -265,6 +265,7 @@ Placeholders are internal art-factory tools only — never ship gates.
 | **Outputs** | Playable builds, logs, tip hashes |
 | **Must not** | Invent story, art, combat lore, or change beat length without new Design GO |
 | **Grok team role** | Author/maintain contracts, review build vs design, orchestrate QA — not write game.dev inside Cursor |
+| **Implementer how-to (kit)** | [GAME_DEV_BEST_PRACTICES.md](GAME_DEV_BEST_PRACTICES.md) + [templates/GAME_DEV_SCORECARD.md](templates/GAME_DEV_SCORECARD.md) — procedural leaf; **Build tip GO not stamped in kit** |
 
 ### 3.9 QA levels
 

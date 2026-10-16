@@ -36,6 +36,7 @@ Every exit uses [OUTPUT_CONTRACT.md](../OUTPUT_CONTRACT.md): `status · why · p
 - [BOARD_SCHEMA.md](../../BOARD_SCHEMA.md) · [schemas/board.issue_pack.schema.json](../../schemas/board.issue_pack.schema.json)
 - [ART_FACTORY_SOP.md](../../ART_FACTORY_SOP.md) → skills for enforceable 3D/anim gates
 - Handoff smoke: [HANDOFF_SMOKE_CONSUMER.md](../../templates/HANDOFF_SMOKE_CONSUMER.md) · lock schema: [handoff-lock.schema.json](../../schemas/handoff-lock.schema.json)
+- Cursor implementer cases (post-smoke): [GAME_DEV_BEST_PRACTICES.md](../../GAME_DEV_BEST_PRACTICES.md) · [FACTORY_OPERATING_SOP.md](../../FACTORY_OPERATING_SOP.md) Appendix B
 
 ## Day-run checklist (Master Plan §5.2)
 
