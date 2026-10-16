@@ -96,7 +96,7 @@ test -f "content/<SKU>/qa/schema/GAME-QA-SCH-001_<YYYYMMDD>_validate_pass.log"
 
 **Runtime (`build_ref`):** This repo has no embedded Godot project. Tech/Cursor supplies the **candidate player** path or CI download URL; record it in the scorecard header before LOAD / NAR / CMB / UAT cases. No `build_ref` → runtime cases are **NO** (not silent PASS).
 
-Day-run order: [FACTORY_OPERATING_SOP.md](./FACTORY_OPERATING_SOP.md) §3 (Game QA).
+Day-run order: [FACTORY_OPERATING_SOP.md](./FACTORY_OPERATING_SOP.md) Appendix A (Game QA).
 
 ---
 

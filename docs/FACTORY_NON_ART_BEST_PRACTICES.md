@@ -432,7 +432,7 @@ Industrial JRPG pattern: beat sheet → dialogue/VO line packs keyed to systems 
 
 **On-disk schemas (Track A2):** [schemas/content-pack.schema.json](./schemas/content-pack.schema.json) and composed leaf schemas under [schemas/](./schemas/). CLI: `tools/validate-content-pack/` (root `README.md`). **Tech Lead Schema GO** still required — do not stamp Schema GO from validators alone.
 
-**Fillable kits (Track A3–A7):** [templates/README.md](./templates/README.md) — how-to tables for clearance through live ops; laws remain in Master Plan.
+**Fillable kits (Track A3–A7):** [templates/README.md](./templates/README.md) — how-to tables for clearance through live ops; laws remain in Master Plan. **Day-one routing (phase → leaf → template):** [FACTORY_OPERATING_SOP.md](./FACTORY_OPERATING_SOP.md).
 
 ### Workflow
 

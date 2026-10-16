@@ -3,9 +3,11 @@
 **Status:** Draft map for future titles (not Tides of Urashima) — **not** the SSOT plan  
 **Owner mouthpiece:** Grok Bot (product) · Game Factory (this repo kit)  
 **Audience:** Stephen + Grok Bot team + factory-kit agents  
-**Updated:** 2026-10-15 (HKT)
+**Updated:** 2026-10-16 (HKT)
 
-**Note:** [Master Plan v1](FACTORY_MASTER_PLAN.md) at `docs/FACTORY_MASTER_PLAN.md` is the **single SSOT plan** for phases, R&R, rules, and tracks. This Overview is a short map only; [BOOT.md](BOOT.md) defines authority order. Track A status: [KIT_STATUS.md](KIT_STATUS.md).
+**Note:** [Master Plan v1](FACTORY_MASTER_PLAN.md) at `docs/FACTORY_MASTER_PLAN.md` is the **single SSOT plan** for phases, R&R, rules, and tracks. This Overview is a short map only; [BOOT.md](BOOT.md) defines authority order.
+
+**Operating entry (day-one runbook):** [FACTORY_OPERATING_SOP.md](FACTORY_OPERATING_SOP.md) — which leaf and template to open per phase (not a GO stamp). Track A status: [KIT_STATUS.md](KIT_STATUS.md).
 
 ---
 
@@ -125,18 +127,18 @@ Full R&R: Master Plan [§5.2](FACTORY_MASTER_PLAN.md#52-full-rr).
 
 ## Phased build of the factory kit itself (Track A)
 
-| Step | Track | Status (see [KIT_STATUS.md](KIT_STATUS.md)) |
-|------|-------|-----------------------------------------------|
-| 1. Factory kit — BOOT, R&R, board schema, output contract | **A1** | Done (this repo) |
-| 2. Content schema v1 + validators | **A2** | Present; **Schema GO pending** (Tech Lead) |
-| 3. Story kit — folktale intake + PD + length → beats → storyboard | **A3** | Partial |
-| 3b. Dialogue / VO script kit — `dlg.*` line packs → script lock | **A3** §4 + **B2½** | Partial (NON_ART §4) |
-| 4. Design kit — combat/gates + asset list + schema consumption | **A3** §§5–8, **A2** | Partial |
-| 5. Art factory runbook — lock pack + reason log | **A4** | Partial |
-| 6. Locale + handoff pack schema | **A5**, **A7**, **A2** | Partial |
-| 7. Cursor 3.0 game factory hooks (PM automation) | **A5** + **B4** | Partial |
-| 8. QA task + phase regression suite | **A6** | Partial |
-| 9. Publish + live ops runbook | **A7** | Partial |
+| Step | Track | Status (aligned with [KIT_STATUS.md](KIT_STATUS.md)) |
+|------|-------|------------------------------------------------------|
+| 1. Factory kit — BOOT, R&R, board schema, output contract | **A1** | **Done (this kit)** |
+| 2. Content schema v1 + validators | **A2** | **Present; Schema GO pending** (Tech Lead — not stamped) |
+| 3. Story / design template kit — clearance → beats → storyboard → combat/gates → MAL | **A3** | **Template kit landed** (fillable [templates/](templates/README.md)) |
+| 3b. Dialogue / VO — `dlg.*` line packs → script lock | **A3** / **B2½** | Templates landed; craft depth partial (NON_ART §4) |
+| 4. Art factory runbook + art QA kit | **A4** | **Partial** — [ART_FACTORY_SOP](ART_FACTORY_SOP.md), [ART_QA](ART_QA_BEST_PRACTICES.md); **Art SOP GO not stamped** |
+| 5. Handoff contract + smoke consumer | **A5** | **Checklist landed** — [HANDOFF_SMOKE](templates/HANDOFF_SMOKE_CONSUMER.md); **Contract GO not stamped** |
+| 6. QA matrices + game QA executable kit | **A6** | **Template + GAME_QA landed** — [GAME_QA](GAME_QA_BEST_PRACTICES.md), [QA_MATRICES](templates/QA_MATRICES.md); **Phase QA GO not stamped** |
+| 7. Locale + stream/live ops templates | **A7** | **Template kit landed** |
+| 8. Cursor 3.0 game factory hooks (PM automation) | **A5** + **B4** | Partial |
+| 9. **Operating SOP** (whole-factory day-run) | **A1–A7** | [FACTORY_OPERATING_SOP.md](FACTORY_OPERATING_SOP.md) |
 
 Schemas: [docs/schemas/](schemas/) · validators: `tools/validate-content-pack/` (root [README.md](../README.md)).  
 Fillable kits: [docs/templates/README.md](templates/README.md) (Track A3–A7 — **GO stamps not in templates**).

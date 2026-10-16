@@ -1,6 +1,7 @@
 # Factory templates index (Track A)
 
-**Laws:** [FACTORY_MASTER_PLAN.md](../FACTORY_MASTER_PLAN.md) · **Procedural SOP:** [FACTORY_NON_ART_BEST_PRACTICES.md](../FACTORY_NON_ART_BEST_PRACTICES.md)  
+**Day-one runbook:** [FACTORY_OPERATING_SOP.md](../FACTORY_OPERATING_SOP.md) (pipeline → leaf → template → exit — whole factory).  
+**Laws:** [FACTORY_MASTER_PLAN.md](../FACTORY_MASTER_PLAN.md) · **Craft SOP:** [FACTORY_NON_ART_BEST_PRACTICES.md](../FACTORY_NON_ART_BEST_PRACTICES.md)  
 **Status:** Fillable kits — **no GO stamps** in this folder. Stephen-only decisions stay **TBD** where noted.
 
 Use generic SKU language only: `sku_<country>_<tale_slug>_v<semver>`.

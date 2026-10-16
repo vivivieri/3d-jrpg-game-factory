@@ -36,5 +36,6 @@ Cursor 3.0 PM game.dev stays **IDLE** until art + handoff lock and Stephen autho
 
 ## Related
 
+- **Day-one operating runbook** (which leaf/template per phase — not SSOT laws): [FACTORY_OPERATING_SOP.md](./FACTORY_OPERATING_SOP.md)
 - Board one-live-milestone shape: [schemas/board.issue_pack.schema.json](./schemas/board.issue_pack.schema.json) · [BOARD_SCHEMA.md](./BOARD_SCHEMA.md)
 - Content pack SSOT: [schemas/content-pack.schema.json](./schemas/content-pack.schema.json) · run `npm run validate` (see root [README.md](../README.md))
