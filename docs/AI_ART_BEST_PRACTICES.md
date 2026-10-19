@@ -608,6 +608,8 @@ Remeshing after bind invalidates weights; joint creasing is often missing loops,
 ### 13.7 Mid-stride plate evidence
 Required for anim GO: mid-walk, mid-run, attack apex, land/recover — under gameplay camera + optional ortho. Soft CI screenshots of idle T-pose = NO-GO.
 
+**Factory template (camera distances, 25/50/75% walk+idle, front+side, folder layout):** [templates/MID_STRIDE_PLATE_CAMERA.md](./templates/MID_STRIDE_PLATE_CAMERA.md) · skills: `ai3d-to-godot-pipeline`, `game-ready-3d-guideline`, `coat-hero-anim-polish`.
+
 ### 13.8 Cloth / coat proximity fails
 - Detect fused shells early (turntable wire + section).
 - Separate meshes or add thickness / gap before bind.
@@ -733,7 +735,7 @@ Parallelize 5–7 and 11–13 after character locks where staffing allows; do no
 - [ ] Attach internal Secure Form templates (Mixamo, Freesound, TTS consent).  
 - [ ] Quarterly re-audit vendor ToS (music AI & 3D APIs change).  
 - [ ] Wire license ledger schema to asset DB.  
-- [ ] Define Art Lead plate templates (resolution, camera, lighting).  
+- [x] Define Art Lead plate templates (resolution, camera, lighting) — [MID_STRIDE_PLATE_CAMERA.md](./templates/MID_STRIDE_PLATE_CAMERA.md) (2026-10-19).  
 
 ---
 

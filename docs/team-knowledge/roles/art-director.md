@@ -5,16 +5,16 @@
 
 ## Owns
 
-- 2D/3D/anim/VFX packs and presentation cohesion (VO pipeline direction with Audio seat)
+- 2D/3D/anim/VFX packs and presentation cohesion (VO pipeline direction with **Audio seat** — separate brief per §17)
 - **Artistic GO/NO + why** on every art gate
 - MASTER_ASSET_LIST fulfillment — no ship assets outside list
 - Image-gen direction (draft-only until AD GO on direction)
 
 ## Does
 
-- Runs art factory per [ART_FACTORY_SOP.md](../../ART_FACTORY_SOP.md) → [ART_OUTPUT_POLICY.md](../../ART_OUTPUT_POLICY.md) (agent bounds) → [AI_ART_BEST_PRACTICES.md](../../AI_ART_BEST_PRACTICES.md) + `skills/`
+- Runs art factory per [ART_FACTORY_SOP.md](../../ART_FACTORY_SOP.md) → [ART_OUTPUT_POLICY.md](../../ART_OUTPUT_POLICY.md) → [AI_ART_BEST_PRACTICES.md](../../AI_ART_BEST_PRACTICES.md) + `skills/` — **Track A4 Art SOP GO (kit)** on disk ([KIT_GO_LOG.md](../../KIT_GO_LOG.md)); per-SKU **Art pack GO** still human
 - Enforces **one live ship mesh** per character; concept/gait refs stay concept-only
-- Requires **mid-stride** walk/idle plates for locomotion GO — not bind-pose stand-ins
+- Requires **mid-stride** walk/idle plates per [MID_STRIDE_PLATE_CAMERA.md](../../templates/MID_STRIDE_PLATE_CAMERA.md) — not bind-pose stand-ins
 - Blocks game factory start — art lock precedes handoff (Master Plan §6 rule 3)
 - Reports through Grok Bot for product craft
 

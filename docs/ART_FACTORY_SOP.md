@@ -25,7 +25,7 @@ Use these as the **seed SOP** until title-specific runbooks exist. Full text: `d
 |--------|---------|
 | `ai3d-to-godot-pipeline` | Text/concept → AI mesh (Tripo-class) → remesh/retopo/UV **before** rig → Blender weights/LODs → GLB → Godot plates → Art Lead GO/NO+why |
 | `game-ready-3d-guideline` | Realtime character/prop bar: scale, topology, UVs, rig, export, AD eyes-on checklist |
-| `coat-hero-anim-polish` | **Lesson (generic):** jacketed cloth / coat-proximity anim — fix weights on **one** live ship mesh; concept/gait refs stay concept-only (no title-specific IDs) |
+| `coat-hero-anim-polish` | Jacketed cloth / coat-proximity anim — fix weights on **one** live ship mesh; [MID_STRIDE_PLATE_CAMERA.md](./templates/MID_STRIDE_PLATE_CAMERA.md) |
 | `mixamo-adobe-gate` | Mixamo / Adobe animation download — **Stephen 1:1 Secure Form only**; no room workaround |
 | `freesound-full-wav-1to1` | Freesound original full WAV — **Stephen 1:1**; never tip HQ-preview as full WAV |
 
@@ -40,7 +40,7 @@ Text / concept brief → 2D draft (AD GO on direction)
     → prerig check → rig → retarget presets (idle, walk, …)
     → Blender: meters, apply transforms, weight peel, cloth proximity, LODs
     → export GLB
-    → Godot mid-stride plates (walk + idle @ 25/50/75%, front + side)
+    → Godot mid-stride plates (walk + idle @ 25/50/75%, front + side) — [MID_STRIDE_PLATE_CAMERA.md](./templates/MID_STRIDE_PLATE_CAMERA.md)
     → game-ready checklist → Art Lead GO/NO + why
 ```
 

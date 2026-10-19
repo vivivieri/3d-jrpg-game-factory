@@ -2,7 +2,7 @@
 
 **Status:** Procedural leaf — **not** a GO stamp.  
 **SSOT laws:** [FACTORY_MASTER_PLAN.md](./FACTORY_MASTER_PLAN.md) (phases, R&R, §6 hard rules, §17 open decisions).  
-**This document:** Tells an agent or human **which leaf to open next** at each pipeline phase. It does **not** add laws or stamp Schema GO, Art SOP GO, Contract GO, Phase QA GO, UAT GO, or Release GO.
+**This document:** Tells an agent or human **which leaf to open next** at each pipeline phase. It does **not** add laws. **Track A kit GOs** (Schema, Template, Art SOP, Contract, QA kit, Locale-stream kit) are recorded in [KIT_GO_LOG.md](./KIT_GO_LOG.md) — **not** SKU Build tip GO, Phase QA GO, UAT GO, or Release GO.
 
 ---
 
@@ -106,16 +106,18 @@ Laws: [FACTORY_NON_ART_BEST_PRACTICES.md](./FACTORY_NON_ART_BEST_PRACTICES.md) �
 
 | Item | Status in kit |
 |------|----------------|
-| Tale / country pick, stream **platform targets** | Master Plan §17 — **TBD** |
+| Tale / country pick | Master Plan §17 — **open** (B0) |
+| Stream **platform names** (not checklist) | **Deferred** to B0 Clearance — Stephen names targets; [STREAM_PACKAGING_CHECKLIST.md](./templates/STREAM_PACKAGING_CHECKLIST.md) ready |
 | **Release GO** (platform release control) | Stephen |
 | Factory **STOP** / **restart** `game.dev` | Stephen |
 | Paid **license** / Secure Form (Mixamo, Freesound, etc.) | Stephen 1:1 |
 | Sign-in / account flows on external tools | Human |
-| **Schema GO**, **Contract GO**, **Art SOP GO**, **Phase QA GO**, **UAT GO** | Named owners — **not stamped in this repo** |
-| Git **tip model** (dual vs single) | Tech Lead — **undecided** |
-| Engine confirm (Godot 4.x default) | **Not confirmed** |
-| Monetization | Default premium-only until Stephen states otherwise |
-| Merge Story+GD / AD vs Audio seats | **Undecided** |
+| **Track A kit GOs** (Schema, Template, Art SOP, Contract, QA kit, Locale-stream kit) | Stamped in [KIT_GO_LOG.md](./KIT_GO_LOG.md) — **not** SKU Build/Phase QA/UAT/Release |
+| **Phase QA GO (SKU)**, **UAT GO**, **Build tip GO**, **Release GO** | **BLOCKED** until live SKU — [KIT_GO_LOG.md](./KIT_GO_LOG.md) |
+| Git **tip model** | **LOCKED** dual tip (§17) |
+| Engine (Godot 4.x 3D) | **CONFIRMED** first-SKU |
+| Monetization | **LOCKED** premium-only until Stephen reopens |
+| Merge Story+GD / AD vs Audio seats | **NO** / **YES** separate (§17) |
 
 Full table: [KIT_STATUS.md](./KIT_STATUS.md) · Master Plan [§17](./FACTORY_MASTER_PLAN.md).
 

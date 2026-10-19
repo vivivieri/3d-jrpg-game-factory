@@ -2,7 +2,7 @@
 
 **Day-one runbook:** [FACTORY_OPERATING_SOP.md](../FACTORY_OPERATING_SOP.md) (pipeline → leaf → template → exit — whole factory).  
 **Laws:** [FACTORY_MASTER_PLAN.md](../FACTORY_MASTER_PLAN.md) · **Craft SOP:** [FACTORY_NON_ART_BEST_PRACTICES.md](../FACTORY_NON_ART_BEST_PRACTICES.md)  
-**Status:** Fillable kits — **no GO stamps** in this folder. Stephen-only decisions stay **TBD** where noted.
+**Status:** Fillable kits — **no SKU GO stamps** in this folder. Track A kit GO evidence: [KIT_GO_LOG.md](../KIT_GO_LOG.md). Stephen-only platform names stay **TBD** until B0 Clearance.
 
 Use generic SKU language only: `sku_<country>_<tale_slug>_v<semver>`.
 
@@ -41,10 +41,11 @@ Use generic SKU language only: `sku_<country>_<tale_slug>_v<semver>`.
 | [GAME_DEV_SCORECARD.md](./GAME_DEV_SCORECARD.md) | Game production · build roll-up | **A5**, **B4** | Per tip / `build_ref`; **Build tip GO not stamped** |
 | [FACTORY_OPERATING_SOP.md](../FACTORY_OPERATING_SOP.md) | Factory day-run | **A5**, **B4** | Appendix B (game dev) |
 
-## Art task QA (A4)
+## Art evidence (A4)
 
 | Template / leaf | Phase | Track A | Notes |
 |-----------------|-------|---------|-------|
+| [MID_STRIDE_PLATE_CAMERA.md](./MID_STRIDE_PLATE_CAMERA.md) | Art production · locomotion evidence | **A4** | Plate grid — AD GO/NO input; not a GO stamp |
 | [ART_OUTPUT_POLICY.md](../ART_OUTPUT_POLICY.md) | Art production · agent bounds | **A4** | Must/must-not + budgets — **not** a GO stamp |
 | [ART_QA_BEST_PRACTICES.md](../ART_QA_BEST_PRACTICES.md) | Art production · task QA | **A4** | Procedural leaf — numbered cases, evidence law |
 | [ART_QA_TEST_CASES.md](./ART_QA_TEST_CASES.md) | Art production · L1 execution | **A4** | Checklist table (detail in leaf) |

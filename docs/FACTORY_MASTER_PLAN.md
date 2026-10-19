@@ -4,7 +4,7 @@
 **Product owner:** Stephen Chow  
 **Orchestration mouthpiece:** Grok Bot (product latch) · **Factory-kit mouthpiece (this repo):** Game Factory (Cursor) — multi-title kit docs/schemas without inventing Stephen decisions  
 **Audience:** Stephen + Grok Bot design/docs/art/QA team + Game Factory on `vivivieri/3d-jrpg-game-factory` + Cursor 3.0 PM game.dev factory  
-**Updated:** 2026-10-15 (HKT) — Track A2 schemas+validators on disk; BOOT/board/output contract kit; mouthpiece routing clarified; prior 2026-10-14 leaf map / NON_ART §4 / 3D pipeline notes retained
+**Updated:** 2026-10-19 (HKT) — §17 open decisions locked (Stephen authorized); Track A kit GOs stamped in [KIT_GO_LOG.md](KIT_GO_LOG.md); A4 skills + mid-stride plate template; prior 2026-10-15 A2/BOOT notes retained
 
 ---
 
@@ -304,11 +304,11 @@ Industrial defaults for a multi-title factory. Map **one primary tool family per
 | **3. Art 2D** | Concept/UI (Figma or equivalent for UI SSOT); image gen **draft only** under AD GO | Locked ship art without AD GO; gen as sole final |
 | **4. Art 3D / anim** | Concept/text → 2D draft → AI mesh (Tripo-class) → **remesh/retopo/UV before rig** → Blender weights/LODs/cloth proximity → GLB → mid-stride Godot plates → Art Lead GO/NO+why; [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) + `team-knowledge/skills/*`; Mixamo/Adobe **only** Stephen 1:1 Secure Form if used | Remesh **after** rig; dual live paths; concept/gait-ref as field hero; unattended paid Mixamo/Adobe; HQ-preview as full WAV |
 | **5. Audio** | VO (ElevenLabs-class or recorded) + BGM/SFX library + **license ledger**; DAW/mix optional; Freesound-style HQ→full WAV needs **human login** | Unlicensed banks; bot-owned paid logins |
-| **6. Game engine** | **Godot 4.x 3D** (default): short JRPG + stream-friendly (light footprint, open license, fast iterate, handoff→build clarity) | Cursor inventing design/art; second parallel engine tip |
-| **7. Game.dev automation** | Cursor 3.0 PM factory; CI for schema/asset refs; git dual or single tip (**Tech decides**) | Design/art/lore invention inside Cursor |
+| **6. Game engine** | **Godot 4.x 3D** (**CONFIRMED** first-SKU engine): short JRPG + stream-friendly (light footprint, open license, fast iterate, handoff→build clarity) | Cursor inventing design/art; second parallel engine tip |
+| **7. Game.dev automation** | Cursor 3.0 PM factory; CI for schema/asset refs; **dual tip locked** (design/art packs tip vs Cursor build tip — arts-before-dev) | Design/art/lore invention inside Cursor |
 | **8. QA** | Automated schema/task checks + **real runtime UAT** (Godot play / video) | Paper greens as ship evidence |
 | **9. Locale** | String tables + VO slots per market | Locale GO with missing critical strings/VO |
-| **10. Stream / publish** | Platform packaging **TBD by Stephen**; perf budget defined once | Undefined perf / packaging without owner |
+| **10. Stream / publish** | Packaging checklist ready; **platform names deferred to B0 Clearance** (Stephen names targets at Clearance) | Undefined perf / packaging without owner |
 | **11. Orchestration** | Grok Bot team for design/art/QA; **humans** for paid license / sign-in | Agents on paid license or Secure Form logins |
 
 **3D path law:** Single live path only (AI mesh draft → remesh/retopo/UV **before** rig → Blender polish → GLB → plates → GO). Abandon dual live paths; fix jacketed cloth / coat proximity in weights — do not maintain a second “live” mesh variant.
@@ -321,20 +321,17 @@ Industrial defaults for a multi-title factory. Map **one primary tool family per
 
 | Decision | Default |
 |----------|---------|
-| Engine | Godot 4.x 3D |
+| Engine | **CONFIRMED** Godot 4.x 3D (first-SKU) |
 | 3D / anim pipeline | Single path → game-ready GLB |
 | Image gen | Draft under AD GO only |
 | Mixamo / Adobe / Freesound HQ download | Human Secure Form / login only |
-| Monetization | Premium-only until Stephen states otherwise |
-| Git tip model | Tech Lead chooses dual vs single tip |
+| Monetization | **LOCKED** premium-only until Stephen reopens |
+| Git tip model | **LOCKED** dual tip (design/art packs tip vs Cursor build tip) |
 | Perf budget | Defined once per SKU class at Design/Tech GO |
 
 ### 4.3 Open decisions (stack)
 
-- Confirm **Godot 4.x 3D** as first-SKU engine (vs alternate)?
-- Monetization: premium-only vs later IAP (default: premium-only)
-- Git: dual tip vs single tip (design packs vs Cursor builds)?
-- Stream platform packaging targets (Stephen)
+**Locked in §17** (2026-10-19): engine, monetization, git dual tip, Story/GD seats separate, AD/Audio separate. **Still open:** stream **platform names** (deferred to B0 Clearance — checklist only until Stephen names targets); first SKU country/tale pick (Stephen).
 
 ---
 
@@ -428,12 +425,12 @@ Overview kit steps → tracks:
 | Milestone | Deliverable | Exit |
 |-----------|-------------|------|
 | A1 | This document + phase/R&R/rules adopted | Kit baseline GO |
-| A2 | Content schema `v1` (YAML/JSON) + validators — [schemas/](schemas/) + [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §8 | Schema GO (**validators on disk; Tech Lead Schema GO pending**) |
-| A3 | Clearance → story → storyboard → **dialogue/VO scripts** → GD/combat → MASTER_ASSET_LIST — [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §§1–8 | Template GO |
-| A4 | [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) → [ART_OUTPUT_POLICY.md](ART_OUTPUT_POLICY.md) + [AI_ART_BEST_PRACTICES.md](AI_ART_BEST_PRACTICES.md) + seed `team-knowledge/skills/` ×5 + GO/NO reason log format | Art SOP GO |
-| A5 | Cursor 3.0 handoff contract + smoke consumer checklist — [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §10 handoff/tip lock | Contract GO |
-| A6 | QA matrices (task / phase / UAT / release) — [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §§11–12 real UAT + publish | QA kit GO |
-| A7 | Multi-country locale + stream/live ops checklist — [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §§9, 12–13 | Locale/stream kit GO |
+| A2 | Content schema `v1` (YAML/JSON) + validators — [schemas/](schemas/) + [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §8 | **Schema GO** ([KIT_GO_LOG.md](KIT_GO_LOG.md)) |
+| A3 | Clearance → story → storyboard → **dialogue/VO scripts** → GD/combat → MASTER_ASSET_LIST — [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §§1–8 | **Template GO** ([KIT_GO_LOG.md](KIT_GO_LOG.md)) |
+| A4 | [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) → [ART_OUTPUT_POLICY.md](ART_OUTPUT_POLICY.md) + [AI_ART_BEST_PRACTICES.md](AI_ART_BEST_PRACTICES.md) + `team-knowledge/skills/` ×5 + [MID_STRIDE_PLATE_CAMERA.md](templates/MID_STRIDE_PLATE_CAMERA.md) | **Art SOP GO** ([KIT_GO_LOG.md](KIT_GO_LOG.md)) |
+| A5 | Cursor 3.0 handoff contract + smoke consumer checklist — [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §10 handoff/tip lock | **Contract GO** ([KIT_GO_LOG.md](KIT_GO_LOG.md)) |
+| A6 | QA matrices (task / phase / UAT / release) — [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §§11–12 — **kit only, not SKU Phase QA GO** | **QA kit GO** ([KIT_GO_LOG.md](KIT_GO_LOG.md)) |
+| A7 | Multi-country locale + stream/live ops checklist — [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §§9, 12–13 | **Locale/stream kit GO** ([KIT_GO_LOG.md](KIT_GO_LOG.md)) |
 
 ### Track B — First SKU (prove the factory)
 
@@ -495,7 +492,7 @@ Overview kit steps → tracks:
 
 ## 10. Content schema v1
 
-**Machine artifacts:** [schemas/content-pack.schema.json](schemas/content-pack.schema.json) (composes tale, beats, gates, scenes, encounters, dialogue, progression, storyboard, `handoff.lock`). Validators: `tools/validate-content-pack/` (see root `README.md`). **Tech Lead Schema GO** still required before treating v1 as frozen contract.
+**Machine artifacts:** [schemas/content-pack.schema.json](schemas/content-pack.schema.json) (composes tale, beats, gates, scenes, encounters, dialogue, progression, storyboard, `handoff.lock`). Validators: `tools/validate-content-pack/` (see root `README.md`). **Track A2 Schema GO** stamped in [KIT_GO_LOG.md](KIT_GO_LOG.md) (2026-10-19); per-SKU schema bumps still need Tech Lead GO on `schema_version`.
 
 Illustrative YAML below — **no live SKU data**. Machines consume the JSON Schema shape; prose elsewhere explains.
 
@@ -654,12 +651,15 @@ Event envelope schema: [schemas/telemetry.events.schema.json](schemas/telemetry.
 
 | Decision | Status |
 |----------|--------|
-| **Engine** — confirm Godot 4.x 3D as first-SKU (vs alternate) | Defaulted Godot 4.x 3D; confirm before freeze (§4.2–4.3) |
-| **Git tip** — dual tip vs single tip (design packs vs Cursor builds) | **Undecided** — Tech Lead chooses |
-| **Stream packaging** — platform targets | **Undecided** — Stephen |
-| **Monetization** — premium-only vs later IAP | Defaulted **premium-only** until Stephen states otherwise |
-| Merge Story + GD into one seat? | Undecided |
-| Keep AD and Audio separate under Art Factory Lead? | Undecided |
+| **Engine** — Godot 4.x 3D as first-SKU | **CONFIRMED** (2026-10-19) |
+| **Git tip** — dual tip vs single tip (design packs vs Cursor builds) | **LOCKED** dual tip (design/art packs tip vs Cursor build tip) — matches arts-before-dev |
+| **Stream packaging** — platform targets | **DEFERRED** to first-SKU **B0 Clearance** — [STREAM_PACKAGING_CHECKLIST.md](templates/STREAM_PACKAGING_CHECKLIST.md) ready; Stephen names platforms at Clearance (no invented platform names in kit) |
+| **Monetization** — premium-only vs later IAP | **LOCKED** premium-only until Stephen reopens |
+| Merge Story + GD into one seat? | **NO** — keep Story Lead and GD Lead separate (§5 R&R) |
+| Keep AD and Audio separate under Art Factory Lead? | **YES** — keep art-director + audio-mix role briefs separate |
+| First SKU country / tale pick | **Open** — Stephen (Track B0) |
+
+Kit-level GO evidence: [KIT_GO_LOG.md](KIT_GO_LOG.md).
 
 ---
 
@@ -669,10 +669,10 @@ Event envelope schema: [schemas/telemetry.events.schema.json](schemas/telemetry.
 |-------|-------|
 | Path | `docs/FACTORY_MASTER_PLAN.md` |
 | Version | v1 |
-| **Updated** | 2026-10-15 (HKT) — A2 schemas+validators landed; BOOT/board/output contract; mouthpiece routing; §10/§16 schema pointers |
+| **Updated** | 2026-10-19 (HKT) — §17 locks; Track A kit GO log; A4 skills depth + mid-stride plate template |
 | **Supersedes** | `JRPG_AUTO_FACTORY_V0.md` (aka Overview / FACTORY_OVERVIEW) and `IMPLEMENTATION_PLAN_AND_GD_ARCHITECTURE.md` — this file is the **single SSOT plan** |
 | Change control | PM + Tech Lead propose; Stephen approves objective/rule changes |
-| Next kit action | Tech Lead **Schema GO** on content pack v1; mature handoff smoke consumer (A5) and QA telemetry wiring (A6/A7) against [schemas/](schemas/) |
+| Next kit action | **Track B0** Clearance (Stephen: country/tale + stream platform names); SKU GOs in [KIT_GO_LOG.md](KIT_GO_LOG.md) **BLOCKED** section — no Build tip / Phase QA / UAT / Release stamp without live SKU |
 
 ---
 

@@ -1,47 +1,70 @@
 ---
 name: Jacketed cloth anim polish
 description: >-
-  Use when a character wears a jacket, coat, or layered cloth and walk/idle
-  clips show proximity or weight failures — fix on the single live ship mesh in
-  Blender; alternate meshes stay concept-only.
+  Cloth/coat proximity polish for any jacketed character on the single live ship mesh —
+  Blender weights and retarget; mid-stride plates; no title-specific hero IDs.
 ---
 # Jacketed cloth / coat-proximity animation (generic)
 
-Applies to any SKU character with **outer layers** (jacket, coat, tabard, cape hem) where cloth intersects the body during locomotion. No title-specific mesh IDs — use the locked **ship GLB** for that SKU.
+Use for **any SKU character** with outer layers (jacket, coat, tabard, cape hem) where walk/idle clips show intersection, shredding, or weight bleed. Applies to the **locked ship GLB** for that `asset_id` — not alternate meshes.
 
-## Standing rules
+## When to use
 
-- **One live ship mesh** per character — polish weights and clips on that mesh until walk/idle **PASS**.
-- Alternate meshes (undressed, blockout, gait-reference, “no-jacket” variant) are **concept-only** — never tip-replace or field-ship as the playable binary.
-- External Mixamo/Adobe paths are **off** unless Stephen 1:1 Secure Form (see `mixamo-adobe-gate`). Soft CI forbidden. Game factory **IDLE** until Stephen restarts after handoff policy.
-- Artistic GO/NO + **why** owned by Art Factory Lead. Do not self-claim GO.
+- Walk/idle plates fail at 25/50/75% on side view (armpit, hip, lapel clip).
+- QA cites coat/body fusion or **ART-QA-ANIM-*** fail with proximity symptoms.
+- After retarget from Studio presets — before requesting locomotion GO.
 
-## Typical fail modes
+## Preconditions
+
+- **One live ship mesh** per character — no second mesh promoted as “the fix.”
+- Rig already bound; **do not remesh** after rig (rebind invalidates this workflow).
+- Mixamo path **off** unless Stephen completed `mixamo-adobe-gate` for this SKU.
+- Game factory **IDLE** — polish is art-pack work only.
+
+## Ordered steps
+
+1. **Inventory** — List clips (`idle`, `walk`, lengths), joint count, ship GLB SHA on [MASTER_ASSET_LIST](../../../templates/MASTER_ASSET_LIST.md) row.
+2. **Symptom map** — Match fail mode table below; record frame % where fail is worst.
+3. **Blender weight pass** — Peel stray influences on outer shell; limit to plausible bones; repaint coat vs body (volume bind for overlapping thin geo per [AI_ART §13.8](../../../AI_ART_BEST_PRACTICES.md)).
+4. **Retarget tune** — If popping is retarget issue, fix on **same** skeleton; no skeleton swap via alternate mesh.
+5. **Optional AI tools** — Rig-check/retarget presets only **after** Art Lead credit sync; log credits.
+6. **Export scratch** — `demos/<sku_id>_cloth_polish_<date>/ship_polish.glb` until AD accepts merge to `art_packs/`.
+7. **Godot plates** — Re-capture full grid per [MID_STRIDE_PLATE_CAMERA.md](../../../templates/MID_STRIDE_PLATE_CAMERA.md).
+8. **Scorecard** — Update [ART_QA_SCORECARD.md](../../../templates/ART_QA_SCORECARD.md) anim rows.
+9. **AD request** — Output contract with GO/NO recommendation; **AD owns stamp**.
+
+## Fail modes → fix direction
 
 | Symptom | Likely cause | Fix direction |
 |---------|--------------|---------------|
-| Cloth shredded at armpit/hip | Stray weights on outer shell | Weight peel in Blender; limit influence to plausible bones |
-| Jacket “sticks” inside torso | No proximity separation in bind | Repaint weights; slight offset shell if art-approved |
-| Popping at stride phase | Bad retarget or missing mid-stride test | Retarget on locked rig; verify 25/50/75% walk plates |
-| Dual live variants | Second mesh promoted as “fix” | Abandon second path; fix weights on ship mesh only |
+| Cloth shredded at armpit/hip | Stray weights on outer shell | Weight peel; bone influence cap |
+| Jacket inside torso | No proximity separation at bind | Repaint; approved slight shell offset |
+| Popping at stride phase | Bad retarget | Retarget on locked rig; re-plate 50% side |
+| Dual live variants | Second mesh as “fix” | Abandon alternate; fix ship mesh only |
+| Mixamo coat swap | External clip on wrong topology | Prefer Blender polish; Mixamo only via 1:1 gate |
 
-## Pipeline (solid craft)
+## Expected outputs + evidence
 
-1. Inventory clips (walk/idle names, lengths, joint count) on the **locked ship GLB**.
-2. List fail modes from the table above on the actual silhouette.
-3. Prefer **Blender** (MCP or CLI) for weight cleanup and clip retarget — not unpaid login workarounds.
-4. If AI mesh tools are connected: rig-check → retarget presets only after Art Lead credit sync; log credits.
-5. Export polish scratch under `demos/<sku_id>_jacket_polish_<date>/` (generic path; no hero UUIDs).
-6. Godot **mid-stride** plates: idle + walk at 25/50/75%, front + side; Art Lead eyes-on → GO/NO + why.
-7. No tip-import until Art Lead GO and factory handoff policy allows.
+| Output | Path |
+|--------|------|
+| Polished ship GLB | `art_packs/<sku_id>/3d/<asset_id>.glb` |
+| Before/after plates | `.../qa/plates/<asset_id>/` (+ optional `wireframe/` ) |
+| Weight change log | `.../qa/<asset_id>_cloth_polish_notes.md` |
 
-## Do not
+## Pass / fail
 
-- Promote concept, blockout, or gait-reference meshes as ship character.
-- Remesh after rig; use Soft CI as PASS.
-- Maintain a second “live” mesh variant instead of fixing cloth proximity in Blender weights.
+| **PASS** | Side-view walk 25/50/75% shows no persistent body intersection; idle stable; same ship mesh path; AD-ready evidence pack. |
+| **NO** | Still clips through torso at 50% side; second mesh introduced; bind-pose evidence only; Soft CI marked pass. |
 
-## Related
+## Must-not
 
-- Master Plan §3.7 / §4.1 (remesh-before-rig, mid-stride plates, one live path)
-- `game-ready-3d-guideline`, `ai3d-to-godot-pipeline`
+- Promote concept, blockout, or gait-reference meshes to ship.
+- Remesh after rig to “fix” cloth (use weights/retarget).
+- Tip-import before Art Lead GO.
+- Title-specific hero IDs as factory requirements.
+
+## Pointers
+
+- Master Plan §3.7 / §4.1 — one live path, mid-stride law.
+- `ai3d-to-godot-pipeline`, `game-ready-3d-guideline`, `mixamo-adobe-gate`.
+- [ART_OUTPUT_POLICY](../../../ART_OUTPUT_POLICY.md) — hero poly budget still applies after polish.

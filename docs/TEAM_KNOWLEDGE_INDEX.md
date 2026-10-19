@@ -10,5 +10,6 @@
 | Standing rules (mirror) | [team-knowledge/STANDING_RULES.md](./team-knowledge/STANDING_RULES.md) |
 | Short overview map | [FACTORY_OVERVIEW.md](./FACTORY_OVERVIEW.md) |
 | Kit status (Track A) | [KIT_STATUS.md](./KIT_STATUS.md) |
+| Kit GO evidence log | [KIT_GO_LOG.md](./KIT_GO_LOG.md) |
 
 Indexes do not restate laws — cite the Master Plan for gates and authority.
