@@ -18,7 +18,7 @@ Use for **any SKU character** with outer layers (jacket, coat, tabard, cape hem)
 
 - **One live ship mesh** per character — no second mesh promoted as “the fix.”
 - Rig already bound; **do not remesh** after rig (rebind invalidates this workflow).
-- Mixamo path **off** unless Stephen completed `mixamo-adobe-gate` for this SKU.
+- **Tripo + Blender only** — Mixamo is off factory path (POL-G-107); no Stephen reopen implied.
 - Game factory **IDLE** — polish is art-pack work only.
 
 ## Ordered steps
@@ -41,7 +41,7 @@ Use for **any SKU character** with outer layers (jacket, coat, tabard, cape hem)
 | Jacket inside torso | No proximity separation at bind | Repaint; approved slight shell offset |
 | Popping at stride phase | Bad retarget | Retarget on locked rig; re-plate 50% side |
 | Dual live variants | Second mesh as “fix” | Abandon alternate; fix ship mesh only |
-| Mixamo coat swap | External clip on wrong topology | Prefer Blender polish; Mixamo only via 1:1 gate |
+| Wrong-topology clip import | External skeleton not matching ship mesh | Retarget on locked Tripo rig; Blender weight polish |
 
 ## Expected outputs + evidence
 
@@ -66,5 +66,5 @@ Use for **any SKU character** with outer layers (jacket, coat, tabard, cape hem)
 ## Pointers
 
 - Master Plan §3.7 / §4.1 — one live path, mid-stride law.
-- `ai3d-to-godot-pipeline`, `game-ready-3d-guideline`, `mixamo-adobe-gate`.
+- `ai3d-to-godot-pipeline`, `game-ready-3d-guideline`.
 - [ART_OUTPUT_POLICY](../../../ART_OUTPUT_POLICY.md) — hero poly budget still applies after polish.

@@ -28,7 +28,7 @@ description: >-
 3. **Generate / fetch** — Poll job → download GLB to scratch, e.g. `demos/<sku_id>/<asset_id>/source/ai_draft.glb` (no title-specific hero UUIDs in paths).
 4. **Remesh / retopo / UV (mandatory before rig)** — Smart-low-poly, cleanup, UV unwrap. **STOP if rig already bound** — remesh after rig destroys bones/weights.
 5. **Prerig check** — `animate_prerigcheck` or equivalent; if fail, return to step 4, not rig.
-6. **Rig & retarget** — Match skeleton type; retarget presets minimum `idle`, `walk` (plus SKU combat set when in scope).
+6. **Rig & retarget (Tripo only)** — Factory auto-rig / animate / retarget via Tripo tooling (MCP or Studio per repo wiring). Presets minimum `idle`, `walk` (plus SKU combat set when in scope). **Do not use Mixamo** (POL-G-107).
 7. **Blender craft** — Real meters; apply transforms; weight peel; split fused props; **cloth/coat proximity** on jacketed characters; LODs per [ART_OUTPUT_POLICY](../../../ART_OUTPUT_POLICY.md).
 8. **Export GLB** — Single ship binary path; concept/gait-reference exports stay under `concept_only/` subfolder.
 9. **Godot import** — GLB import checklist: [AI_ART §13.12](../../../AI_ART_BEST_PRACTICES.md); gameplay camera per [MID_STRIDE_PLATE_CAMERA.md](../../../templates/MID_STRIDE_PLATE_CAMERA.md).
@@ -52,7 +52,7 @@ description: >-
 
 ## Must-not / human gates
 
-- **Mixamo / Adobe** — only after Stephen **1:1 Secure Form** (`mixamo-adobe-gate`); never from group room.
+- **Mixamo** — off factory path; agents must not rig or download clips (POL-G-107). Stephen reopen + `mixamo-adobe-gate` only if explicitly authorized.
 - **Paid API** — no unattended spend; humans hold keys.
 - **Tip-import** — no field ship until Art Lead GO + factory handoff policy.
 - **Game factory** — stays IDLE until art pack GO + Stephen restart (Master Plan §6 rule 3).

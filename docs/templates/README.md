@@ -45,7 +45,7 @@ Use generic SKU language only: `sku_<country>_<tale_slug>_v<semver>`.
 
 | Template | Source | Policy |
 |----------|--------|--------|
-| [SECURE_FORM_MIXAMO.md](./SECURE_FORM_MIXAMO.md) | Mixamo / Adobe animation | POL-G-103 · AI_ART §13.10 |
+| [SECURE_FORM_MIXAMO.md](./SECURE_FORM_MIXAMO.md) | Mixamo / Adobe — **off path** (Stephen reopen only) | POL-G-107 · AI_ART §13.10 footnote |
 | [SECURE_FORM_FREESOUND.md](./SECURE_FORM_FREESOUND.md) | Freesound full WAV | POL-G-103 · §9 |
 | [SECURE_FORM_TTS_CONSENT.md](./SECURE_FORM_TTS_CONSENT.md) | TTS / voice clone | §9 · VO consent |
 

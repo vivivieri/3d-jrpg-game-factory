@@ -24,7 +24,7 @@ This folder freezes **skills + role knowledge** so a future factory team can be 
 2. [skills/game-ready-3d-guideline/SKILL.md](skills/game-ready-3d-guideline/SKILL.md) — realtime character/prop + env depth bands (ART-QA-ENV-004) before AD GO/NO
 3. [skills/coat-hero-anim-polish/SKILL.md](skills/coat-hero-anim-polish/SKILL.md) — jacketed cloth / coat-proximity on one live ship mesh
 4. [skills/freesound-full-wav-1to1/SKILL.md](skills/freesound-full-wav-1to1/SKILL.md) — Freesound HQ → full WAV (human Secure Form)
-5. [skills/mixamo-adobe-gate/SKILL.md](skills/mixamo-adobe-gate/SKILL.md) — Mixamo/Adobe login is Stephen 1:1 only
+5. [skills/mixamo-adobe-gate/SKILL.md](skills/mixamo-adobe-gate/SKILL.md) — **Off path** — archived gate if Stephen reopens Mixamo (factory rig = Tripo only)
 
 ## Role inventory
 

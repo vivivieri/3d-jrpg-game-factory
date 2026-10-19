@@ -148,7 +148,7 @@ Mark each row: **P**ass · **F**ail · **N/A** (requires why in scorecard). Evid
 | ID | Title | Sev | P/F/N | Evidence path |
 |----|-------|-----|-------|---------------|
 | ART-QA-LICENSE-001 | Row before handoff | **Critical** | | |
-| ART-QA-LICENSE-002 | Mixamo Secure Form | **Critical** | | |
+| ART-QA-LICENSE-002 | Mixamo Secure Form (Stephen reopen only) | **Critical** | | |
 
 ---
 

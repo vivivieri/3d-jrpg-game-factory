@@ -36,8 +36,8 @@ blocked_on: ""
 
 ```yaml
 status: BLOCKED
-why: "Mixamo download requires Stephen Secure Form"
-paths: ["team-knowledge/skills/mixamo-adobe-gate/SKILL.md"]
+why: "Freesound full WAV requires Stephen 1:1 Secure Form"
+paths: ["team-knowledge/skills/freesound-full-wav-1to1/SKILL.md"]
 next: "Stephen 1:1 Secure Form"
 blocked_on: sign-in
 ```

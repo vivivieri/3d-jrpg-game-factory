@@ -1,17 +1,19 @@
-# Secure Form — Mixamo / Adobe animation (fillable kit)
+# Secure Form — Mixamo / Adobe (OFF PATH — Stephen gate only)
 
-**Track:** A4 art factory · **Not a GO stamp** — human attestation before Mixamo/Adobe downloads enter `main`.  
-**Laws:** [FACTORY_MASTER_PLAN.md](../FACTORY_MASTER_PLAN.md) §4.1, §14 · [ART_OUTPUT_POLICY.md](../ART_OUTPUT_POLICY.md) POL-G-103 · [AI_ART_BEST_PRACTICES.md](../AI_ART_BEST_PRACTICES.md) §13.10  
+> **Not the Game Factory skeleton/rig path.** Factory automation = **Tripo only** (rig, animate, retarget). Mixamo is **closed** unless Stephen explicitly reopens this gate. Agents must not use mixamo.com for auto-rig or animation.
+
+**Track:** A4 art factory · **Not a GO stamp** — archived human attestation **only if** Stephen reopens Mixamo after Tripo path is ruled out.  
+**Laws:** [FACTORY_MASTER_PLAN.md](../FACTORY_MASTER_PLAN.md) §4.1, §14 · [ART_OUTPUT_POLICY.md](../ART_OUTPUT_POLICY.md) POL-G-107 · [AI_ART_BEST_PRACTICES.md](../AI_ART_BEST_PRACTICES.md) §13.10 footnote  
 **Skill:** [mixamo-adobe-gate](../team-knowledge/skills/mixamo-adobe-gate/SKILL.md) — **Stephen 1:1 only**; never from group room or agent session.
 
 ---
 
 ## Preconditions
 
-- [ ] Ship mesh meets Mixamo auto-rig constraints (scale, T-pose/A-pose, no fused coat shells blocking rig).
+- [ ] Stephen has **explicitly reopened** the Mixamo gate for this SKU (written ack in gate log).
+- [ ] Tripo rig/animate/retarget + Blender polish documented as insufficient — not a coat-weight workaround.
 - [ ] Art Lead has **NO** on using concept/gait-reference mesh as rig source — live ship mesh only.
-- [ ] Mixamo/Adobe is the agreed path (not a workaround for unfixed coat weights).
-- [ ] Escalation is **1:1 DM** with Stephen — URLs / clip names listed below before login.
+- [ ] Escalation is **1:1 DM** with Stephen — URLs / clip names listed below before login (if clips are in scope).
 
 ---
 
@@ -31,6 +33,7 @@
 
 | # | Statement | Pass ☐ |
 |---|-----------|--------|
+| A0 | Stephen **reopen** of Mixamo gate recorded for this SKU (date + scope). | |
 | A1 | Account eligibility verified for **commercial** game use (not edu/personal-only if terms forbid ship). | |
 | A2 | Assets will be **embedded in shipped game** — raw Mixamo files **not** redistributed as standalone downloads. | |
 | A3 | **AI/ML training ban** on Mixamo content acknowledged ([Mixamo additional terms](https://wwwimages2.adobe.com/content/dam/cc/en/legal/servicetou/Mixamo-Addl-Terms-en_US-20210623.pdf)). | |
@@ -49,7 +52,7 @@
 
 - Signed attestation file on disk under evidence path.
 - Downloads match manifest; `LICENSE.json` / ledger row updated per [license-asset.schema.json](../schemas/license-asset.schema.json).
-- ART-QA-LICENSE-002 evidence path populated when Mixamo used.
+- ART-QA-LICENSE-002 evidence path populated **only when** Stephen reopened gate and Mixamo entered the pack.
 
 ---
 
@@ -72,7 +75,7 @@ content/<sku_id>/clearance/secure_forms/evidence/MIXAMO_<YYYYMMDD>/
 | Result | Bar |
 |--------|-----|
 | **PASS** | All attestation boxes checked; manifest complete; 1:1 discipline; ledger row `commercial_ok: true` with human reviewer. |
-| **FAIL** | Any unchecked box; agent attempted login; group-room Secure Form; raw redistribution planned; training use; tip-import before attestation on disk. |
+| **FAIL** | Any unchecked box; agent attempted login without reopen; group-room Secure Form; raw redistribution planned; training use; tip-import before attestation on disk. |
 
 **Exit line:** `GO` / `NO` · why: · paths: · next: · blocked_on:
 

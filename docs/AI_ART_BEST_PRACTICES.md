@@ -277,7 +277,7 @@ Soft placeholders and “CI green with grey cubes” do **not** count as GO.
 | General props→chars | Meshy |
 | Hero surface detail source | Rodin / Hyper3D (expect retopo + bake) |
 | DCC cleanup | Blender + QuadriFlow / Instant Meshes / Q Remeshify / RetopoFlow |
-| Auto-rig first pass | Vendor auto-rig or Mixamo (humanoid only) — expect re-skin to studio standard |
+| Auto-rig / skeleton (factory) | **Tripo only** — rig, animate, retarget presets; expect Blender re-skin to studio standard |
 
 ### Prompts / refs tips
 - Clean BG, even light, readable silhouette, minimal occlusion.
@@ -293,7 +293,7 @@ Soft placeholders and “CI green with grey cubes” do **not** count as GO.
 
 ### Common fails — **cloth / coat proximity**
 - Coat fused to torso → shoulders tear / candy-wrapper.
-- Large hair / wings / weapons welded → Mixamo / auto-rig refuse or misplace bones (Adobe Mixamo FAQ).
+- Large hair / wings / weapons welded → Tripo auto-rig refuse or misplace bones — separate meshes before rig.
 - Remesh after skinning → weights destroyed.
 - Auto-rig “success” ≠ production deformation.
 
@@ -304,7 +304,9 @@ Soft placeholders and “CI green with grey cubes” do **not** count as GO.
 
 **Law: remesh-before-rig. Never remesh after.**
 
-**Sources:** https://www.tripo3d.ai/blog/retopo-an-ai-character-model-for-animation · https://www.tripo3d.ai/blog/how-to-use-ai-3d-models-in-godot · https://assethub.io/blog/skinning-weights-ai-3d-characters · https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html · https://www.strayspark.studio/blog/generative-3d-tools-comparison-meshy-rodin-tripo-csm-2026
+**Sources:** https://www.tripo3d.ai/blog/retopo-an-ai-character-model-for-animation · https://www.tripo3d.ai/blog/how-to-use-ai-3d-models-in-godot · https://assethub.io/blog/skinning-weights-ai-3d-characters · https://www.strayspark.studio/blog/generative-3d-tools-comparison-meshy-rodin-tripo-csm-2026
+
+**Factory law:** skeleton / auto-rig = **Tripo only**. Mixamo is **not** a factory option (see §13.10 footnote).
 
 ---
 
@@ -313,16 +315,16 @@ Soft placeholders and “CI green with grey cubes” do **not** count as GO.
 ### Workflow steps
 1. Confirm production mesh + weights passed extreme pose QA.
 2. Skeleton standard locked (studio humanoid or retarget map).
-3. Source clips: mocap / library (e.g. Mixamo) / AI motion / hand keyframe.
+3. Source clips: Tripo animate presets / retarget / AI motion / mocap / hand keyframe.
 4. Retarget → AnimationPlayer / AnimationTree in Godot.
 5. **Mid-stride plate evidence:** walk/run mid-frame, attack apex, hit-react — orthographic or fixed gameplay camera.
 6. Art Lead anim GO/NO on plates + short loop video.
 7. Combat: root motion vs in-place policy frozen per SKU.
 
 ### AI tool classes
-- Auto-rig + library motion (Mixamo, vendor animation libraries, text-to-motion tools).
+- **Tripo** rig + animate presets + retarget (factory default).
 - Retargeter addons (Blender) / Godot AnimationTree.
-- Hand polish for combat snappiness (JRPG often needs held frames / pose readability).
+- Text-to-motion tools (SKU-approved) + hand keyframe for combat snappiness (JRPG often needs held frames / pose readability).
 
 ### Prompts / refs tips (motion tools)
 - Specify loop vs one-shot, root motion, style (snappy JRPG vs naturalistic).
@@ -336,16 +338,16 @@ Soft placeholders and “CI green with grey cubes” do **not** count as GO.
 
 ### Common fails
 - Approving T-pose only.
-- Mixamo on non-humanoid / floating parts / extra props in file.
-- Re-uploading weight-fixed FBX to Mixamo losing armature recognition (*community reports* — prefer retarget in DCC).
-- Using Mixamo content to train AI/ML — **prohibited** by Mixamo Additional Terms (2021).
+- Rigging before remesh/UV (weights destroyed on next topology pass).
+- Retarget on unfrozen mesh or second “fix” live path.
+- Floating parts / extra props parented into rig root — strip before Tripo rig.
 
-### Human-only gates — **Secure Form**
-- Mixamo / Adobe: human verifies account eligibility, commercial embed rules (characters/anims royalty-free for games when **embedded**; do not redistribute standalone Mixamo files), AI/ML training ban.
+### Human-only gates
 - Hero combat strings final timing.
 - Hitbox / hurtbox sync with frames.
+- Paid Tripo/API spend and credit burn sign-off.
 
-**Sources:** https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html · https://wwwimages2.adobe.com/content/dam/cc/en/legal/servicetou/Mixamo-Addl-Terms-en_US-20210623.pdf · https://assethub.io/blog/skinning-weights-ai-3d-characters · https://www.meshy.ai/tutorials/how-to-use-mixamo-with-meshy
+**Sources:** https://www.tripo3d.ai/blog/how-to-use-ai-3d-models-in-godot · https://assethub.io/blog/skinning-weights-ai-3d-characters
 
 ---
 
@@ -614,13 +616,13 @@ Required for anim GO: mid-walk, mid-run, attack apex, land/recover — under gam
 - Detect fused shells early (turntable wire + section).
 - Separate meshes or add thickness / gap before bind.
 - Explicit weights for thin geo; volume bind methods for overlapping parts.
-- Mixamo: large clothing/hair may fail auto-rigger — simplify or studio-rig.
+- Tripo auto-rig: large clothing/hair may fail — separate shells before rig; Blender weight polish (`coat-hero-anim-polish`).
 
 ### 13.9 When NOT to use AI
 - Final identity lock for primary cast (may use AI for exploration only).
 - Legal: trademarks, celebrity likeness, competitor IP style cloning.
 - Culture-sacred symbols without consultant.
-- Training datasets from Mixamo / restricted libraries.
+- Training datasets from restricted vendor libraries without counsel.
 - Gameplay-critical modular kits needing exact metrics (cover, door clearances) — prefer hand modular.
 - Anything where provenance cannot be recorded.
 
@@ -629,11 +631,11 @@ Factory policy: a named human must complete a Secure Form before these enter `ma
 
 | Source | Human verifies | Fillable kit |
 |--------|----------------|--------------|
-| Mixamo / Adobe | Account type allowed; assets embedded not redistributed raw; AI/ML training ban acknowledged; mesh meets Mixamo auto-rig constraints | [SECURE_FORM_MIXAMO.md](./templates/SECURE_FORM_MIXAMO.md) |
-| Other Adobe libs | Current product-specific terms | _(product-specific — counsel)_ |
 | Freesound | Original full-quality download (not preview); license CC0/CC-BY only for commercial; attribution filed; BY-NC rejected | [SECURE_FORM_FREESOUND.md](./templates/SECURE_FORM_FREESOUND.md) |
 | TTS voice clone | Consent / rights documentation | [SECURE_FORM_TTS_CONSENT.md](./templates/SECURE_FORM_TTS_CONSENT.md) |
 | Paid music AI | Paid-plan commercial rights at time of download; Steam/disclosure rules | _(ledger row + counsel)_ |
+
+**Mixamo / Adobe (off factory path):** Agents **must not** use Mixamo for skeleton, auto-rig, or animation. Tripo is the **only** named factory rig path (§6–7). If Stephen **explicitly reopens** the Mixamo gate, a human completes [SECURE_FORM_MIXAMO.md](./templates/SECURE_FORM_MIXAMO.md) in 1:1 — not a default, fallback, or parallel ship path.
 
 ### 13.11 Credit-aware generation (API spend)
 - Metric: `(tool $ + artist h + reject cost) / shipped assets`.
@@ -699,7 +701,6 @@ Parallelize 5–7 and 11–13 after character locks where staffing allows; do no
 - Undocumented prompts/refs  
 - Free-tier music in commercial builds without confirming rights  
 - Freesound previews / BY-NC  
-- Mixamo content for ML training  
 - Celebrity / sacred motif gens without review  
 
 ---
@@ -717,8 +718,6 @@ Parallelize 5–7 and 11–13 after character locks where staffing allows; do no
 | https://customuse.com/learn/best-ai-3d-tools-for-game-developers | Tool choice by pipeline stage |
 | https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/available_formats.html | Official glTF/GLB recommendation |
 | https://assethub.io/blog/skinning-weights-ai-3d-characters | Weights, topology-before-paint |
-| https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html | Mixamo commercial use & rig constraints |
-| https://wwwimages2.adobe.com/content/dam/cc/en/legal/servicetou/Mixamo-Addl-Terms-en_US-20210623.pdf | Mixamo AI/ML restriction |
 | https://icora.io/blog/how-to-make-game-icons | Icon/HUD industrial practices |
 | https://skywork.ai/blog/how-to-consistent-characters-ai-scenes-prompt-patterns-2025 | 2D consistency patterns |
 | https://elevenlabs.io/blog/text-to-speech-api-integration | TTS production integration |
@@ -732,7 +731,7 @@ Parallelize 5–7 and 11–13 after character locks where staffing allows; do no
 ## 17. Open items for factory owners
 
 - [ ] Freeze numeric poly/texel tables per SKU platform tier after profiling.  
-- [x] Attach internal Secure Form templates (Mixamo, Freesound, TTS consent) — [templates/README.md](./templates/README.md) § Secure Forms (2026-10-19).  
+- [x] Attach internal Secure Form templates (Freesound, TTS consent; Mixamo archived off-path) — [templates/README.md](./templates/README.md) § Secure Forms (2026-10-19).  
 - [ ] Quarterly re-audit vendor ToS (music AI & 3D APIs change).  
 - [x] Wire license ledger schema — [license-ledger.schema.json](./schemas/license-ledger.schema.json), [license-asset.schema.json](./schemas/license-asset.schema.json); `npm run validate:license:pass` (not a full asset DB product).  
 - [x] Define Art Lead plate templates (resolution, camera, lighting) — [MID_STRIDE_PLATE_CAMERA.md](./templates/MID_STRIDE_PLATE_CAMERA.md) (2026-10-19).  
