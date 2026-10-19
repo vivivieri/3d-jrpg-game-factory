@@ -16,15 +16,15 @@ This folder freezes **skills + role knowledge** so a future factory team can be 
 | `skills/` | Reusable craft skills (SKILL.md + any sidecar files) |
 | `STANDING_RULES.md` | Cross-role operating rules learned the hard way |
 | `OUTPUT_CONTRACT.md` | Required handoff shape for every agent output |
-| `DISMISSAL.md` | Which seats were dismissed and how to rebuild |
+| [DISMISSAL.md](./DISMISSAL.md) | Which seats were dismissed and how to rebuild |
 
 ## Skills inventory
 
-1. `skills/ai3d-to-godot-pipeline` — Tripo/AI 3D → Godot-ready ship GLB (executable steps; [MID_STRIDE_PLATE_CAMERA.md](../templates/MID_STRIDE_PLATE_CAMERA.md))
-2. `skills/game-ready-3d-guideline` — realtime character/prop + env depth bands (ART-QA-ENV-004) before AD GO/NO
-3. `skills/coat-hero-anim-polish` — jacketed cloth / coat-proximity on one live ship mesh
-4. `skills/freesound-full-wav-1to1` — Freesound HQ → full WAV (human Secure Form)
-5. `skills/mixamo-adobe-gate` — Mixamo/Adobe login is Stephen 1:1 only
+1. [skills/ai3d-to-godot-pipeline/SKILL.md](skills/ai3d-to-godot-pipeline/SKILL.md) — Tripo/AI 3D → Godot-ready ship GLB (executable steps; [MID_STRIDE_PLATE_CAMERA.md](../templates/MID_STRIDE_PLATE_CAMERA.md))
+2. [skills/game-ready-3d-guideline/SKILL.md](skills/game-ready-3d-guideline/SKILL.md) — realtime character/prop + env depth bands (ART-QA-ENV-004) before AD GO/NO
+3. [skills/coat-hero-anim-polish/SKILL.md](skills/coat-hero-anim-polish/SKILL.md) — jacketed cloth / coat-proximity on one live ship mesh
+4. [skills/freesound-full-wav-1to1/SKILL.md](skills/freesound-full-wav-1to1/SKILL.md) — Freesound HQ → full WAV (human Secure Form)
+5. [skills/mixamo-adobe-gate/SKILL.md](skills/mixamo-adobe-gate/SKILL.md) — Mixamo/Adobe login is Stephen 1:1 only
 
 ## Role inventory
 

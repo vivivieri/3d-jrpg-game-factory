@@ -2,7 +2,7 @@
 
 **Day-one runbook:** [FACTORY_OPERATING_SOP.md](../FACTORY_OPERATING_SOP.md) (pipeline → leaf → template → exit — whole factory).  
 **Laws:** [FACTORY_MASTER_PLAN.md](../FACTORY_MASTER_PLAN.md) · **Craft SOP:** [FACTORY_NON_ART_BEST_PRACTICES.md](../FACTORY_NON_ART_BEST_PRACTICES.md)  
-**Status:** Fillable kits — **no SKU GO stamps** in this folder. Track A kit GO evidence: [KIT_GO_LOG.md](../KIT_GO_LOG.md). Stephen-only platform names stay **TBD** until B0 Clearance.
+**Status:** Fillable kits — **no SKU GO stamps** in this folder. Track A kit GO evidence: [KIT_GO_LOG.md](../KIT_GO_LOG.md). Stream **platform names** deferred to B0 Clearance (Stephen).
 
 Use generic SKU language only: `sku_<country>_<tale_slug>_v<semver>`.
 
@@ -46,7 +46,9 @@ Use generic SKU language only: `sku_<country>_<tale_slug>_v<semver>`.
 | Template / leaf | Phase | Track A | Notes |
 |-----------------|-------|---------|-------|
 | [MID_STRIDE_PLATE_CAMERA.md](./MID_STRIDE_PLATE_CAMERA.md) | Art production · locomotion evidence | **A4** | Plate grid — AD GO/NO input; not a GO stamp |
+| [ART_FACTORY_SOP.md](../ART_FACTORY_SOP.md) | Art production · index | **A4** | Policy → Craft → Proof chain |
 | [ART_OUTPUT_POLICY.md](../ART_OUTPUT_POLICY.md) | Art production · agent bounds | **A4** | Must/must-not + budgets — **not** a GO stamp |
+| [AI_ART_BEST_PRACTICES.md](../AI_ART_BEST_PRACTICES.md) | Art production · craft how-to | **A4** | Generation SOP — read after policy |
 | [ART_QA_BEST_PRACTICES.md](../ART_QA_BEST_PRACTICES.md) | Art production · task QA | **A4** | Procedural leaf — numbered cases, evidence law |
 | [ART_QA_TEST_CASES.md](./ART_QA_TEST_CASES.md) | Art production · L1 execution | **A4** | Checklist table (detail in leaf) |
 | [ART_QA_SCORECARD.md](./ART_QA_SCORECARD.md) | Art production · pack roll-up | **A4** | Per-asset + Art Factory Lead roll-up |

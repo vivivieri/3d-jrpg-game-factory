@@ -33,7 +33,7 @@ description: >-
 8. **Export GLB** — Single ship binary path; concept/gait-reference exports stay under `concept_only/` subfolder.
 9. **Godot import** — GLB import checklist: [AI_ART §13.12](../../../AI_ART_BEST_PRACTICES.md); gameplay camera per [MID_STRIDE_PLATE_CAMERA.md](../../../templates/MID_STRIDE_PLATE_CAMERA.md).
 10. **Plates** — Walk + idle at 25/50/75%, front + side; optional run/attack per AI_ART §13.7.
-11. **Game-ready checklist** — Run [game-ready-3d-guideline](sand-workflow:game-ready-3d-guideline) pass/fail table.
+11. **Game-ready checklist** — Run [game-ready-3d-guideline](../game-ready-3d-guideline/SKILL.md) pass/fail table.
 12. **Report** — Task ids, credits, GLB SHA, plate paths, GO/NO recommendation (AD owns stamp).
 
 ## Expected outputs + evidence
@@ -66,5 +66,5 @@ description: >-
 
 ## Related skills
 
-- `game-ready-3d-guideline` — acceptance bar before AD eyes-on.
+- [game-ready-3d-guideline](../game-ready-3d-guideline/SKILL.md) — acceptance bar before AD eyes-on.
 - `coat-hero-anim-polish` — jacketed cloth weight fixes on ship mesh only.

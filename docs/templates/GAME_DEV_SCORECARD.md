@@ -18,7 +18,7 @@
 | `handoff.lock.tip` | |
 | `godot_project_ref` (path or commit in Cursor factory) | |
 | `build_ref` (exported player path or CI artifact URL — **required before BLD-006 PASS**) | |
-| Engine note | Godot 4.x **defaulted — not confirmed** (Master Plan §17) |
+| Engine note | Godot 4.x 3D **CONFIRMED** first-SKU (Master Plan §17) |
 | Implementer(s) | |
 | Date (HKT) | |
 | Stephen factory open ref (AUTH-001) | |
