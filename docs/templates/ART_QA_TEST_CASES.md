@@ -29,8 +29,9 @@ Mark each row: **P**ass · **F**ail · **N/A** (requires why in scorecard). Evid
 | ART-QA-ENV-001 | Scale vs player capsule | Major | | |
 | ART-QA-ENV-002 | Populated scene | Major | | |
 | ART-QA-ENV-003 | Collision / nav sanity | Critical† | | |
+| ART-QA-ENV-004 | Short / mid / long depth bands | **Critical** | | |
 
-†Critical on gameplay-critical areas.
+†Critical on gameplay-critical areas. ENV-004: [ART_OUTPUT_POLICY.md](../ART_OUTPUT_POLICY.md) §3 — all three bands + dressed floor required.
 
 ---
 

@@ -1,5 +1,6 @@
 # AI Art Best Practices — 3D JRPG / Narrative Game Factory SOP
 
+> **Policy bounds (agents read first):** [ART_OUTPUT_POLICY.md](./ART_OUTPUT_POLICY.md) — hard must/must-not, budgets, env depth bands. **This document** = craft how-to (ceiling), not policy caps.  
 > **Companion leaf:** [FACTORY_NON_ART_BEST_PRACTICES.md](./FACTORY_NON_ART_BEST_PRACTICES.md) (clearance → design → data → locale → handoff → QA → publish → live).
 
 > **Status:** Research outline ready for factory adoption (Godot 4.x GLB pipeline).  

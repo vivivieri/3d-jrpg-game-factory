@@ -1,14 +1,19 @@
 # Art factory SOP (leaf index)
 
-**Status:** Thin index for Track **A4** — gates and laws live in [FACTORY_MASTER_PLAN.md](./FACTORY_MASTER_PLAN.md) (§3.7, §4.1 area 4, §6, §14). **Generation how-to (every art track):** [AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md) · procedural 3D/anim/audio detail also in skill leaf docs below.
+**Status:** Thin index for Track **A4** — gates and laws live in [FACTORY_MASTER_PLAN.md](./FACTORY_MASTER_PLAN.md) (§3.7, §4.1 area 4, §6, §14). **Agent bounds (read first):** [ART_OUTPUT_POLICY.md](./ART_OUTPUT_POLICY.md) · **Generation how-to (every art track):** [AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md) · procedural 3D/anim/audio detail also in skill leaf docs below.
 
 **Product owner:** Stephen Chow · **Artistic GO/NO + why:** Art Factory Lead (Art Director seat)
 
 ---
 
-## Industrial AI generation SOP (all tracks)
+## Art output policy + industrial AI generation SOP (all tracks)
 
-**[AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md)** — factory-wide leaf for concept, env kits, props, UI, textures, 3D characters, animation, VFX, VO, BGM/SFX, storyboard, and locale art: spec → staged gen → cleanup → engine test → GO/NO + provenance. Use it alongside the seed skills for track-specific depth.
+| Leaf | Role |
+|------|------|
+| **[ART_OUTPUT_POLICY.md](./ART_OUTPUT_POLICY.md)** | Agent-enforceable **bounds** (must/must-not, budgets, env short/mid/long bands) — **not** a GO stamp |
+| **[AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md)** | Craft how-to for concept, env kits, props, UI, textures, 3D, animation, VFX, VO, BGM/SFX, storyboard, locale art |
+
+Read policy before generation; use AI_ART for staged gen → cleanup → engine test → GO/NO + provenance. Seed skills below add track depth.
 
 ---
 
@@ -65,6 +70,7 @@ Animation GO requires **mid-stride** walk and idle plates — not bind-pose or A
 
 | Doc | Role |
 |-----|------|
+| [ART_OUTPUT_POLICY.md](./ART_OUTPUT_POLICY.md) | Agent output bounds — all art/audio tracks |
 | [AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md) | Industrial AI generation SOP — all art/audio tracks |
 | [ART_QA_BEST_PRACTICES.md](./ART_QA_BEST_PRACTICES.md) | Art/audio **task QA** — numbered test cases, evidence law, pack scorecard (L1; phase/UAT stays NON_ART) |
 | [FACTORY_NON_ART_BEST_PRACTICES.md](./FACTORY_NON_ART_BEST_PRACTICES.md) | Non-art tracks (story, GD, schema, locale, handoff, QA, publish, live ops, PM, Tech) |

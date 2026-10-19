@@ -15,7 +15,7 @@ Obey [BOOT.md](./BOOT.md) — lower items never override higher items.
 | 1 | [FACTORY_MASTER_PLAN.md](./FACTORY_MASTER_PLAN.md) | SSOT laws and gates |
 | 2 | [BOOT.md](./BOOT.md) | Navigation / latch |
 | 3 | [team-knowledge/OUTPUT_CONTRACT.md](./team-knowledge/OUTPUT_CONTRACT.md) | Handoff fields |
-| 4 | Leaf SOPs (NON_ART, AI_ART, ART_FACTORY, ART_QA, GAME_DEV, GAME_QA, this file) | How-to only |
+| 4 | Leaf SOPs (NON_ART, ART_OUTPUT_POLICY, AI_ART, ART_FACTORY, ART_QA, GAME_DEV, GAME_QA, this file) | How-to / bounds; cite Master Plan for gates |
 | 5 | Indexes ([FACTORY_OVERVIEW.md](./FACTORY_OVERVIEW.md), [KIT_STATUS.md](./KIT_STATUS.md), [templates/README.md](./templates/README.md)) | Pointers only |
 
 **Operating entry:** Start here for day-one routing; cite Master Plan when a gate is in dispute.
@@ -47,7 +47,7 @@ Copy fillable templates from [templates/README.md](./templates/README.md) into `
 | **Storyboard / GD** | Locked beats | NON_ART §§3, 5–8 | [STORYBOARD_FRAME_INDEX.md](./templates/STORYBOARD_FRAME_INDEX.md), [COMBAT_GATES_ENCOUNTER_BUDGET.md](./templates/COMBAT_GATES_ENCOUNTER_BUDGET.md), [MASTER_ASSET_LIST.md](./templates/MASTER_ASSET_LIST.md) | Design data ready for schema | Game Design Lead |
 | **Dialogue / VO lock** | Beats + cast | NON_ART §4 | [DIALOGUE_VO_LINE_PACK.md](./templates/DIALOGUE_VO_LINE_PACK.md) | `dlg.*` script lock | Story Lead |
 | **Schema / content pack** | Design tables | NON_ART §8 · validators | `docs/schemas/content-pack.schema.json` · `npm run validate:pass` | **Schema GO** (Tech Lead) — **not stamped here** | Tech Lead |
-| **Art factory** | MAL, briefs | [ART_FACTORY_SOP.md](./ART_FACTORY_SOP.md) → [AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md) | [MASTER_ASSET_LIST.md](./templates/MASTER_ASSET_LIST.md) (scope) | Art pack GO | Art Factory Lead |
+| **Art factory** | MAL, briefs | [ART_FACTORY_SOP.md](./ART_FACTORY_SOP.md) → [ART_OUTPUT_POLICY.md](./ART_OUTPUT_POLICY.md) → [AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md) | [MASTER_ASSET_LIST.md](./templates/MASTER_ASSET_LIST.md) (scope) | Art pack GO | Art Factory Lead |
 | **Art task QA (L1)** | Per-asset evidence | [ART_QA_BEST_PRACTICES.md](./ART_QA_BEST_PRACTICES.md) | [ART_QA_SCORECARD.md](./templates/ART_QA_SCORECARD.md), [ART_QA_TEST_CASES.md](./templates/ART_QA_TEST_CASES.md) | Per-track GO/NO | Art + QA spot-check |
 | **Locale** | Locked `dlg.*`, art | NON_ART §9 | [LOCALE_READINESS_CHECKLIST.md](./templates/LOCALE_READINESS_CHECKLIST.md) | Locale GO | Art / Story |
 | **Handoff pack** | Art GO + design YAML | NON_ART §10 | [HANDOFF_SMOKE_CONSUMER.md](./templates/HANDOFF_SMOKE_CONSUMER.md) · `handoff.lock` in pack | **Contract GO** — **not stamped here** | Tech Lead / PM |
@@ -67,7 +67,7 @@ Copy fillable templates from [templates/README.md](./templates/README.md) into `
 
 | Track | Procedural leaves | QA kit | Do not use for |
 |-------|-------------------|--------|----------------|
-| **Art / audio craft** | [AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md) · index [ART_FACTORY_SOP.md](./ART_FACTORY_SOP.md) · skills `team-knowledge/skills/*` | [ART_QA_BEST_PRACTICES.md](./ART_QA_BEST_PRACTICES.md) (L1 task + art pack roll-up) | Phase UAT, schema, handoff hash law |
+| **Art / audio craft** | [ART_OUTPUT_POLICY.md](./ART_OUTPUT_POLICY.md) (bounds) · [AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md) · index [ART_FACTORY_SOP.md](./ART_FACTORY_SOP.md) · skills `team-knowledge/skills/*` | [ART_QA_BEST_PRACTICES.md](./ART_QA_BEST_PRACTICES.md) (L1 task + art pack roll-up) | Phase UAT, schema, handoff hash law |
 | **Non-art craft** | [FACTORY_NON_ART_BEST_PRACTICES.md](./FACTORY_NON_ART_BEST_PRACTICES.md) §§0–19 | [GAME_QA_BEST_PRACTICES.md](./GAME_QA_BEST_PRACTICES.md) (L1 schema/handoff + L2–L5) | Mid-stride anim law, LICENSE.json art rows |
 | **Cursor implementer** | [GAME_DEV_BEST_PRACTICES.md](./GAME_DEV_BEST_PRACTICES.md) (after smoke GO) | [GAME_QA_BEST_PRACTICES.md](./GAME_QA_BEST_PRACTICES.md) on `build_ref` | Art L1 task QA, schema authoring |
 | **Matrices shell** | — | [QA_MATRICES.md](./templates/QA_MATRICES.md) links both kits | Case text (live in ART_QA / GAME_QA leaves) |
@@ -171,6 +171,7 @@ Index: [team-knowledge/README.md](./team-knowledge/README.md) · R&R SSOT: Maste
 | **This file** | Day-one operating runbook |
 | [FACTORY_OVERVIEW.md](./FACTORY_OVERVIEW.md) | Short map (not SSOT) |
 | [FACTORY_NON_ART_BEST_PRACTICES.md](./FACTORY_NON_ART_BEST_PRACTICES.md) | Non-art craft §§0–19 |
+| [ART_OUTPUT_POLICY.md](./ART_OUTPUT_POLICY.md) | Art/audio agent bounds (all tracks) |
 | [AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md) | Art/audio craft |
 | [ART_FACTORY_SOP.md](./ART_FACTORY_SOP.md) | Art index + pipeline order |
 | [ART_QA_BEST_PRACTICES.md](./ART_QA_BEST_PRACTICES.md) | Art L1 QA cases |
@@ -232,7 +233,7 @@ UAT-001 first: require `.png`/`.mp4` under `content/<SKU>/qa/uat/`. UAT-002 prim
 
 ### A.7 Art L1 (parallel)
 
-[ART_QA_TEST_CASES.md](./templates/ART_QA_TEST_CASES.md) + [ART_QA_SCORECARD.md](./templates/ART_QA_SCORECARD.md) — link both paths in QA_MATRICES L1.
+[ART_OUTPUT_POLICY.md](./ART_OUTPUT_POLICY.md) (agent bounds) → [ART_QA_TEST_CASES.md](./templates/ART_QA_TEST_CASES.md) + [ART_QA_SCORECARD.md](./templates/ART_QA_SCORECARD.md) — include **ART-QA-ENV-004** on dressed areas; link paths in QA_MATRICES L1.
 
 ### A.8 Tech / PM quick checks
 

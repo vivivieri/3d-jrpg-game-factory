@@ -133,7 +133,7 @@ Full R&R: Master Plan [§5.2](FACTORY_MASTER_PLAN.md#52-full-rr).
 | 2. Content schema v1 + validators | **A2** | **Present; Schema GO pending** (Tech Lead — not stamped) |
 | 3. Story / design template kit — clearance → beats → storyboard → combat/gates → MAL | **A3** | **Template kit landed** (fillable [templates/](templates/README.md)) |
 | 3b. Dialogue / VO — `dlg.*` line packs → script lock | **A3** / **B2½** | Templates landed; craft depth partial (NON_ART §4) |
-| 4. Art factory runbook + art QA kit | **A4** | **Partial** — [ART_FACTORY_SOP](ART_FACTORY_SOP.md), [ART_QA](ART_QA_BEST_PRACTICES.md); **Art SOP GO not stamped** |
+| 4. Art factory runbook + art QA kit | **A4** | **Partial** — [ART_OUTPUT_POLICY](ART_OUTPUT_POLICY.md), [ART_FACTORY_SOP](ART_FACTORY_SOP.md), [ART_QA](ART_QA_BEST_PRACTICES.md); **Art SOP GO not stamped** |
 | 5. Handoff contract + smoke consumer | **A5** | **Checklist landed** — [HANDOFF_SMOKE](templates/HANDOFF_SMOKE_CONSUMER.md); **Contract GO not stamped** |
 | 6. QA matrices + game QA executable kit | **A6** | **Template + GAME_QA landed** — [GAME_QA](GAME_QA_BEST_PRACTICES.md), [QA_MATRICES](templates/QA_MATRICES.md); **Phase QA GO not stamped** |
 | 7. Locale + stream/live ops templates | **A7** | **Template kit landed** |
