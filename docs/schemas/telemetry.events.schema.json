@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://vivivieri.github.io/3d-jrpg-game-factory/schemas/telemetry.events.schema.json",
   "title": "Telemetry event envelope (factory baseline)",
-  "description": "Event names from Master Plan §16. Store destinations and SDK wiring are platform TBD (Stephen / Tech).",
+  "description": "Event names from Master Plan §16. Emit rules: docs/TELEMETRY_EMIT_CONTRACT.md. Store/SDK destination TBD (Stephen / Tech).",
   "type": "object",
   "required": ["event", "sku_id", "occurred_at"],
   "additionalProperties": false,

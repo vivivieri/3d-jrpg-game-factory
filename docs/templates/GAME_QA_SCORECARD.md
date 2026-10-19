@@ -1,3 +1,9 @@
+---
+scorecard_kind: game_qa
+sku_id: sku_xx_template_v0.0.0
+date_hkt: YYYY-MM-DD
+---
+
 # Game QA scorecard (copy per SKU / build)
 
 **Executable cases:** [GAME_QA_BEST_PRACTICES.md](../GAME_QA_BEST_PRACTICES.md) · **Checklist:** [GAME_QA_TEST_CASES.md](./GAME_QA_TEST_CASES.md) · **Day-run:** [FACTORY_OPERATING_SOP.md](../FACTORY_OPERATING_SOP.md) §3  

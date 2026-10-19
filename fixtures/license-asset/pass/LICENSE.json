@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "asset_id": "PROP_CRATE_WOOD_A",
+  "sku_id": "sku_xx_placeholder_v1.0.0",
+  "source_type": "ai_generated",
+  "tool_or_vendor": "Tripo",
+  "license_spdx_or_label": "Tripo-Commercial-Plan",
+  "commercial_ok": true,
+  "attribution_required": false,
+  "prompt_or_ref_archive": "content/sku_xx_placeholder_v1.0.0/art/3d/PROP_CRATE_WOOD_A/src_ai/prompt.json",
+  "file_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "reviewer_human": "Art Director",
+  "reviewed_at": "2026-10-19T09:00:00Z",
+  "evidence_path": "content/sku_xx_placeholder_v1.0.0/art/3d/PROP_CRATE_WOOD_A/plates/"
+}

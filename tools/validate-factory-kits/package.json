@@ -1,0 +1,17 @@
+{
+  "name": "@vivivieri/validate-factory-kits",
+  "private": true,
+  "version": "1.0.0",
+  "description": "License ledger, telemetry envelope, and QA scorecard validators",
+  "type": "module",
+  "scripts": {
+    "validate:license": "node validate-license.mjs",
+    "validate:telemetry": "node validate-telemetry.mjs",
+    "validate:qa": "node validate-qa-scorecard.mjs"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "yaml": "^2.6.0"
+  }
+}

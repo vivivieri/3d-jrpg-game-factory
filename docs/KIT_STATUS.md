@@ -2,7 +2,7 @@
 
 **SSOT laws:** [FACTORY_MASTER_PLAN.md](./FACTORY_MASTER_PLAN.md)  
 **Kit GO evidence:** [KIT_GO_LOG.md](./KIT_GO_LOG.md)  
-**Updated:** 2026-10-19 (HKT) — §17 locks; A2/A3/A4/A5/A6-kit/A7 kit GO stamped; skills + plate template
+**Updated:** 2026-10-19 (HKT) — Secure Forms, license/telemetry/QA validators; §17 locks; A2–A7 kit GO stamped
 
 ## Track A milestones
 
@@ -21,8 +21,10 @@
 
 ```bash
 npm ci --prefix tools/validate-content-pack
+npm ci --prefix tools/validate-factory-kits
 npm run validate:pass    # fixtures/content-packs/pass/minimal-pack.yaml
 node tools/validate-content-pack/validate.mjs path/to/pack.yaml
+npm run test:factory-kits   # license ledger, telemetry envelopes, QA scorecard shape
 ```
 
 Example-only stub (not CI): `fixtures/content-packs/example/design-pack-fields-stub.yaml`
@@ -43,8 +45,8 @@ Example-only stub (not CI): `fixtures/content-packs/example/design-pack-fields-s
 
 ## Doc sync log
 
-**This PR:** 2026-10-19 (HKT) — branch `cursor/factory-s17-kit-go-ebda` (§17 locks, kit GO log, skills depth, mid-stride plate template)
+**This PR:** 2026-10-19 (HKT) — branch `cursor/idle-safe-kit-enhancements-2921` (Secure Forms, license-ledger + telemetry emit leaf + QA scorecard CI)
 
 **Prior gap-fill:** 2026-10-16 (HKT) — GAME_DEV + Operating SOP; 2026-10-15 — A3–A7 template kits + art QA
 
-**Residual (intentional):** SKU/runtime GOs unstamped; automated QA suite wiring beyond matrices; numeric poly tier tables per platform (AI_ART §17); telemetry store wiring (§16 TBD).
+**Residual (intentional):** SKU/runtime GOs unstamped; numeric poly tier tables per platform (AI_ART §17); telemetry **store/SDK** destination (§16 — emit contract landed).

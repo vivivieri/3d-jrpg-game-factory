@@ -41,6 +41,14 @@ Use generic SKU language only: `sku_<country>_<tale_slug>_v<semver>`.
 | [GAME_DEV_SCORECARD.md](./GAME_DEV_SCORECARD.md) | Game production · build roll-up | **A5**, **B4** | Per tip / `build_ref`; **Build tip GO not stamped** |
 | [FACTORY_OPERATING_SOP.md](../FACTORY_OPERATING_SOP.md) | Factory day-run | **A5**, **B4** | Appendix B (game dev) |
 
+## Secure Forms (A4 — human 1:1 only)
+
+| Template | Source | Policy |
+|----------|--------|--------|
+| [SECURE_FORM_MIXAMO.md](./SECURE_FORM_MIXAMO.md) | Mixamo / Adobe animation | POL-G-103 · AI_ART §13.10 |
+| [SECURE_FORM_FREESOUND.md](./SECURE_FORM_FREESOUND.md) | Freesound full WAV | POL-G-103 · §9 |
+| [SECURE_FORM_TTS_CONSENT.md](./SECURE_FORM_TTS_CONSENT.md) | TTS / voice clone | §9 · VO consent |
+
 ## Art evidence (A4)
 
 | Template / leaf | Phase | Track A | Notes |
@@ -77,4 +85,4 @@ Use generic SKU language only: `sku_<country>_<tale_slug>_v<semver>`.
 |------|---------|
 | [../fixtures/content-packs/example/design-pack-fields-stub.yaml](../../fixtures/content-packs/example/design-pack-fields-stub.yaml) | Field examples for authors — **not** CI-validated |
 
-Validators: `npm run validate:pass` (see [KIT_STATUS.md](../KIT_STATUS.md)).
+Validators: `npm run validate:pass` · license `npm run validate:license:pass` · telemetry `npm run validate:telemetry:pass` · QA scorecards `npm run validate:qa:art:pass` / `validate:qa:game:pass` (see [KIT_STATUS.md](../KIT_STATUS.md)).

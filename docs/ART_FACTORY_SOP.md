@@ -56,8 +56,9 @@ Text / concept brief → 2D draft (AD GO on direction)
 | Live path | **One** live asset path per hero/prop; second meshes = concept-only labels |
 | AI 3D | Draft until game-ready checklist + plates + **Art Lead GO** |
 | Image gen | Draft-only under Art Lead GO — not locked ship art |
-| Mixamo / Adobe | Human Secure Form (Stephen 1:1) only when standing rules allow |
-| Freesound full WAV | Human login 1:1 only; HQ preview ≠ full WAV for tip-import |
+| Mixamo / Adobe | Human Secure Form (Stephen 1:1) — [SECURE_FORM_MIXAMO.md](./templates/SECURE_FORM_MIXAMO.md) |
+| Freesound full WAV | Human login 1:1 — [SECURE_FORM_FREESOUND.md](./templates/SECURE_FORM_FREESOUND.md); HQ preview ≠ full WAV |
+| TTS / voice clone | [SECURE_FORM_TTS_CONSENT.md](./templates/SECURE_FORM_TTS_CONSENT.md) before ship VO |
 
 ---
 

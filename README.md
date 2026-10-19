@@ -29,7 +29,9 @@ Machine schemas: [docs/schemas/](docs/schemas/) (content pack root: `content-pac
 
 ```bash
 npm ci --prefix tools/validate-content-pack
+npm ci --prefix tools/validate-factory-kits
 npm run validate:pass
+npm run test:factory-kits
 node tools/validate-content-pack/validate.mjs path/to/your-pack.yaml
 ```
 

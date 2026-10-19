@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vivivieri.github.io/3d-jrpg-game-factory/schemas/license-ledger.schema.json",
+  "title": "SKU license ledger (pack-level provenance index)",
+  "description": "Machine-checkable index of LICENSE.json rows and clearance refs for POL-G-002 / PACK-003.",
+  "type": "object",
+  "required": ["schema_version", "sku_id", "ledger_id", "updated_at", "assets"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "$ref": "common.defs.json#/$defs/semver" },
+    "sku_id": { "$ref": "common.defs.json#/$defs/skuId" },
+    "ledger_id": {
+      "type": "string",
+      "pattern": "^LL_[A-Z0-9_]+$",
+      "description": "Matches CLEARANCE_PD_LICENSE_LEDGER ledger_id convention"
+    },
+    "clearance_pack_ref": {
+      "type": "string",
+      "description": "Path to filled CLEARANCE_PD_LICENSE_LEDGER.md"
+    },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "assets": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "license-asset.schema.json" }
+    }
+  }
+}

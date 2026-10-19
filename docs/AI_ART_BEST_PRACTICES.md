@@ -597,7 +597,7 @@ SKU/Track/Family/SM_Family_Asset_vMajor.Minor/
   export/           # GLB
   plates/           # mid-stride / turntable evidence
   qa/               # scorecard
-  LICENSE.json      # tool, plan, dates, refs, reviewer, commercial OK
+  LICENSE.json      # tool, plan, dates, refs, reviewer, commercial OK — schema: schemas/license-asset.schema.json
 ```
 Suffixes: `_SK`, `_COL`, `_BC`, `_N`, `_ORM`. Metadata: category, biome, tris, tex mem, AI-assisted flag, approval state.
 
@@ -627,13 +627,13 @@ Required for anim GO: mid-walk, mid-run, attack apex, land/recover — under gam
 ### 13.10 Human Secure Form gates
 Factory policy: a named human must complete a Secure Form before these enter `main`:
 
-| Source | Human verifies |
-|--------|----------------|
-| Mixamo / Adobe | Account type allowed; assets embedded not redistributed raw; AI/ML training ban acknowledged; mesh meets Mixamo auto-rig constraints |
-| Other Adobe libs | Current product-specific terms |
-| Freesound | Original full-quality download (not preview); license CC0/CC-BY only for commercial; attribution filed; BY-NC rejected |
-| TTS voice clone | Consent / rights documentation |
-| Paid music AI | Paid-plan commercial rights at time of download; Steam/disclosure rules |
+| Source | Human verifies | Fillable kit |
+|--------|----------------|--------------|
+| Mixamo / Adobe | Account type allowed; assets embedded not redistributed raw; AI/ML training ban acknowledged; mesh meets Mixamo auto-rig constraints | [SECURE_FORM_MIXAMO.md](./templates/SECURE_FORM_MIXAMO.md) |
+| Other Adobe libs | Current product-specific terms | _(product-specific — counsel)_ |
+| Freesound | Original full-quality download (not preview); license CC0/CC-BY only for commercial; attribution filed; BY-NC rejected | [SECURE_FORM_FREESOUND.md](./templates/SECURE_FORM_FREESOUND.md) |
+| TTS voice clone | Consent / rights documentation | [SECURE_FORM_TTS_CONSENT.md](./templates/SECURE_FORM_TTS_CONSENT.md) |
+| Paid music AI | Paid-plan commercial rights at time of download; Steam/disclosure rules | _(ledger row + counsel)_ |
 
 ### 13.11 Credit-aware generation (API spend)
 - Metric: `(tool $ + artist h + reject cost) / shipped assets`.
@@ -732,9 +732,9 @@ Parallelize 5–7 and 11–13 after character locks where staffing allows; do no
 ## 17. Open items for factory owners
 
 - [ ] Freeze numeric poly/texel tables per SKU platform tier after profiling.  
-- [ ] Attach internal Secure Form templates (Mixamo, Freesound, TTS consent).  
+- [x] Attach internal Secure Form templates (Mixamo, Freesound, TTS consent) — [templates/README.md](./templates/README.md) § Secure Forms (2026-10-19).  
 - [ ] Quarterly re-audit vendor ToS (music AI & 3D APIs change).  
-- [ ] Wire license ledger schema to asset DB.  
+- [x] Wire license ledger schema — [license-ledger.schema.json](./schemas/license-ledger.schema.json), [license-asset.schema.json](./schemas/license-asset.schema.json); `npm run validate:license:pass` (not a full asset DB product).  
 - [x] Define Art Lead plate templates (resolution, camera, lighting) — [MID_STRIDE_PLATE_CAMERA.md](./templates/MID_STRIDE_PLATE_CAMERA.md) (2026-10-19).  
 
 ---

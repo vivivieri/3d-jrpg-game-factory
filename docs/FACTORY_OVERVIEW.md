@@ -140,7 +140,7 @@ Full R&R: Master Plan [§5.2](FACTORY_MASTER_PLAN.md#52-full-rr).
 | 8. Cursor 3.0 game factory hooks (PM automation) | **A5** + **B4** | GAME_DEV kit landed; **Build tip GO blocked** (no live SKU) |
 | 9. **Operating SOP** (whole-factory day-run) | **A1–A7** | [FACTORY_OPERATING_SOP.md](FACTORY_OPERATING_SOP.md) |
 
-Schemas: [docs/schemas/](schemas/) · validators: `tools/validate-content-pack/` (root [README.md](../README.md)).  
+Schemas: [docs/schemas/](schemas/) · validators: `tools/validate-content-pack/`, `tools/validate-factory-kits/` (license, telemetry, QA scorecards — root [README.md](../README.md)).  
 Fillable kits: [docs/templates/README.md](templates/README.md) (Track A3–A7 — **GO stamps not in templates**).
 
 ---

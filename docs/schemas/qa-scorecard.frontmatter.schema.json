@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vivivieri.github.io/3d-jrpg-game-factory/schemas/qa-scorecard.frontmatter.schema.json",
+  "title": "QA scorecard YAML frontmatter",
+  "description": "Validated structurally by tools/validate-factory-kits/validate-qa-scorecard.mjs together with required Markdown sections.",
+  "type": "object",
+  "required": ["scorecard_kind", "sku_id", "date_hkt"],
+  "additionalProperties": false,
+  "properties": {
+    "scorecard_kind": {
+      "type": "string",
+      "enum": ["art_qa", "game_qa"]
+    },
+    "sku_id": { "$ref": "common.defs.json#/$defs/skuId" },
+    "date_hkt": {
+      "type": "string",
+      "minLength": 8,
+      "description": "HKT calendar date YYYY-MM-DD"
+    },
+    "pack_hash": { "type": "string" },
+    "tester": { "type": "string" }
+  }
+}

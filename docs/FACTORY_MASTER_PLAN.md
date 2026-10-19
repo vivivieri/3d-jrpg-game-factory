@@ -636,7 +636,7 @@ No title-specific hero IDs in baseline names.
 
 ## 16. Telemetry events
 
-Event envelope schema: [schemas/telemetry.events.schema.json](schemas/telemetry.events.schema.json) (store/SDK wiring **TBD**).
+Event envelope schema: [schemas/telemetry.events.schema.json](schemas/telemetry.events.schema.json). **Emit contract (Godot-oriented):** [TELEMETRY_EMIT_CONTRACT.md](TELEMETRY_EMIT_CONTRACT.md) — when to emit, required fields, PII ban, CI fixtures. Store/SDK destination **TBD** (Stephen / Tech).
 
 - `session_start`
 - `beat_enter`
