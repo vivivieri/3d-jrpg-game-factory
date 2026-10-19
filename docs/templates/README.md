@@ -45,6 +45,7 @@ Use generic SKU language only: `sku_<country>_<tale_slug>_v<semver>`.
 
 | Template / leaf | Phase | Track A | Notes |
 |-----------------|-------|---------|-------|
+| [ART_OUTPUT_POLICY.md](../ART_OUTPUT_POLICY.md) | Art production · agent bounds | **A4** | Must/must-not + budgets — **not** a GO stamp |
 | [ART_QA_BEST_PRACTICES.md](../ART_QA_BEST_PRACTICES.md) | Art production · task QA | **A4** | Procedural leaf — numbered cases, evidence law |
 | [ART_QA_TEST_CASES.md](./ART_QA_TEST_CASES.md) | Art production · L1 execution | **A4** | Checklist table (detail in leaf) |
 | [ART_QA_SCORECARD.md](./ART_QA_SCORECARD.md) | Art production · pack roll-up | **A4** | Per-asset + Art Factory Lead roll-up |

@@ -12,7 +12,7 @@
 
 ## Does
 
-- Runs art factory per [ART_FACTORY_SOP.md](../../ART_FACTORY_SOP.md) → [AI_ART_BEST_PRACTICES.md](../../AI_ART_BEST_PRACTICES.md) + `skills/`
+- Runs art factory per [ART_FACTORY_SOP.md](../../ART_FACTORY_SOP.md) → [ART_OUTPUT_POLICY.md](../../ART_OUTPUT_POLICY.md) (agent bounds) → [AI_ART_BEST_PRACTICES.md](../../AI_ART_BEST_PRACTICES.md) + `skills/`
 - Enforces **one live ship mesh** per character; concept/gait refs stay concept-only
 - Requires **mid-stride** walk/idle plates for locomotion GO — not bind-pose stand-ins
 - Blocks game factory start — art lock precedes handoff (Master Plan §6 rule 3)
@@ -30,7 +30,7 @@ Every exit uses [OUTPUT_CONTRACT.md](../OUTPUT_CONTRACT.md): `status · why · p
 
 ## Procedural how-to
 
-- [AI_ART_BEST_PRACTICES.md](../../AI_ART_BEST_PRACTICES.md) · [ART_FACTORY_SOP.md](../../ART_FACTORY_SOP.md)
+- [ART_OUTPUT_POLICY.md](../../ART_OUTPUT_POLICY.md) · [AI_ART_BEST_PRACTICES.md](../../AI_ART_BEST_PRACTICES.md) · [ART_FACTORY_SOP.md](../../ART_FACTORY_SOP.md)
 - Art task QA + pack scorecard: [ART_QA_BEST_PRACTICES.md](../../ART_QA_BEST_PRACTICES.md) · [templates/ART_QA_SCORECARD.md](../../templates/ART_QA_SCORECARD.md)
 - Storyboard / beat refs tie to [schemas/storyboard-frame.schema.json](../../schemas/storyboard-frame.schema.json)
 - Scope list: [MASTER_ASSET_LIST.md](../../templates/MASTER_ASSET_LIST.md)

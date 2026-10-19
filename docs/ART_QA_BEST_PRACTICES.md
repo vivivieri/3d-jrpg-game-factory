@@ -2,7 +2,7 @@
 
 **Status:** Procedural leaf — **not** a GO stamp. Laws remain in [FACTORY_MASTER_PLAN.md](./FACTORY_MASTER_PLAN.md) (§2, §3.7, §6, §14).  
 **Scope:** Task-level and **art-pack roll-up** QA before **Art pack GO** (and per-asset gates inside art production).  
-**Craft SOP (generation):** [AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md) · **Index:** [ART_FACTORY_SOP.md](./ART_FACTORY_SOP.md)  
+**Policy bounds:** [ART_OUTPUT_POLICY.md](./ART_OUTPUT_POLICY.md) (agent must/must-not; map in policy §12) · **Craft SOP:** [AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md) · **Index:** [ART_FACTORY_SOP.md](./ART_FACTORY_SOP.md)  
 **General QA (phase / UAT / release):** [FACTORY_NON_ART_BEST_PRACTICES.md](./FACTORY_NON_ART_BEST_PRACTICES.md) §11 + [templates/QA_MATRICES.md](./templates/QA_MATRICES.md) — art fills **Level 1 Task** rows only; phase regression and UAT stay **NON_ART**.
 
 ---
@@ -136,6 +136,17 @@ Execute cases as written; mark **N/A** only with `why` in scorecard. Full fillab
 | **Evidence** | `.../qa/ART-QA-ENV-003_<date>_collision_notes.md` + optional debug capture |
 | **Pass/Fail** | Pass = path clean |
 | **Severity** | Critical (gameplay-critical areas) |
+
+#### ART-QA-ENV-004 — Short / mid / long depth bands
+
+| Field | Content |
+|-------|---------|
+| **Precondition** | Dressed area or vista candidate for art GO; gameplay camera height/FOV set per brief; [ART_OUTPUT_POLICY.md](./ART_OUTPUT_POLICY.md) §3 applies. |
+| **Steps** | 1. Capture **short** band: floor/ground + near interactables along walk path (collision-true). 2. Capture **mid** band: modular architecture / street walls / kit modules with readable landmark silhouette. 3. Capture **long** band: skyline / parallax / impostors / plates — far dressing without full 3D hero cost. 4. Label each capture in filename or companion notes. |
+| **Expected** | All three bands populated — **no empty mid, no empty far, no undressed walkable floor plane** as ship evidence. |
+| **Evidence** | `.../qa/ART-QA-ENV-004_<date>_band_short.png`, `_band_mid.png`, `_band_long.png` (or one annotated composite with band callouts) |
+| **Pass/Fail** | Fail = missing band or floor-only short band |
+| **Severity** | **Critical** (area / pack populated-scene gates) |
 
 ---
 
@@ -596,9 +607,9 @@ Execute cases as written; mark **N/A** only with `why` in scorecard. Full fillab
 
 | Field | Content |
 |-------|---------|
-| **Precondition** | AI_ART §14 step 16 — populated scene. |
-| **Steps** | 1. Load representative chapter scene at ship density. 2. Gameplay camera + perf note. 3. Style cohesion vs golden set. |
-| **Expected** | Real populated scene evidence — not greybox-as-ship. |
+| **Precondition** | AI_ART §14 step 16 — populated scene; [ART_OUTPUT_POLICY.md](./ART_OUTPUT_POLICY.md) §3 depth bands. |
+| **Steps** | 1. Load representative chapter scene at ship density. 2. Gameplay camera + perf note. 3. Style cohesion vs golden set. 4. Confirm ART-QA-ENV-004 pass on same scene (short/mid/long). |
+| **Expected** | Real populated scene evidence — not greybox-as-ship; depth bands present. |
 | **Evidence** | `content/<SKU>/art/qa/ART-QA-PACK-002_<date>_populated_scene.png` |
 | **Pass/Fail** | Fail = empty/greybox gate |
 | **Severity** | **Critical** |
@@ -632,7 +643,9 @@ Execute cases as written; mark **N/A** only with `why` in scorecard. Full fillab
 | AI_ART § | Topic | Primary ART-QA IDs | Skill (seed) |
 |----------|-------|-------------------|--------------|
 | §1 | Concept / 2D sheets | ART-QA-2D-001 … 003 | — |
-| §2 | Environment | ART-QA-ENV-001 … 003 | `game-ready-3d-guideline` |
+| §2 | Environment | ART-QA-ENV-001 … 004 | `game-ready-3d-guideline` |
+| [ART_OUTPUT_POLICY](./ART_OUTPUT_POLICY.md) §3 | Env depth bands | ART-QA-ENV-004 | — |
+| [ART_OUTPUT_POLICY](./ART_OUTPUT_POLICY.md) §2 | Budget starting bands | ART-QA-PROP-003, 3D-*, GLB-002, PACK-002 | — |
 | §3 | Props | ART-QA-PROP-001 … 003 | `game-ready-3d-guideline` |
 | §4 | UI / icons | ART-QA-UI-001 … 003 | — |
 | §5 | Textures / PBR | ART-QA-TEX-001 … 003 | — |
@@ -676,6 +689,7 @@ Copy per SKU: [templates/ART_QA_SCORECARD.md](./templates/ART_QA_SCORECARD.md).
 | Baking rarity or text into icons/textures | Loc + combinatorics | ART-QA-UI-003, LOCALE-002 |
 | Mixamo without Secure Form | Human gate | ART-QA-LICENSE-002 |
 | Shipping without LICENSE row | Master Plan art law | ART-QA-LICENSE-001 |
+| Empty mid/far env band or bare floor | ART_OUTPUT_POLICY §3 depth law | ART-QA-ENV-004 |
 
 ---
 

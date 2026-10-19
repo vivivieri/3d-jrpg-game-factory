@@ -78,8 +78,9 @@ Concept → Pre-production → Art production → Game production → QA → Rel
 | Leaf | Path | Scope | Track A |
 |------|------|-------|---------|
 | **Factory non-art SOP** | [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) | Clearance → beats → storyboard → **§4 dialogue/VO scripts** → GD/combat → asset list → schema → locale → handoff → QA → publish → live → PM/Tech (§§0–19) | **A2**, **A3**, **A5**, **A6**, **A7** |
-| **AI art generation SOP** | [AI_ART_BEST_PRACTICES.md](AI_ART_BEST_PRACTICES.md) | All art/audio gen tracks: concept → env → props → UI → textures → 3D → anim → VFX → VO → BGM/SFX → storyboard stills → locale art (§§0–17) | **A4** (primary) |
-| **Art factory index** | [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) | Thin index → AI art SOP + `docs/team-knowledge/skills/` ×5; 3D pipeline order | **A4** |
+| **Art output policy** | [ART_OUTPUT_POLICY.md](ART_OUTPUT_POLICY.md) | Agent-enforceable bounds: must/must-not, budgets, env depth bands — all art tracks; **not** a GO stamp | **A4** |
+| **AI art generation SOP** | [AI_ART_BEST_PRACTICES.md](AI_ART_BEST_PRACTICES.md) | All art/audio gen tracks: concept → env → props → UI → textures → 3D → anim → VFX → VO → BGM/SFX → storyboard stills → locale art (§§0–17) | **A4** (primary craft) |
+| **Art factory index** | [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) | Thin index → policy + AI art SOP + `docs/team-knowledge/skills/` ×5; 3D pipeline order | **A4** |
 
 **Track A → leaf pointers (single source per milestone):**
 
@@ -87,7 +88,7 @@ Concept → Pre-production → Art production → Game production → QA → Rel
 |-----------|-----------------|
 | A2 | [schemas/content-pack.schema.json](schemas/content-pack.schema.json) + `tools/validate-content-pack/` · procedural [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §8 |
 | A3 | [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §§1–8 (clearance through dialogue/VO + design data) |
-| A4 | [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) → [AI_ART_BEST_PRACTICES.md](AI_ART_BEST_PRACTICES.md) + skills |
+| A4 | [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) → [ART_OUTPUT_POLICY.md](ART_OUTPUT_POLICY.md) → [AI_ART_BEST_PRACTICES.md](AI_ART_BEST_PRACTICES.md) + skills |
 | A5 | [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §10 handoff/tip lock |
 | A6 | [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §§11–12 QA + publish packaging |
 | A7 | [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §§9, 12–13 locale + publish + live ops |
@@ -253,7 +254,7 @@ Placeholders are internal art-factory tools only — never ship gates.
 | AI 3D | Draft until game-ready checklist + plates + Art Lead GO |
 | External anim/audio HQ | Mixamo / Adobe / Freesound full WAV → human Secure Form only (§4.1, §14) |
 
-**Art/audio how-to:** [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) → [AI_ART_BEST_PRACTICES.md](AI_ART_BEST_PRACTICES.md) + `team-knowledge/skills/` (`ai3d-to-godot-pipeline`, `game-ready-3d-guideline`, `coat-hero-anim-polish`, `mixamo-adobe-gate`, `freesound-full-wav-1to1`). **Non-art how-to:** [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) (includes §4 dialogue/VO scripts). Full milestone map: **§2.1**.
+**Art/audio bounds + how-to:** [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) → [ART_OUTPUT_POLICY.md](ART_OUTPUT_POLICY.md) (agent bounds) → [AI_ART_BEST_PRACTICES.md](AI_ART_BEST_PRACTICES.md) + `team-knowledge/skills/` (`ai3d-to-godot-pipeline`, `game-ready-3d-guideline`, `coat-hero-anim-polish`, `mixamo-adobe-gate`, `freesound-full-wav-1to1`). **Non-art how-to:** [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) (includes §4 dialogue/VO scripts). Full milestone map: **§2.1**.
 
 ### 3.8 Game factory — Cursor 3.0
 
@@ -416,7 +417,7 @@ Overview kit steps → tracks:
 | 2. Story kit — folktale intake + PD checklist + length → beats → storyboard | **A3** (templates) + **B0–B1** |
 | 2b. Dialogue / VO script kit — `dlg.*` line packs → script lock | **A3** §4 + **B2½** |
 | 3. Design kit — combat/gates + asset list + schema | **A3** §§5–8, **A2** + **B2** |
-| 4. Art factory runbook — lock pack + reason log | **A4** ([ART_FACTORY](ART_FACTORY_SOP.md) → [AI_ART](AI_ART_BEST_PRACTICES.md)) + **B3** |
+| 4. Art factory runbook — lock pack + reason log | **A4** ([ART_FACTORY](ART_FACTORY_SOP.md) → [ART_OUTPUT_POLICY](ART_OUTPUT_POLICY.md) → [AI_ART](AI_ART_BEST_PRACTICES.md)) + **B3** |
 | 5. Locale + handoff pack schema | **A7**, **A5**, **A2** + Locale GO |
 | 6. Cursor 3.0 game factory hooks (PM automation) | **A5** + **B4** |
 | 7. QA task + phase regression suite | **A6** + **B5** |
@@ -429,7 +430,7 @@ Overview kit steps → tracks:
 | A1 | This document + phase/R&R/rules adopted | Kit baseline GO |
 | A2 | Content schema `v1` (YAML/JSON) + validators — [schemas/](schemas/) + [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §8 | Schema GO (**validators on disk; Tech Lead Schema GO pending**) |
 | A3 | Clearance → story → storyboard → **dialogue/VO scripts** → GD/combat → MASTER_ASSET_LIST — [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §§1–8 | Template GO |
-| A4 | [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) → [AI_ART_BEST_PRACTICES.md](AI_ART_BEST_PRACTICES.md) (all-track AI gen SOP) + seed `team-knowledge/skills/` ×5 + GO/NO reason log format | Art SOP GO |
+| A4 | [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) → [ART_OUTPUT_POLICY.md](ART_OUTPUT_POLICY.md) + [AI_ART_BEST_PRACTICES.md](AI_ART_BEST_PRACTICES.md) + seed `team-knowledge/skills/` ×5 + GO/NO reason log format | Art SOP GO |
 | A5 | Cursor 3.0 handoff contract + smoke consumer checklist — [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §10 handoff/tip lock | Contract GO |
 | A6 | QA matrices (task / phase / UAT / release) — [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §§11–12 real UAT + publish | QA kit GO |
 | A7 | Multi-country locale + stream/live ops checklist — [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) §§9, 12–13 | Locale/stream kit GO |

@@ -1,7 +1,7 @@
 # Factory kit status (Track A)
 
 **SSOT laws:** [FACTORY_MASTER_PLAN.md](./FACTORY_MASTER_PLAN.md)  
-**Updated:** 2026-10-16 (HKT) — GAME_DEV implementer kit (A5/B4) + consolidated operating SOP
+**Updated:** 2026-10-19 (HKT) — ART_OUTPUT_POLICY agent bounds leaf (A4)
 
 ## Track A milestones
 
@@ -10,7 +10,7 @@
 | **A1** BOOT, board schema, output contract | **Done (this kit)** | [BOOT.md](./BOOT.md), [BOARD_SCHEMA.md](./BOARD_SCHEMA.md), expanded [OUTPUT_CONTRACT.md](./team-knowledge/OUTPUT_CONTRACT.md) |
 | **A2** Content schema v1 + validators | **Present; Schema GO pending** | [docs/schemas/](./schemas/), `tools/validate-content-pack/`, CI workflow — **Tech Lead Schema GO not stamped** |
 | **A3** Clearance → design templates | **Template kit landed** | Fillable kits: [templates/README.md](./templates/README.md) (clearance ledger, bible/beat, storyboard, `dlg.*`, MASTER_ASSET_LIST, combat/gates) + deepened ratings/L0/a11y/SLA shells |
-| **A4** Art factory SOP + skills | Partial | [ART_FACTORY_SOP.md](./ART_FACTORY_SOP.md), [ART_QA_BEST_PRACTICES.md](./ART_QA_BEST_PRACTICES.md) + `templates/ART_QA_*` (art QA kit landed); `team-knowledge/skills/` — **Art SOP GO not stamped** |
+| **A4** Art factory SOP + skills | Partial | [ART_OUTPUT_POLICY.md](./ART_OUTPUT_POLICY.md) (agent bounds), [ART_FACTORY_SOP.md](./ART_FACTORY_SOP.md), [ART_QA_BEST_PRACTICES.md](./ART_QA_BEST_PRACTICES.md) + `templates/ART_QA_*`; `team-knowledge/skills/` — **Art SOP GO not stamped** |
 | **A5** Handoff contract + smoke consumer + GAME_DEV leaf | **Checklist + implementer kit landed** | [HANDOFF_SMOKE_CONSUMER.md](./templates/HANDOFF_SMOKE_CONSUMER.md) · [GAME_DEV_BEST_PRACTICES.md](./GAME_DEV_BEST_PRACTICES.md) + `templates/GAME_DEV_*` — **Contract GO not stamped** |
 | **A6** QA matrices | **Template + GAME_QA kit landed** | [QA_MATRICES.md](./templates/QA_MATRICES.md); art L1 → ART_QA; non-art L1 + L2–L5 → [GAME_QA_BEST_PRACTICES.md](./GAME_QA_BEST_PRACTICES.md) + `templates/GAME_QA_*` — **Phase QA GO not stamped** |
 | **Operating** Whole-factory SOP | **Landed** | [FACTORY_OPERATING_SOP.md](./FACTORY_OPERATING_SOP.md) — pipeline table, QA ladder, role day-run; **not** a GO stamp |
@@ -54,6 +54,7 @@ Example-only stub (not CI): `fixtures/content-packs/example/design-pack-fields-s
 | Area | Change |
 |------|--------|
 | [templates/](./templates/) | A3–A7 fillable kits + [README.md](./templates/README.md) index |
+| [ART_OUTPUT_POLICY.md](./ART_OUTPUT_POLICY.md) | A4 agent output bounds (all art tracks; env depth bands) |
 | [ART_QA_BEST_PRACTICES.md](./ART_QA_BEST_PRACTICES.md) | A4 executable art task QA cases + scorecard templates |
 | [GAME_QA_BEST_PRACTICES.md](./GAME_QA_BEST_PRACTICES.md) · [FACTORY_OPERATING_SOP.md](./FACTORY_OPERATING_SOP.md) | A6 game QA cases + QA day-run SOP |
 | [GAME_DEV_BEST_PRACTICES.md](./GAME_DEV_BEST_PRACTICES.md) | A5/B4 Cursor implementer cases + `templates/GAME_DEV_*` |
