@@ -6,6 +6,15 @@
     "validate": "npm run validate --prefix tools/validate-content-pack",
     "validate:pass": "node tools/validate-content-pack/validate.mjs fixtures/content-packs/pass/minimal-pack.yaml",
     "validate:fail": "node tools/validate-content-pack/validate.mjs fixtures/content-packs/fail/orphan-and-handoff.yaml",
-    "test:validators": "npm run validate:pass && npm run validate:fail; test $? -eq 1"
+    "validate:license:pass": "node tools/validate-factory-kits/validate-license.mjs fixtures/license-ledger/pass/minimal-ledger.json",
+    "validate:license:asset:pass": "node tools/validate-factory-kits/validate-license.mjs fixtures/license-asset/pass/LICENSE.json",
+    "validate:license:fail": "node tools/validate-factory-kits/validate-license.mjs fixtures/license-ledger/fail/no-commercial.json",
+    "validate:telemetry:pass": "node tools/validate-factory-kits/validate-telemetry.mjs fixtures/telemetry/pass/session_start.json && node tools/validate-factory-kits/validate-telemetry.mjs fixtures/telemetry/pass/beat_enter.json",
+    "validate:telemetry:fail": "node tools/validate-factory-kits/validate-telemetry.mjs fixtures/telemetry/fail/beat_enter_missing_beat.json",
+    "validate:qa:art:pass": "node tools/validate-factory-kits/validate-qa-scorecard.mjs --kind art docs/templates/ART_QA_SCORECARD.md && node tools/validate-factory-kits/validate-qa-scorecard.mjs --kind art fixtures/qa-scorecards/pass/art-minimal.md",
+    "validate:qa:art:fail": "node tools/validate-factory-kits/validate-qa-scorecard.mjs --kind art fixtures/qa-scorecards/fail/art-missing-rollup.md",
+    "validate:qa:game:pass": "node tools/validate-factory-kits/validate-qa-scorecard.mjs --kind game docs/templates/GAME_QA_SCORECARD.md && node tools/validate-factory-kits/validate-qa-scorecard.mjs --kind game fixtures/qa-scorecards/pass/game-minimal.md",
+    "test:validators": "npm run validate:pass && npm run validate:fail; test $? -eq 1",
+    "test:factory-kits": "npm run validate:license:pass && npm run validate:license:asset:pass && npm run validate:telemetry:pass && npm run validate:qa:art:pass && npm run validate:qa:game:pass && npm run validate:license:fail; test $? -ne 0 && npm run validate:telemetry:fail; test $? -ne 0 && npm run validate:qa:art:fail; test $? -ne 0"
   }
 }

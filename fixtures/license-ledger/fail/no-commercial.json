@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "sku_id": "sku_xx_placeholder_v1.0.0",
+  "ledger_id": "LL_FAIL_001",
+  "updated_at": "2026-10-19T08:00:00Z",
+  "assets": [
+    {
+      "schema_version": "1.0.0",
+      "asset_id": "SFX_BAD",
+      "sku_id": "sku_xx_placeholder_v1.0.0",
+      "source_type": "human_authored",
+      "tool_or_vendor": "internal",
+      "license_spdx_or_label": "proprietary",
+      "commercial_ok": false,
+      "reviewer_human": "Tester",
+      "reviewed_at": "2026-10-19T08:00:00Z",
+      "evidence_path": "content/sku_xx_placeholder_v1.0.0/audio/sfx/bad.wav"
+    }
+  ]
+}

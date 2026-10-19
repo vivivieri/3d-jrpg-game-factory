@@ -231,7 +231,7 @@ UAT-001 first: require `.png`/`.mp4` under `content/<SKU>/qa/uat/`. UAT-002 prim
 
 ### A.6 L5 — Live
 
-[LIVE_OPS_HOTFIX_TALE_QUEUE.md](./templates/LIVE_OPS_HOTFIX_TALE_QUEUE.md) → LIVE-004. [telemetry.events.schema.json](./schemas/telemetry.events.schema.json) → LIVE-001.
+[LIVE_OPS_HOTFIX_TALE_QUEUE.md](./templates/LIVE_OPS_HOTFIX_TALE_QUEUE.md) → LIVE-004. [TELEMETRY_EMIT_CONTRACT.md](./TELEMETRY_EMIT_CONTRACT.md) + [telemetry.events.schema.json](./schemas/telemetry.events.schema.json) → LIVE-001.
 
 ### A.7 Art L1 (parallel)
 
@@ -239,7 +239,7 @@ UAT-001 first: require `.png`/`.mp4` under `content/<SKU>/qa/uat/`. UAT-002 prim
 
 ### A.8 Tech / PM quick checks
 
-- **Tech:** `npm run validate:pass`; `npm run validate:fail` must exit non-zero.  
+- **Tech:** `npm run validate:pass`; `npm run validate:fail` must exit non-zero; `npm run test:factory-kits` green.  
 - **PM:** Single `issue_pack_ref`; GAME-QA-EVD-001 clean before gate requests.
 
 ---

@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vivivieri.github.io/3d-jrpg-game-factory/schemas/license-asset.schema.json",
+  "title": "Per-asset LICENSE.json (ship candidate provenance)",
+  "description": "POL-G-002: every ship candidate carries provenance + commercial OK before handoff import.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "asset_id",
+    "sku_id",
+    "source_type",
+    "tool_or_vendor",
+    "commercial_ok",
+    "reviewer_human",
+    "reviewed_at",
+    "evidence_path"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "$ref": "common.defs.json#/$defs/semver" },
+    "asset_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable id matching MASTER_ASSET_LIST or export folder slug"
+    },
+    "sku_id": { "$ref": "common.defs.json#/$defs/skuId" },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "ai_generated",
+        "human_authored",
+        "mixamo_adobe",
+        "freesound",
+        "tts",
+        "stock_library",
+        "pd",
+        "commissioned"
+      ]
+    },
+    "tool_or_vendor": {
+      "type": "string",
+      "minLength": 1,
+      "description": "e.g. Tripo, Mixamo, Freesound:12345, ElevenLabs"
+    },
+    "license_spdx_or_label": {
+      "type": "string",
+      "description": "CC0-1.0, CC-BY-4.0, Mixamo-Embed, proprietary, etc."
+    },
+    "commercial_ok": {
+      "type": "boolean",
+      "description": "Human attestation — must be true for ship"
+    },
+    "attribution_required": { "type": "boolean", "default": false },
+    "attribution_text": { "type": "string" },
+    "secure_form_ref": {
+      "type": "string",
+      "description": "Path to completed SECURE_FORM_* kit when policy requires"
+    },
+    "prompt_or_ref_archive": {
+      "type": "string",
+      "description": "Path to src_ai/ prompt JSON or approved 2D ref"
+    },
+    "file_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "reviewer_human": { "type": "string", "minLength": 1 },
+    "reviewed_at": { "type": "string", "format": "date-time" },
+    "evidence_path": {
+      "type": "string",
+      "minLength": 1,
+      "description": "QA plates, listen WAV, or secure form folder"
+    },
+    "notes": { "type": "string" }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "commercial_ok": { "const": true } },
+        "required": ["commercial_ok"]
+      },
+      "then": {
+        "properties": {
+          "license_spdx_or_label": { "type": "string", "minLength": 1 }
+        },
+        "required": ["license_spdx_or_label"]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "source_type": { "enum": ["mixamo_adobe", "freesound", "tts"] }
+        },
+        "required": ["source_type"]
+      },
+      "then": { "required": ["secure_form_ref"] }
+    }
+  ]
+}

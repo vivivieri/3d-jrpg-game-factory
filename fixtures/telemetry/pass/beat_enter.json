@@ -1,0 +1,9 @@
+{
+  "event": "beat_enter",
+  "sku_id": "sku_xx_placeholder_v1.0.0",
+  "occurred_at": "2026-10-19T10:01:00Z",
+  "session_id": "550e8400-e29b-41d4-a716-446655440000",
+  "beat_id": "B001",
+  "build_tip": "abc123deadbeef",
+  "locale": "en"
+}

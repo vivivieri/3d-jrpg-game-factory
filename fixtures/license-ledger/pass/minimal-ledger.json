@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "sku_id": "sku_xx_placeholder_v1.0.0",
+  "ledger_id": "LL_PLACEHOLDER_001",
+  "clearance_pack_ref": "content/sku_xx_placeholder_v1.0.0/clearance/CLEARANCE_PD_LICENSE_LEDGER.md",
+  "updated_at": "2026-10-19T08:00:00Z",
+  "assets": [
+    {
+      "schema_version": "1.0.0",
+      "asset_id": "SFX_AMBIENT_WIND_01",
+      "sku_id": "sku_xx_placeholder_v1.0.0",
+      "source_type": "freesound",
+      "tool_or_vendor": "Freesound:12345",
+      "license_spdx_or_label": "CC0-1.0",
+      "commercial_ok": true,
+      "attribution_required": false,
+      "secure_form_ref": "content/sku_xx_placeholder_v1.0.0/clearance/secure_forms/FREESOUND_20261019_12345.md",
+      "file_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "reviewer_human": "Stephen",
+      "reviewed_at": "2026-10-19T08:00:00Z",
+      "evidence_path": "content/sku_xx_placeholder_v1.0.0/audio/sfx/_full/12345.wav"
+    }
+  ]
+}

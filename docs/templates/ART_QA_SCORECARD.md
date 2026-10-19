@@ -1,3 +1,9 @@
+---
+scorecard_kind: art_qa
+sku_id: sku_xx_template_v0.0.0
+date_hkt: YYYY-MM-DD
+---
+
 # Art QA scorecard (copy per SKU / asset)
 
 **Executable cases:** [ART_QA_BEST_PRACTICES.md](../ART_QA_BEST_PRACTICES.md) · **Checklist table:** [ART_QA_TEST_CASES.md](./ART_QA_TEST_CASES.md)  

@@ -39,7 +39,7 @@ Industrial grounding: production **art bibles** function as spec + budgets, not 
 | ID | Rule |
 |----|------|
 | **POL-G-001** | Emit only assets on [MASTER_ASSET_LIST.md](./templates/MASTER_ASSET_LIST.md) or an **explicit brief scope** row — no free-invent heroes, props, or areas. |
-| **POL-G-002** | Every ship candidate: `LICENSE.json` (or pack ledger row) **before** handoff tree import; provenance + commercial OK path documented. |
+| **POL-G-002** | Every ship candidate: `LICENSE.json` (or pack ledger row) **before** handoff tree import; provenance + commercial OK path documented ([license-asset.schema.json](./schemas/license-asset.schema.json), [license-ledger.schema.json](./schemas/license-ledger.schema.json)). |
 | **POL-G-003** | **Remesh / retopo / UV before rig**; mid-stride plates for locomotion GO; **no concept mesh / gait ref / greybox** as field ship tier. |
 | **POL-G-004** | Prefer **kit reuse, retexture, local Blender polish** over unbounded full regen when identity is locked (credit-aware; AI_ART §13.11). |
 | **POL-G-005** | Numeric bands in this policy and AI_ART §13.3 are **starting bands** — SKU may tighten after platform profile; **never silently exceed** without Art Lead waiver + `why` in scorecard. |
@@ -51,7 +51,7 @@ Industrial grounding: production **art bibles** function as spec + budgets, not 
 |----|------|
 | **POL-G-101** | Ship raw AI LOD0 without topology/UV gate; remesh **after** skin bind. |
 | **POL-G-102** | Pack fake `_LOD#` meshes inside GLB — use Godot mesh LOD / visibility ranges ([mesh LOD](https://docs.godotengine.org/en/latest/tutorials/3d/mesh_lod.html), [visibility ranges](https://docs.godotengine.org/en/stable/tutorials/3d/visibility_ranges.html)). |
-| **POL-G-103** | Use Freesound preview / BY-NC clips, or Mixamo/Adobe downloads without human Secure Form when required (AI_ART §13.10). |
+| **POL-G-103** | Use Freesound preview / BY-NC clips, or Mixamo/Adobe downloads without human Secure Form when required (AI_ART §13.10; templates [SECURE_FORM_MIXAMO.md](./templates/SECURE_FORM_MIXAMO.md), [SECURE_FORM_FREESOUND.md](./templates/SECURE_FORM_FREESOUND.md)). |
 | **POL-G-104** | Bake English UI text, rarity tiers, or platform glyphs into world albedo or icon art. |
 | **POL-G-105** | Claim area or pack art GO with **empty mid band, empty far band, or undressed walkable floor** (§3). |
 
@@ -188,7 +188,7 @@ Any **dressed playable area** or **vista** claimed as art GO must show **short +
 
 - VO after `dlg.*` lock; cache keys; no ship without listen evidence.
 - BGM/SFX: ledger complete; loudness checked against mix band (R128-aligned targets).
-- Freesound: full WAV, CC0/CC-BY commercial only; Secure Form when standing rules require.
+- Freesound: full WAV, CC0/CC-BY commercial only; [SECURE_FORM_FREESOUND.md](./templates/SECURE_FORM_FREESOUND.md) when standing rules require. TTS clone: [SECURE_FORM_TTS_CONSENT.md](./templates/SECURE_FORM_TTS_CONSENT.md).
 
 ---
 
@@ -261,10 +261,10 @@ Full case text: [ART_QA_BEST_PRACTICES.md](./ART_QA_BEST_PRACTICES.md) §3 · ch
 
 ## 14. Open / Stephen
 
-- [ ] **Art SOP GO** — intentionally **not** stamped in this kit PR.  
-- [ ] Plate camera templates (resolution, FOV, lighting) — AI_ART §17.  
+- [x] **Art SOP GO (kit)** — stamped [KIT_GO_LOG.md](./KIT_GO_LOG.md) A4; index [ART_FACTORY_SOP.md](./ART_FACTORY_SOP.md).  
+- [x] Plate camera templates — [MID_STRIDE_PLATE_CAMERA.md](./templates/MID_STRIDE_PLATE_CAMERA.md) (AI_ART §17).  
 - [ ] Numeric freeze per platform tier after profiling — §2 starting bands.  
-- [ ] Internal Secure Form file paths when published.
+- [x] Secure Form fillable shells — [SECURE_FORM_MIXAMO.md](./templates/SECURE_FORM_MIXAMO.md), [SECURE_FORM_FREESOUND.md](./templates/SECURE_FORM_FREESOUND.md), [SECURE_FORM_TTS_CONSENT.md](./templates/SECURE_FORM_TTS_CONSENT.md) (AI_ART §13.10 / §17).
 
 ---
 

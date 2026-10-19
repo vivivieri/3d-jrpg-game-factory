@@ -26,6 +26,8 @@
 
 ## License ledger rows (one row per source / asset class)
 
+Machine-checkable pack index (optional JSON export): [license-ledger.schema.json](../schemas/license-ledger.schema.json) · per-asset [license-asset.schema.json](../schemas/license-asset.schema.json) · `npm run validate:license:pass`.
+
 | ledger_id | subject | type (tale / asset / font / audio / tool) | status `PD\|licensed\|blocked` | edition / version cited | jurisdiction (US/UK/…) | evidence_path | expiry | commercial_scope | markets | owner (human) | last_review (HKT) |
 |-----------|---------|-------------------------------------------|----------------------------------|-------------------------|------------------------|---------------|--------|------------------|---------|---------------|-------------------|
 | L001 | Primary tale source | tale | | | | | | | | Story Lead | |
