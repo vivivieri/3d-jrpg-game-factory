@@ -3,7 +3,7 @@
 **Status:** Draft map for future titles (not Tides of Urashima) — **not** the SSOT plan  
 **Owner mouthpiece:** Grok Bot (product) · Game Factory (this repo kit)  
 **Audience:** Stephen + Grok Bot team + factory-kit agents  
-**Updated:** 2026-10-16 (HKT)
+**Updated:** 2026-10-19 (HKT)
 
 **Note:** [Master Plan v1](FACTORY_MASTER_PLAN.md) at `docs/FACTORY_MASTER_PLAN.md` is the **single SSOT plan** for phases, R&R, rules, and tracks. This Overview is a short map only; [BOOT.md](BOOT.md) defines authority order.
 
@@ -130,14 +130,14 @@ Full R&R: Master Plan [§5.2](FACTORY_MASTER_PLAN.md#52-full-rr).
 | Step | Track | Status (aligned with [KIT_STATUS.md](KIT_STATUS.md)) |
 |------|-------|------------------------------------------------------|
 | 1. Factory kit — BOOT, R&R, board schema, output contract | **A1** | **Done (this kit)** |
-| 2. Content schema v1 + validators | **A2** | **Present; Schema GO pending** (Tech Lead — not stamped) |
-| 3. Story / design template kit — clearance → beats → storyboard → combat/gates → MAL | **A3** | **Template kit landed** (fillable [templates/](templates/README.md)) |
-| 3b. Dialogue / VO — `dlg.*` line packs → script lock | **A3** / **B2½** | Templates landed; craft depth partial (NON_ART §4) |
-| 4. Art factory runbook + art QA kit | **A4** | **Partial** — [ART_OUTPUT_POLICY](ART_OUTPUT_POLICY.md), [ART_FACTORY_SOP](ART_FACTORY_SOP.md), [ART_QA](ART_QA_BEST_PRACTICES.md); **Art SOP GO not stamped** |
-| 5. Handoff contract + smoke consumer | **A5** | **Checklist landed** — [HANDOFF_SMOKE](templates/HANDOFF_SMOKE_CONSUMER.md); **Contract GO not stamped** |
-| 6. QA matrices + game QA executable kit | **A6** | **Template + GAME_QA landed** — [GAME_QA](GAME_QA_BEST_PRACTICES.md), [QA_MATRICES](templates/QA_MATRICES.md); **Phase QA GO not stamped** |
-| 7. Locale + stream/live ops templates | **A7** | **Template kit landed** |
-| 8. Cursor 3.0 game factory hooks (PM automation) | **A5** + **B4** | **GAME_DEV kit landed** — [GAME_DEV](GAME_DEV_BEST_PRACTICES.md); **Build tip GO not stamped** |
+| 2. Content schema v1 + validators | **A2** | **Schema GO (kit)** — [KIT_GO_LOG](KIT_GO_LOG.md) |
+| 3. Story / design template kit — clearance → beats → storyboard → combat/gates → MAL | **A3** | **Template GO (kit)** — [templates/](templates/README.md) |
+| 3b. Dialogue / VO — `dlg.*` line packs → script lock | **A3** / **B2½** | Templates landed; Script pack GO = SKU (blocked) |
+| 4. Art factory runbook + art QA kit | **A4** | **Art SOP GO (kit)** — skills + [MID_STRIDE_PLATE_CAMERA](templates/MID_STRIDE_PLATE_CAMERA.md) |
+| 5. Handoff contract + smoke consumer | **A5** | **Contract GO (kit)** — [HANDOFF_SMOKE](templates/HANDOFF_SMOKE_CONSUMER.md) |
+| 6. QA matrices + game QA executable kit | **A6** | **QA kit GO (kit)** — not SKU Phase QA GO |
+| 7. Locale + stream/live ops templates | **A7** | **Locale-stream kit GO (kit)** — platform names at B0 Clearance |
+| 8. Cursor 3.0 game factory hooks (PM automation) | **A5** + **B4** | GAME_DEV kit landed; **Build tip GO blocked** (no live SKU) |
 | 9. **Operating SOP** (whole-factory day-run) | **A1–A7** | [FACTORY_OPERATING_SOP.md](FACTORY_OPERATING_SOP.md) |
 
 Schemas: [docs/schemas/](schemas/) · validators: `tools/validate-content-pack/` (root [README.md](../README.md)).  
@@ -154,16 +154,16 @@ Fillable kits: [docs/templates/README.md](templates/README.md) (Track A3–A7 �
 
 ## Open decisions
 
-Aligned with Master Plan [§17](FACTORY_MASTER_PLAN.md#17-open-decisions) — do not assume Stephen has decided:
+Aligned with Master Plan [§17](FACTORY_MASTER_PLAN.md#17-open-decisions):
 
 | Decision | Status |
 |----------|--------|
-| **Engine** — confirm Godot 4.x 3D as first-SKU (vs alternate) | Defaulted Godot; **not confirmed** |
-| **Git tip** — dual tip vs single tip (design packs vs Cursor builds) | **Undecided** — Tech Lead |
-| **Stream packaging** — platform targets | **Undecided** — Stephen |
-| **Monetization** — premium-only vs later IAP | Default **premium-only** until Stephen states otherwise |
-| Merge Story + GD into one seat? | Undecided |
-| Keep AD and Audio separate under Art Factory Lead? | Undecided |
-| First SKU country/tale pick | Out of scope for kit repo |
+| **Engine** — Godot 4.x 3D first-SKU | **CONFIRMED** |
+| **Git tip** — dual vs single | **LOCKED** dual tip |
+| **Stream packaging** — platform names | **DEFERRED** to B0 Clearance (checklist ready) |
+| **Monetization** | **LOCKED** premium-only until Stephen reopens |
+| Merge Story + GD seats | **NO** — separate leads |
+| AD vs Audio seats | **YES** — separate briefs |
+| First SKU country/tale pick | **Open** — Stephen |
 
 Team knowledge pack: [docs/team-knowledge/README.md](team-knowledge/README.md)

@@ -20,9 +20,9 @@ This folder freezes **skills + role knowledge** so a future factory team can be 
 
 ## Skills inventory
 
-1. `skills/ai3d-to-godot-pipeline` — Tripo/AI 3D → Godot-ready scratch GLB
-2. `skills/game-ready-3d-guideline` — realtime character/prop bar before artistic GO/NO
-3. `skills/coat-hero-anim-polish` — generic jacketed cloth / coat-proximity anim (one live ship mesh; concept refs concept-only)
+1. `skills/ai3d-to-godot-pipeline` — Tripo/AI 3D → Godot-ready ship GLB (executable steps; [MID_STRIDE_PLATE_CAMERA.md](../templates/MID_STRIDE_PLATE_CAMERA.md))
+2. `skills/game-ready-3d-guideline` — realtime character/prop + env depth bands (ART-QA-ENV-004) before AD GO/NO
+3. `skills/coat-hero-anim-polish` — jacketed cloth / coat-proximity on one live ship mesh
 4. `skills/freesound-full-wav-1to1` — Freesound HQ → full WAV (human Secure Form)
 5. `skills/mixamo-adobe-gate` — Mixamo/Adobe login is Stephen 1:1 only
 

@@ -7,6 +7,7 @@
 
 - Task-level and **phase regression** suites
 - **Real UAT** evidence standards (play or video — no paper greens)
+- **QA kit** playbooks landed (Track **A6 QA kit GO** — [KIT_GO_LOG.md](../../KIT_GO_LOG.md)); **Phase QA GO on a live SKU** is separate and blocked until build exists
 - Live health triage signal post-release
 
 ## Does

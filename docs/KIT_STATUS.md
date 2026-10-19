@@ -1,20 +1,21 @@
 # Factory kit status (Track A)
 
 **SSOT laws:** [FACTORY_MASTER_PLAN.md](./FACTORY_MASTER_PLAN.md)  
-**Updated:** 2026-10-19 (HKT) — ART_OUTPUT_POLICY agent bounds leaf (A4)
+**Kit GO evidence:** [KIT_GO_LOG.md](./KIT_GO_LOG.md)  
+**Updated:** 2026-10-19 (HKT) — §17 locks; A2/A3/A4/A5/A6-kit/A7 kit GO stamped; skills + plate template
 
 ## Track A milestones
 
 | Milestone | Status | Notes |
 |-----------|--------|-------|
-| **A1** BOOT, board schema, output contract | **Done (this kit)** | [BOOT.md](./BOOT.md), [BOARD_SCHEMA.md](./BOARD_SCHEMA.md), expanded [OUTPUT_CONTRACT.md](./team-knowledge/OUTPUT_CONTRACT.md) |
-| **A2** Content schema v1 + validators | **Present; Schema GO pending** | [docs/schemas/](./schemas/), `tools/validate-content-pack/`, CI workflow — **Tech Lead Schema GO not stamped** |
-| **A3** Clearance → design templates | **Template kit landed** | Fillable kits: [templates/README.md](./templates/README.md) (clearance ledger, bible/beat, storyboard, `dlg.*`, MASTER_ASSET_LIST, combat/gates) + deepened ratings/L0/a11y/SLA shells |
-| **A4** Art factory SOP + skills | Partial | [ART_OUTPUT_POLICY.md](./ART_OUTPUT_POLICY.md) (agent bounds), [ART_FACTORY_SOP.md](./ART_FACTORY_SOP.md), [ART_QA_BEST_PRACTICES.md](./ART_QA_BEST_PRACTICES.md) + `templates/ART_QA_*`; `team-knowledge/skills/` — **Art SOP GO not stamped** |
-| **A5** Handoff contract + smoke consumer + GAME_DEV leaf | **Checklist + implementer kit landed** | [HANDOFF_SMOKE_CONSUMER.md](./templates/HANDOFF_SMOKE_CONSUMER.md) · [GAME_DEV_BEST_PRACTICES.md](./GAME_DEV_BEST_PRACTICES.md) + `templates/GAME_DEV_*` — **Contract GO not stamped** |
-| **A6** QA matrices | **Template + GAME_QA kit landed** | [QA_MATRICES.md](./templates/QA_MATRICES.md); art L1 → ART_QA; non-art L1 + L2–L5 → [GAME_QA_BEST_PRACTICES.md](./GAME_QA_BEST_PRACTICES.md) + `templates/GAME_QA_*` — **Phase QA GO not stamped** |
-| **Operating** Whole-factory SOP | **Landed** | [FACTORY_OPERATING_SOP.md](./FACTORY_OPERATING_SOP.md) — pipeline table, QA ladder, role day-run; **not** a GO stamp |
-| **A7** Locale + stream/live ops | **Template kit landed** | [LOCALE_READINESS_CHECKLIST.md](./templates/LOCALE_READINESS_CHECKLIST.md), [STREAM_PACKAGING_CHECKLIST.md](./templates/STREAM_PACKAGING_CHECKLIST.md), [LIVE_OPS_HOTFIX_TALE_QUEUE.md](./templates/LIVE_OPS_HOTFIX_TALE_QUEUE.md) |
+| **A1** BOOT, board schema, output contract | **Done (this kit)** | [BOOT.md](./BOOT.md), [BOARD_SCHEMA.md](./BOARD_SCHEMA.md), [OUTPUT_CONTRACT.md](./team-knowledge/OUTPUT_CONTRACT.md) |
+| **A2** Content schema v1 + validators | **Schema GO (kit)** | Evidence: [KIT_GO_LOG.md](./KIT_GO_LOG.md) · `docs/schemas/`, `tools/validate-content-pack/`, CI, `npm run validate:pass` |
+| **A3** Clearance → design templates | **Template GO (kit)** | [templates/README.md](./templates/README.md) + clearance→design kits |
+| **A4** Art factory SOP + skills | **Art SOP GO (kit)** | [ART_FACTORY_SOP.md](./ART_FACTORY_SOP.md), [ART_OUTPUT_POLICY.md](./ART_OUTPUT_POLICY.md), [AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md), [ART_QA_*](./ART_QA_BEST_PRACTICES.md), skills ×5, [MID_STRIDE_PLATE_CAMERA.md](./templates/MID_STRIDE_PLATE_CAMERA.md) |
+| **A5** Handoff contract + smoke consumer + GAME_DEV leaf | **Contract GO (kit)** | [HANDOFF_SMOKE_CONSUMER.md](./templates/HANDOFF_SMOKE_CONSUMER.md), [handoff-lock.schema.json](./schemas/handoff-lock.schema.json), [GAME_DEV_BEST_PRACTICES.md](./GAME_DEV_BEST_PRACTICES.md) |
+| **A6** QA matrices + GAME_QA + ART_QA kits | **QA kit GO (kit)** — *not SKU Phase QA GO* | [QA_MATRICES.md](./templates/QA_MATRICES.md), [GAME_QA_BEST_PRACTICES.md](./GAME_QA_BEST_PRACTICES.md), [ART_QA_BEST_PRACTICES.md](./ART_QA_BEST_PRACTICES.md) |
+| **Operating** Whole-factory SOP | **Landed** | [FACTORY_OPERATING_SOP.md](./FACTORY_OPERATING_SOP.md) |
+| **A7** Locale + stream/live ops | **Locale-stream kit GO (kit)** | Checklists landed; **platform names deferred** to B0 Clearance (Stephen) |
 
 ## Validators
 
@@ -26,17 +27,14 @@ node tools/validate-content-pack/validate.mjs path/to/pack.yaml
 
 Example-only stub (not CI): `fixtures/content-packs/example/design-pack-fields-stub.yaml`
 
-## Stephen / Tech-only (still open)
+## Still open (Stephen / first SKU)
 
-| Decision | Status |
-|----------|--------|
-| Stream / store packaging targets | Undecided — Stephen |
-| Git tip model (dual vs single) | Undecided — Tech Lead |
-| Confirm Godot 4.x as first-SKU engine | Defaulted Godot; **not confirmed** |
-| Merge Story + GD seats | Undecided |
-| Keep AD and Audio separate | Undecided |
-| Monetization | Default **premium-only** |
-| First SKU country/tale pick | Out of scope for kit repo |
+| Decision / gate | Status |
+|-----------------|--------|
+| Stream / store **platform names** | **Deferred** to B0 Clearance — [STREAM_PACKAGING_CHECKLIST.md](./templates/STREAM_PACKAGING_CHECKLIST.md) ready |
+| First SKU country/tale pick | Stephen — Track B0 |
+| Design / Script / Art / Locale pack GO | **BLOCKED** — live SKU ([KIT_GO_LOG.md](./KIT_GO_LOG.md)) |
+| Build tip GO, Phase QA GO (SKU), UAT GO, Release GO | **BLOCKED** — no live SKU / human gates ([KIT_GO_LOG.md](./KIT_GO_LOG.md)) |
 
 ## Mouthpiece
 
@@ -45,23 +43,8 @@ Example-only stub (not CI): `fixtures/content-packs/example/design-pack-fields-s
 
 ## Doc sync log
 
-**Last gap-fill:** 2026-10-16 (HKT) — branch `cursor/game-dev-best-practices-a5-b4-d0bc` (GAME_DEV kit + Operating SOP Appendix B + index sync)
+**This PR:** 2026-10-19 (HKT) — branch `cursor/factory-s17-kit-go-ebda` (§17 locks, kit GO log, skills depth, mid-stride plate template)
 
-**Prior gap-fill:** 2026-10-16 (HKT) — branch `cursor/game-qa-best-practices-a6-1c16` (GAME_QA kit + consolidated FACTORY_OPERATING_SOP + Overview sync)
+**Prior gap-fill:** 2026-10-16 (HKT) — GAME_DEV + Operating SOP; 2026-10-15 — A3–A7 template kits + art QA
 
-**Prior gap-fill:** 2026-10-15 (HKT) — branch `cursor/track-a3-a7-template-kits-ce3a` + art QA kit (`cursor/art-qa-best-practices-07db`)
-
-| Area | Change |
-|------|--------|
-| [templates/](./templates/) | A3–A7 fillable kits + [README.md](./templates/README.md) index |
-| [ART_OUTPUT_POLICY.md](./ART_OUTPUT_POLICY.md) | A4 agent output bounds (all art tracks; env depth bands) |
-| [ART_QA_BEST_PRACTICES.md](./ART_QA_BEST_PRACTICES.md) | A4 executable art task QA cases + scorecard templates |
-| [GAME_QA_BEST_PRACTICES.md](./GAME_QA_BEST_PRACTICES.md) · [FACTORY_OPERATING_SOP.md](./FACTORY_OPERATING_SOP.md) | A6 game QA cases + QA day-run SOP |
-| [GAME_DEV_BEST_PRACTICES.md](./GAME_DEV_BEST_PRACTICES.md) | A5/B4 Cursor implementer cases + `templates/GAME_DEV_*` |
-| Role briefs | Day-run checklists (Master Plan §5.2 + leaf SOP pointers) |
-| [FACTORY_OVERVIEW.md](./FACTORY_OVERVIEW.md) · [ART_FACTORY_SOP.md](./ART_FACTORY_SOP.md) | Template index + ART_QA pointers |
-| Example stub | `fixtures/content-packs/example/design-pack-fields-stub.yaml` |
-
-**Prior sync:** 2026-10-15 — `cursor/doc-sync-kit-a1-a2-9e77` (Overview, roles, ART_FACTORY, mixamo generic path)
-
-**Residual (intentional):** Stephen decisions in §17; Schema GO / Design GO / Art GO / Contract GO / Build tip GO unstamped; A4 skills depth; automated QA suite wiring beyond matrices; plate camera templates (AI_ART §17); Tides archival mention in team-knowledge source line only.
+**Residual (intentional):** SKU/runtime GOs unstamped; automated QA suite wiring beyond matrices; numeric poly tier tables per platform (AI_ART §17); telemetry store wiring (§16 TBD).

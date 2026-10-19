@@ -16,7 +16,7 @@
 - Enforces phase law — no parallel soft-ship tracks
 - Coordinates Story / GD / Art / Tech / QA through Grok Bot latch
 - Proposes CAPA when gates, prompts, or docs drift from [BOOT.md](../../BOOT.md) / Master Plan
-- Keeps [KIT_STATUS.md](../../KIT_STATUS.md) honest for Track A landing state
+- Keeps [KIT_STATUS.md](../../KIT_STATUS.md) and [KIT_GO_LOG.md](../../KIT_GO_LOG.md) honest for Track A landing state
 
 ## Does not own
 
