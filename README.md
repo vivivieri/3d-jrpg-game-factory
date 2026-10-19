@@ -11,10 +11,12 @@ Multi-title **factory kit** for future 3D JRPG folktale SKUs — laws, schemas, 
 | [docs/KIT_STATUS.md](docs/KIT_STATUS.md) | Track A done vs pending |
 | [docs/KIT_GO_LOG.md](docs/KIT_GO_LOG.md) | Track A kit GO evidence (stamps vs SKU-blocked gates) |
 | [docs/FACTORY_OVERVIEW.md](docs/FACTORY_OVERVIEW.md) | Short map (points at Master Plan) |
+| [docs/FACTORY_OPERATING_SOP.md](docs/FACTORY_OPERATING_SOP.md) | Day-run: which leaf/template per phase |
 
 ## Leaf how-to map
 
-- Non-art: [docs/FACTORY_NON_ART_BEST_PRACTICES.md](docs/FACTORY_NON_ART_BEST_PRACTICES.md)
+- Non-art: [docs/FACTORY_NON_ART_BEST_PRACTICES.md](docs/FACTORY_NON_ART_BEST_PRACTICES.md) · operating runbook [docs/FACTORY_OPERATING_SOP.md](docs/FACTORY_OPERATING_SOP.md)
+- Game implementer: [docs/GAME_DEV_BEST_PRACTICES.md](docs/GAME_DEV_BEST_PRACTICES.md) · game QA [docs/GAME_QA_BEST_PRACTICES.md](docs/GAME_QA_BEST_PRACTICES.md)
 - Art/audio:
   - Policy bounds: [docs/ART_OUTPUT_POLICY.md](docs/ART_OUTPUT_POLICY.md)
   - Craft: [docs/AI_ART_BEST_PRACTICES.md](docs/AI_ART_BEST_PRACTICES.md) · index [docs/ART_FACTORY_SOP.md](docs/ART_FACTORY_SOP.md)

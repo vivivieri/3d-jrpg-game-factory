@@ -1,7 +1,7 @@
 # Factory operating SOP — single day-one runbook (Track A)
 
 **Status:** Procedural leaf — **not** a GO stamp.  
-**SSOT laws:** [FACTORY_MASTER_PLAN.md](./FACTORY_MASTER_PLAN.md) (phases, R&R, §6 hard rules, §17 open decisions).  
+**SSOT laws:** [FACTORY_MASTER_PLAN.md](./FACTORY_MASTER_PLAN.md) (phases, R&R, §6 hard rules, §17 locks).  
 **This document:** Tells an agent or human **which leaf to open next** at each pipeline phase. It does **not** add laws. **Track A kit GOs** (Schema, Template, Art SOP, Contract, QA kit, Locale-stream kit) are recorded in [KIT_GO_LOG.md](./KIT_GO_LOG.md) — **not** SKU Build tip GO, Phase QA GO, UAT GO, or Release GO.
 
 ---
@@ -46,11 +46,11 @@ Copy fillable templates from [templates/README.md](./templates/README.md) into `
 | **Story** | Cleared source, length band | NON_ART §2 | [STORY_BIBLE_BEAT_SHEET.md](./templates/STORY_BIBLE_BEAT_SHEET.md) | Beat sheet GO | Story Lead |
 | **Storyboard / GD** | Locked beats | NON_ART §§3, 5–8 | [STORYBOARD_FRAME_INDEX.md](./templates/STORYBOARD_FRAME_INDEX.md), [COMBAT_GATES_ENCOUNTER_BUDGET.md](./templates/COMBAT_GATES_ENCOUNTER_BUDGET.md), [MASTER_ASSET_LIST.md](./templates/MASTER_ASSET_LIST.md) | Design data ready for schema | Game Design Lead |
 | **Dialogue / VO lock** | Beats + cast | NON_ART §4 | [DIALOGUE_VO_LINE_PACK.md](./templates/DIALOGUE_VO_LINE_PACK.md) | `dlg.*` script lock | Story Lead |
-| **Schema / content pack** | Design tables | NON_ART §8 · validators | `docs/schemas/content-pack.schema.json` · `npm run validate:pass` | **Schema GO** (Tech Lead) — **not stamped here** | Tech Lead |
-| **Art factory** | MAL, briefs | [ART_FACTORY_SOP.md](./ART_FACTORY_SOP.md) → [ART_OUTPUT_POLICY.md](./ART_OUTPUT_POLICY.md) → [AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md) | [MASTER_ASSET_LIST.md](./templates/MASTER_ASSET_LIST.md) (scope) | Art pack GO | Art Factory Lead |
+| **Schema / content pack** | Design tables | NON_ART §8 · validators | `docs/schemas/content-pack.schema.json` · `npm run validate:pass` | **Track A2 Schema GO (kit)** — [KIT_GO_LOG.md](./KIT_GO_LOG.md); per-SKU `schema_version` bump = Tech Lead | Tech Lead |
+| **Art factory** | MAL, briefs | [ART_FACTORY_SOP.md](./ART_FACTORY_SOP.md) → [ART_OUTPUT_POLICY.md](./ART_OUTPUT_POLICY.md) → [AI_ART_BEST_PRACTICES.md](./AI_ART_BEST_PRACTICES.md) → [ART_QA_BEST_PRACTICES.md](./ART_QA_BEST_PRACTICES.md) | [MASTER_ASSET_LIST.md](./templates/MASTER_ASSET_LIST.md) (scope) | Art pack GO | Art Factory Lead |
 | **Art task QA (L1)** | Per-asset evidence | [ART_QA_BEST_PRACTICES.md](./ART_QA_BEST_PRACTICES.md) | [ART_QA_SCORECARD.md](./templates/ART_QA_SCORECARD.md), [ART_QA_TEST_CASES.md](./templates/ART_QA_TEST_CASES.md) | Per-track GO/NO | Art + QA spot-check |
 | **Locale** | Locked `dlg.*`, art | NON_ART §9 | [LOCALE_READINESS_CHECKLIST.md](./templates/LOCALE_READINESS_CHECKLIST.md) | Locale GO | Art / Story |
-| **Handoff pack** | Art GO + design YAML | NON_ART §10 | [HANDOFF_SMOKE_CONSUMER.md](./templates/HANDOFF_SMOKE_CONSUMER.md) · `handoff.lock` in pack | **Contract GO** — **not stamped here** | Tech Lead / PM |
+| **Handoff pack** | Art GO + design YAML | NON_ART §10 | [HANDOFF_SMOKE_CONSUMER.md](./templates/HANDOFF_SMOKE_CONSUMER.md) · `handoff.lock` in pack | **Track A5 Contract GO (kit)** — [KIT_GO_LOG.md](./KIT_GO_LOG.md); per-SKU smoke/handoff GO still human | Tech Lead / PM |
 | **Cursor game.dev** | Frozen handoff + lock + smoke GO + Stephen open | [GAME_DEV_BEST_PRACTICES.md](./GAME_DEV_BEST_PRACTICES.md) · Master Plan §3.8 · [HANDOFF_SMOKE_CONSUMER.md](./templates/HANDOFF_SMOKE_CONSUMER.md) | [GAME_DEV_SCORECARD.md](./templates/GAME_DEV_SCORECARD.md), [GAME_DEV_TEST_CASES.md](./templates/GAME_DEV_TEST_CASES.md) | Playable build / tip — **Build tip GO not stamped here** | PM + Tech |
 | **QA task (L1 non-art)** | Locked pack | [GAME_QA_BEST_PRACTICES.md](./GAME_QA_BEST_PRACTICES.md) §3.1–3.2 | [GAME_QA_SCORECARD.md](./templates/GAME_QA_SCORECARD.md) | Task GO/NO | QA Lead |
 | **QA phase (L2)** | `build_ref` player | GAME_QA §3.3–3.8 · §9 below | [QA_MATRICES.md](./templates/QA_MATRICES.md) L2 | **Phase QA GO** — **not stamped here** | QA Lead |

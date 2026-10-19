@@ -2,7 +2,7 @@
 
 **Phase:** Game production · frozen pack intake (Master Plan §3.8, NON_ART §10)  
 **Audience:** Tech Lead, Cursor 3.0 PM factory, QA regression  
-**Contract GO:** _not stamped in kit repo_ — this checklist does not replace human handoff GO.
+**Track A5 Contract GO (kit):** stamped in [KIT_GO_LOG.md](../KIT_GO_LOG.md) — this checklist does not replace **per-SKU** human handoff / smoke GO.
 
 ## Preconditions (must be true before smoke)
 
@@ -74,4 +74,4 @@ Log per [OUTPUT_CONTRACT.md](../team-knowledge/OUTPUT_CONTRACT.md):
 
 - [FACTORY_NON_ART_BEST_PRACTICES.md](../FACTORY_NON_ART_BEST_PRACTICES.md) §10  
 - Fixture pass example: [fixtures/content-packs/pass/minimal-pack.yaml](../../fixtures/content-packs/pass/minimal-pack.yaml)  
-- **Git tip model (dual vs single):** undecided — Tech Lead (Master Plan §17)
+- **Git tip model:** **LOCKED** dual tip (design/art packs vs Cursor build tip) — Master Plan §17; record `handoff.lock.tip` for build side only

@@ -11,5 +11,9 @@
 | Short overview map | [FACTORY_OVERVIEW.md](./FACTORY_OVERVIEW.md) |
 | Kit status (Track A) | [KIT_STATUS.md](./KIT_STATUS.md) |
 | Kit GO evidence log | [KIT_GO_LOG.md](./KIT_GO_LOG.md) |
+| Day-run operating SOP | [FACTORY_OPERATING_SOP.md](./FACTORY_OPERATING_SOP.md) |
+| Board one-live-milestone | [BOARD_SCHEMA.md](./BOARD_SCHEMA.md) |
+| Dismissed seats / rebuild | [team-knowledge/DISMISSAL.md](./team-knowledge/DISMISSAL.md) |
+| Art factory index (Policy → Craft → Proof) | [ART_FACTORY_SOP.md](./ART_FACTORY_SOP.md) |
 
 Indexes do not restate laws — cite the Master Plan for gates and authority.

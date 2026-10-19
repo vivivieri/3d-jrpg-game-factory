@@ -73,4 +73,4 @@
 ## References
 
 - [FACTORY_NON_ART_BEST_PRACTICES.md](../FACTORY_NON_ART_BEST_PRACTICES.md) §1  
-- Master Plan §17 open decisions
+- Master Plan [§17](../FACTORY_MASTER_PLAN.md#17-open-decisions) — tale/country **open**; stream platform names **deferred** to this Clearance (Stephen)

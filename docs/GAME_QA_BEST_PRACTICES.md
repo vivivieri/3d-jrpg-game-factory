@@ -924,7 +924,7 @@ Copy per SKU / build: [templates/GAME_QA_SCORECARD.md](./templates/GAME_QA_SCORE
 
 1. Execute cases mapped in §4 for the target layer (L1 task, L2 phase, L3 UAT, L4 release, L5 live).  
 2. **Any Critical fail → phase/UAT pack NO** until retest passes (EVD-004).  
-3. QA Lead signs **GO/NO + why** on roll-up — does **not** replace Stephen UAT/Release GO or Tech Lead Schema GO.  
+3. QA Lead signs **GO/NO + why** on roll-up — does **not** replace per-SKU Stephen UAT/Release GO or Build tip GO ([KIT_GO_LOG.md](./KIT_GO_LOG.md) BLOCKED section).  
 4. Attach scorecard path in output contract `paths`.  
 5. Art L1 remains on ART_QA scorecard — do not merge art task evidence into game pack without both scorecards linked.
 
@@ -951,8 +951,8 @@ Copy per SKU / build: [templates/GAME_QA_SCORECARD.md](./templates/GAME_QA_SCORE
 
 ## 7. Residual / open (factory owners)
 
-- **Schema GO**, **Phase QA GO**, **UAT GO**, **Release GO** — human gates; not stamped in this kit.  
-- Stephen §17 decisions (platform targets, markets, git tip model) — remain **TBD**; cases use placeholders.  
+- **Track A2 Schema GO (kit)** stamped — [KIT_GO_LOG.md](./KIT_GO_LOG.md); per-SKU **Phase QA GO**, **UAT GO**, **Release GO**, **Build tip GO** remain BLOCKED until live SKU.  
+- Master Plan §17 **locks:** engine, monetization, dual git tip; **deferred:** stream platform names (B0 Clearance); **open:** first SKU country/tale (Stephen). Cases use placeholders until B0 names targets.  
 - Numeric perf / telemetry thresholds — set per SKU in QA matrices L5; cases log **TBD** until frozen.  
 - Automated QA suite wiring beyond matrices — Tech Lead; `validate:pass` is CI today, runtime suite **partial**.  
 - SDK-specific session save — see L0 policy; SES cases may be N/A until wired.

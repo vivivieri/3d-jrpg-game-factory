@@ -2,7 +2,7 @@
 
 **Status:** Procedural leaf — **not** a GO stamp. Laws remain in [FACTORY_MASTER_PLAN.md](./FACTORY_MASTER_PLAN.md) (§3.8, §6, B4).  
 **Scope:** Cursor 3.0 PM **game.dev** implementer path — import locked packs, assemble Godot-oriented scenes/systems, emit playable **build tip** evidence. **After** handoff smoke GO and Stephen factory open.  
-**Engine:** Default **Godot 4.x** (3D JRPG factory) — **not confirmed** by Stephen; cases are Godot-oriented until Tech Lead confirms alternate (Master Plan §17).  
+**Engine:** **CONFIRMED** Godot 4.x 3D (first-SKU) — Master Plan [§17](./FACTORY_MASTER_PLAN.md#17-open-decisions); cases are Godot-oriented.  
 **Craft law:** [FACTORY_NON_ART_BEST_PRACTICES.md](./FACTORY_NON_ART_BEST_PRACTICES.md) §10 handoff/Cursor contract — this leaf **cites** §10; does not replace it.  
 **Intake smoke (before this kit):** [templates/HANDOFF_SMOKE_CONSUMER.md](./templates/HANDOFF_SMOKE_CONSUMER.md) — GAME_DEV starts **after** smoke GO, not instead of it.  
 **Test the build (downstream):** [GAME_QA_BEST_PRACTICES.md](./GAME_QA_BEST_PRACTICES.md) — GAME_DEV = how to build; GAME_QA = how to test `build_ref`.
@@ -13,7 +13,7 @@
 
 | Layer | Owner | Kit | Exit |
 |-------|-------|-----|------|
-| **Handoff smoke** | Tech / PM | HANDOFF_SMOKE_CONSUMER + GAME-QA-HOFF-* | Smoke GO — **Contract GO not stamped in kit** |
+| **Handoff smoke** | Tech / PM | HANDOFF_SMOKE_CONSUMER + GAME-QA-HOFF-* | **Track A5 Contract GO (kit)** in [KIT_GO_LOG.md](./KIT_GO_LOG.md); per-SKU smoke GO still human |
 | **Authorization** | Stephen + PM | §3.1 GAME-DEV-AUTH-* | Factory **open** logged — not a GO stamp |
 | **Implementer intake** | Tech / Cursor | §3.2 GAME-DEV-INTAKE-* | Frozen pack re-verified on disk |
 | **Import + assemble** | Cursor game.dev | §3.3–3.8 IMP/SCN/DLG/INT/CMB | Scene/system bindings vs SSOT |
@@ -96,7 +96,7 @@ test -f "content/<SKU>/dev/intake/GAME-DEV-INTAKE-008_<YYYYMMDD>_validate_pass.l
 npm run validate:fail; test $? -eq 1
 ```
 
-**Godot project (Cursor factory repo):** This **kit repo** does not host the engine tree. Record `godot_project_ref` (path or commit) in the scorecard header. Export commands in BLD-* assume **Godot 4.x** CLI on the implementer machine — **engine not confirmed** for first SKU.
+**Godot project (Cursor factory repo):** This **kit repo** does not host the engine tree. Record `godot_project_ref` (path or commit) in the scorecard header. Export commands in BLD-* assume **Godot 4.x** CLI on the implementer machine (first-SKU engine **CONFIRMED** per §17).
 
 **Build logs:** Write export/CI logs under `content/<SKU>/dev/build/` and point QA at `build_ref` for [GAME_QA_BEST_PRACTICES.md](./GAME_QA_BEST_PRACTICES.md) L2+.
 
@@ -160,9 +160,9 @@ Execute cases as written; mark **N/A** only with `why` in scorecard. Fillable ch
 
 | Field | Content |
 |-------|---------|
-| **Precondition** | Git tip model **undecided** (Master Plan §17). |
-| **Steps** | 1. List active tips/branches claiming ship for same SKU. 2. If >1 without Tech Lead written policy → **Fail**. 3. Record tip id from `handoff.lock.tip` only. |
-| **Expected** | One implementer tip per SKU unless Tech documents exception. |
+| **Precondition** | Git tip model **LOCKED** dual tip (design/art packs tip vs Cursor build tip — Master Plan §17). |
+| **Steps** | 1. List active tips/branches claiming ship for same SKU on the **build** side. 2. If >1 build tip without Tech Lead written policy → **Fail**. 3. Record build tip id from `handoff.lock.tip` only; design/art pack tip may differ by policy. |
+| **Expected** | One Cursor **build** tip per SKU unless Tech documents exception; dual tip model documented. |
 | **Evidence** | `.../GAME-DEV-AUTH-005_<date>_tip_singular.md` |
 | **Pass/Fail** | Fail = dual tips |
 | **Severity** | **Critical** |
@@ -695,7 +695,7 @@ Per [L0_SESSION_SAVE_POLICY.md](./templates/L0_SESSION_SAVE_POLICY.md) — SDK d
 
 | Field | Content |
 |-------|---------|
-| **Precondition** | Godot 4.x CLI available (**engine default, not confirmed**). |
+| **Precondition** | Godot 4.x CLI available (first-SKU engine **CONFIRMED**). |
 | **Steps** | 1. Record `export_presets.cfg` name used. 2. Run headless export command (document exact CLI). 3. Save command + exit code in log. |
 | **Expected** | Export exits 0. |
 | **Evidence** | `content/<SKU>/dev/build/GAME-DEV-BLD-001_<date>_export_cmd.log` |
@@ -926,7 +926,7 @@ Copy per SKU / build: [templates/GAME_DEV_SCORECARD.md](./templates/GAME_DEV_SCO
 
 1. Execute cases in §3 for the target build tip.  
 2. **Any Critical fail → build pack NO** until EVD-004 retest passes.  
-3. Tech/PM signs **GO/NO + why** on roll-up — does **not** replace Build tip GO, Contract GO, or Schema GO.  
+3. Tech/PM signs **GO/NO + why** on roll-up — does **not** replace per-SKU Build tip GO, handoff smoke GO, or `schema_version` bump GO (Track A kit GOs: [KIT_GO_LOG.md](./KIT_GO_LOG.md)).  
 4. Attach scorecard path in output contract `paths`.  
 5. After PACK-002, open [GAME_QA_BEST_PRACTICES.md](./GAME_QA_BEST_PRACTICES.md) on the same `build_ref`.
 

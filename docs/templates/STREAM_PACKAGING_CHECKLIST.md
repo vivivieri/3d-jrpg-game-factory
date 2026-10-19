@@ -80,5 +80,5 @@ Reference links (examples only — not factory mandates):
 
 ## References
 
-- Master Plan §3.10 · §17 (stream packaging undecided)  
+- Master Plan §3.10 · §17 (stream **platform names** deferred to B0 Clearance — checklist ready)  
 - [FACTORY_NON_ART_BEST_PRACTICES.md](../FACTORY_NON_ART_BEST_PRACTICES.md) §12

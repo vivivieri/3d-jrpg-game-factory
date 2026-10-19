@@ -430,7 +430,7 @@ Industrial JRPG pattern: beat sheet → dialogue/VO line packs keyed to systems 
 
 ## 8. Data model / schema / validators (YAML/JSON SSOT)
 
-**On-disk schemas (Track A2):** [schemas/content-pack.schema.json](./schemas/content-pack.schema.json) and composed leaf schemas under [schemas/](./schemas/). CLI: `tools/validate-content-pack/` (root `README.md`). **Tech Lead Schema GO** still required — do not stamp Schema GO from validators alone.
+**On-disk schemas (Track A2):** [schemas/content-pack.schema.json](./schemas/content-pack.schema.json) and composed leaf schemas under [schemas/](./schemas/). CLI: `tools/validate-content-pack/` (root `README.md`). **Track A2 Schema GO (kit)** stamped in [KIT_GO_LOG.md](./KIT_GO_LOG.md); Tech Lead still owns per-SKU **`schema_version`** bump GO — validators alone do not stamp SKU schema GO.
 
 **Fillable kits (Track A3–A7):** [templates/README.md](./templates/README.md) — how-to tables for clearance through live ops; laws remain in Master Plan. **Day-one routing (phase → leaf → template):** [FACTORY_OPERATING_SOP.md](./FACTORY_OPERATING_SOP.md).
 
@@ -601,7 +601,7 @@ handoff.lock:
 ### Human-only gates
 
 - Stephen: START / STOP / restart game factory.  
-- Tech Lead: tip model (dual vs single) decision.
+- Tech Lead: per-SKU `schema_version` bump GO; enforce **LOCKED** dual tip policy (design/art packs tip vs Cursor build tip — §17).
 
 **Executable implementer kit (numbered cases, scorecard, day-run):** [GAME_DEV_BEST_PRACTICES.md](./GAME_DEV_BEST_PRACTICES.md) + [templates/GAME_DEV_SCORECARD.md](./templates/GAME_DEV_SCORECARD.md) + [FACTORY_OPERATING_SOP.md](./FACTORY_OPERATING_SOP.md) Appendix B. Intake smoke remains [HANDOFF_SMOKE_CONSUMER.md](./templates/HANDOFF_SMOKE_CONSUMER.md) — GAME_DEV starts **after** smoke GO.
 
