@@ -28,8 +28,7 @@ Use these as the **seed SOP** until title-specific runbooks exist. Full text: `d
 |--------|---------|
 | [ai3d-to-godot-pipeline](./team-knowledge/skills/ai3d-to-godot-pipeline/SKILL.md) | Text/concept → AI mesh (Tripo-class) → remesh/retopo/UV **before** rig → Blender weights/LODs → GLB → Godot plates → Art Lead GO/NO+why |
 | [game-ready-3d-guideline](./team-knowledge/skills/game-ready-3d-guideline/SKILL.md) | Realtime character/prop bar: scale, topology, UVs, rig, export, AD eyes-on checklist |
-| [coat-hero-anim-polish](./team-knowledge/skills/coat-hero-anim-polish/SKILL.md) | Jacketed cloth / coat-proximity anim — fix weights on **one** live ship mesh; [MID_STRIDE_PLATE_CAMERA.md](./templates/MID_STRIDE_PLATE_CAMERA.md) |
-| [mixamo-adobe-gate](./team-knowledge/skills/mixamo-adobe-gate/SKILL.md) | Mixamo / Adobe animation download — **Stephen 1:1 Secure Form only**; no room workaround |
+| [coat-hero-anim-polish](./team-knowledge/skills/coat-hero-anim-polish/SKILL.md) | Jacketed cloth / coat-proximity anim — Tripo presets + Blender weights on **one** live ship mesh; [MID_STRIDE_PLATE_CAMERA.md](./templates/MID_STRIDE_PLATE_CAMERA.md) |
 | [freesound-full-wav-1to1](./team-knowledge/skills/freesound-full-wav-1to1/SKILL.md) | Freesound original full WAV — **Stephen 1:1**; never tip HQ-preview as full WAV |
 
 ---
@@ -40,7 +39,7 @@ Use these as the **seed SOP** until title-specific runbooks exist. Full text: `d
 Text / concept brief → 2D draft (AD GO on direction)
     → AI mesh draft (Tripo-class; credit-aware)
     → remesh / retopo / UV (BEFORE rig — mandatory)
-    → prerig check → rig → retarget presets (idle, walk, …)
+    → prerig check → rig / animate / retarget (Tripo only) → presets (idle, walk, …)
     → Blender: meters, apply transforms, weight peel, cloth proximity, LODs
     → export GLB
     → Godot mid-stride plates (walk + idle @ 25/50/75%, front + side) — [MID_STRIDE_PLATE_CAMERA.md](./templates/MID_STRIDE_PLATE_CAMERA.md)
@@ -52,12 +51,13 @@ Text / concept brief → 2D draft (AD GO on direction)
 | Guard | Rule |
 |-------|------|
 | Remesh timing | **Never remesh after rig** — destroys bones, weights, bindings |
+| Skeleton / auto-rig | **Tripo only** for factory automation — **not Mixamo** (off path unless Stephen reopens gate) |
 | Ship tier | **Never** ship concept mesh, gait-reference mesh, or greybox as field hero |
 | Live path | **One** live asset path per hero/prop; second meshes = concept-only labels |
 | AI 3D | Draft until game-ready checklist + plates + **Art Lead GO** |
 | Image gen | Draft-only under Art Lead GO — not locked ship art |
-| Mixamo / Adobe | Human Secure Form (Stephen 1:1) — [SECURE_FORM_MIXAMO.md](./templates/SECURE_FORM_MIXAMO.md) |
 | Freesound full WAV | Human login 1:1 — [SECURE_FORM_FREESOUND.md](./templates/SECURE_FORM_FREESOUND.md); HQ preview ≠ full WAV |
+| Mixamo / Adobe | **Off factory path** — do not use for skeleton/rig/anim. Archived human gate only if Stephen reopens: [SECURE_FORM_MIXAMO.md](./templates/SECURE_FORM_MIXAMO.md) |
 | TTS / voice clone | [SECURE_FORM_TTS_CONSENT.md](./templates/SECURE_FORM_TTS_CONSENT.md) before ship VO |
 
 ---

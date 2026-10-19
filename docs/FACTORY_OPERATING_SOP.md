@@ -110,7 +110,8 @@ Laws: [FACTORY_NON_ART_BEST_PRACTICES.md](./FACTORY_NON_ART_BEST_PRACTICES.md) �
 | Stream **platform names** (not checklist) | **Deferred** to B0 Clearance — Stephen names targets; [STREAM_PACKAGING_CHECKLIST.md](./templates/STREAM_PACKAGING_CHECKLIST.md) ready |
 | **Release GO** (platform release control) | Stephen |
 | Factory **STOP** / **restart** `game.dev` | Stephen |
-| Paid **license** / Secure Form (Mixamo, Freesound, etc.) | Stephen 1:1 |
+| Paid **license** / Secure Form (Freesound full WAV, TTS consent, etc.) | Stephen 1:1 |
+| Factory **skeleton / auto-rig** | **Tripo only** — Mixamo off path unless Stephen reopens gate |
 | Sign-in / account flows on external tools | Human |
 | **Track A kit GOs** (Schema, Template, Art SOP, Contract, QA kit, Locale-stream kit) | Stamped in [KIT_GO_LOG.md](./KIT_GO_LOG.md) — **not** SKU Build/Phase QA/UAT/Release |
 | **Phase QA GO (SKU)**, **UAT GO**, **Build tip GO**, **Release GO** | **BLOCKED** until live SKU — [KIT_GO_LOG.md](./KIT_GO_LOG.md) |

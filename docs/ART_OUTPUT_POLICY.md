@@ -51,7 +51,8 @@ Industrial grounding: production **art bibles** function as spec + budgets, not 
 |----|------|
 | **POL-G-101** | Ship raw AI LOD0 without topology/UV gate; remesh **after** skin bind. |
 | **POL-G-102** | Pack fake `_LOD#` meshes inside GLB — use Godot mesh LOD / visibility ranges ([mesh LOD](https://docs.godotengine.org/en/latest/tutorials/3d/mesh_lod.html), [visibility ranges](https://docs.godotengine.org/en/stable/tutorials/3d/visibility_ranges.html)). |
-| **POL-G-103** | Use Freesound preview / BY-NC clips, or Mixamo/Adobe downloads without human Secure Form when required (AI_ART §13.10; templates [SECURE_FORM_MIXAMO.md](./templates/SECURE_FORM_MIXAMO.md), [SECURE_FORM_FREESOUND.md](./templates/SECURE_FORM_FREESOUND.md)). |
+| **POL-G-103** | Use Freesound preview / BY-NC clips without human Secure Form when required (AI_ART §13.10; [SECURE_FORM_FREESOUND.md](./templates/SECURE_FORM_FREESOUND.md)). |
+| **POL-G-107** | Use **Mixamo** (or mixamo.com) for skeleton, auto-rig, or animation — **off factory path**; Stephen gate only ([SECURE_FORM_MIXAMO.md](./templates/SECURE_FORM_MIXAMO.md) if reopened). Factory rig path = **Tripo only** (AI_ART §6–7). |
 | **POL-G-104** | Bake English UI text, rarity tiers, or platform glyphs into world albedo or icon art. |
 | **POL-G-105** | Claim area or pack art GO with **empty mid band, empty far band, or undressed walkable floor** (§3). |
 
@@ -146,10 +147,10 @@ Any **dressed playable area** or **vista** claimed as art GO must show **short +
 
 | Must | Must-not |
 |------|----------|
-| Ship path: sheet GO → remesh → UV → rig → GLB | Concept / exploration mesh as ship |
+| Ship path: sheet GO → remesh → UV → **Tripo rig** → GLB | Concept / exploration mesh as ship |
 | **Mid-stride** walk + idle plates @ 25/50/75% (front + side) for anim GO | T-pose / bind-pose as anim GO |
 | Coat/cloth **separate** or gap before bind | Fused shell shipped as hero |
-| Mixamo only after **Secure Form** when policy applies | Training/export violations per Adobe terms |
+| Skeleton / clips via **Tripo** animate + retarget (+ Blender polish) | **Mixamo** for rig/skeleton/anim (POL-G-107); remesh after rig |
 
 ---
 

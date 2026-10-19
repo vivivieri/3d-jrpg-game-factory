@@ -70,7 +70,7 @@ A model is **game-ready** when the engine imports and uses it without surgery: r
 
 ## Human gates
 
-- Mixamo/Adobe/Freesound full download — Stephen 1:1 only.
+- Rig/skeleton: **Tripo only** on factory path. Freesound full download — Stephen 1:1 (`freesound-full-wav-1to1`). Mixamo off path (POL-G-107).
 - Paid 3D/API spend — human approval on credits.
 
 ## Pointers

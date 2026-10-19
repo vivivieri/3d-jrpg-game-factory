@@ -56,5 +56,5 @@ HQ preview on Freesound **≠** original full WAV for ship/tip-import. Agents mu
 ## Pointers
 
 - Master Plan §14 Freesound row
-- `mixamo-adobe-gate` — same Secure Form discipline
+- Secure Form discipline matches other human 1:1 gates (Master Plan §14)
 - [ART_QA_BEST_PRACTICES.md](../../../ART_QA_BEST_PRACTICES.md) audio cases (task L1)

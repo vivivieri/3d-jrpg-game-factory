@@ -242,19 +242,21 @@ Placeholders are internal art-factory tools only — never ship gates.
 
 **Image gen:** draft-only under Art Factory Lead GO — not locked ship art without AD eyes-on.
 
-**3D character pipeline (factory order):** text/concept brief → 2D draft (direction GO) → AI mesh draft (Tripo-class; credit-aware) → **remesh / retopo / UV before rig** → prerig check → rig → retarget presets (`idle`, `walk`, …) → Blender (real meters, apply transforms, weight peel, **cloth/coat proximity**, LODs) → export **GLB** → Godot **mid-stride** plates (walk + idle at 25/50/75%, front + side) → [game-ready checklist](team-knowledge/skills/game-ready-3d-guideline/SKILL.md) → **Art Lead GO/NO + why**.
+**3D character pipeline (factory order):** text/concept brief → 2D draft (direction GO) → AI mesh draft (Tripo-class; credit-aware) → **remesh / retopo / UV before rig** → prerig check → **rig / animate / retarget (Tripo tooling only)** → presets (`idle`, `walk`, …) → Blender (real meters, apply transforms, weight peel, **cloth/coat proximity**, LODs) → export **GLB** → Godot **mid-stride** plates (walk + idle at 25/50/75%, front + side) → [game-ready checklist](team-knowledge/skills/game-ready-3d-guideline/SKILL.md) → **Art Lead GO/NO + why**.
 
 | Guard | Rule |
 |-------|------|
 | Remesh timing | **Never remesh after rig** — destroys bones, weights, bindings |
+| Skeleton / auto-rig | **Tripo only** for factory automation (rig, animate, retarget). **Not Mixamo** — off path unless Stephen reopens gate (§14) |
 | Ship tier | Never ship concept mesh, gait-reference mesh, or greybox as field hero |
 | Live path | One live asset path per hero/prop; alternates stay **concept-only** |
 | Locked identity | Prefer Blender polish on the locked ship mesh over new AI spend when visual identity is fixed |
 | Concept ≠ ship | Never tip-import or field-ship concept or gait-reference binaries |
 | AI 3D | Draft until game-ready checklist + plates + Art Lead GO |
-| External anim/audio HQ | Mixamo / Adobe / Freesound full WAV → human Secure Form only (§4.1, §14) |
+| External audio HQ | Freesound full WAV → human Secure Form only (§4.1, §14) |
+| Mixamo / Adobe (skeleton, rig, clips) | **Off factory path** — agents do not use; Stephen gate only if explicitly reopened ([SECURE_FORM_MIXAMO.md](templates/SECURE_FORM_MIXAMO.md)) |
 
-**Art/audio bounds + how-to:** [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) → [ART_OUTPUT_POLICY.md](ART_OUTPUT_POLICY.md) (agent bounds) → [AI_ART_BEST_PRACTICES.md](AI_ART_BEST_PRACTICES.md) + `team-knowledge/skills/` (`ai3d-to-godot-pipeline`, `game-ready-3d-guideline`, `coat-hero-anim-polish`, `mixamo-adobe-gate`, `freesound-full-wav-1to1`). **Non-art how-to:** [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) (includes §4 dialogue/VO scripts). Full milestone map: **§2.1**.
+**Art/audio bounds + how-to:** [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) → [ART_OUTPUT_POLICY.md](ART_OUTPUT_POLICY.md) (agent bounds) → [AI_ART_BEST_PRACTICES.md](AI_ART_BEST_PRACTICES.md) + `team-knowledge/skills/` (`ai3d-to-godot-pipeline`, `game-ready-3d-guideline`, `coat-hero-anim-polish`, `freesound-full-wav-1to1`). **Non-art how-to:** [FACTORY_NON_ART_BEST_PRACTICES.md](FACTORY_NON_ART_BEST_PRACTICES.md) (includes §4 dialogue/VO scripts). Full milestone map: **§2.1**.
 
 ### 3.8 Game factory — Cursor 3.0
 
@@ -302,7 +304,7 @@ Industrial defaults for a multi-title factory. Map **one primary tool family per
 | **1. Story / narrative** | Docs + YAML beat/`dlg.*` dialogue SSOT; [NON_ART §§1–4](FACTORY_NON_ART_BEST_PRACTICES.md); research + PD clearance | Engine / game.dev |
 | **2. Game design / data** | YAML/JSON schemas + validators; spreadsheet optional (tables → export YAML) | Live engine authoring as SSOT |
 | **3. Art 2D** | Concept/UI (Figma or equivalent for UI SSOT); image gen **draft only** under AD GO | Locked ship art without AD GO; gen as sole final |
-| **4. Art 3D / anim** | Concept/text → 2D draft → AI mesh (Tripo-class) → **remesh/retopo/UV before rig** → Blender weights/LODs/cloth proximity → GLB → mid-stride Godot plates → Art Lead GO/NO+why; [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) + `team-knowledge/skills/*`; Mixamo/Adobe **only** Stephen 1:1 Secure Form if used | Remesh **after** rig; dual live paths; concept/gait-ref as field hero; unattended paid Mixamo/Adobe; HQ-preview as full WAV |
+| **4. Art 3D / anim** | Concept/text → 2D draft → AI mesh (Tripo-class) → **remesh/retopo/UV before rig** → **Tripo rig/animate/retarget** → Blender weights/LODs/cloth proximity → GLB → mid-stride Godot plates → Art Lead GO/NO+why; [ART_FACTORY_SOP.md](ART_FACTORY_SOP.md) + `team-knowledge/skills/*` | Remesh **after** rig; **Mixamo** for skeleton/rig/anim; dual live paths; concept/gait-ref as field hero; unattended paid vendor logins; HQ-preview as full WAV |
 | **5. Audio** | VO (ElevenLabs-class or recorded) + BGM/SFX library + **license ledger**; DAW/mix optional; Freesound-style HQ→full WAV needs **human login** | Unlicensed banks; bot-owned paid logins |
 | **6. Game engine** | **Godot 4.x 3D** (**CONFIRMED** first-SKU engine): short JRPG + stream-friendly (light footprint, open license, fast iterate, handoff→build clarity) | Cursor inventing design/art; second parallel engine tip |
 | **7. Game.dev automation** | Cursor 3.0 PM factory; CI for schema/asset refs; **dual tip locked** (design/art packs tip vs Cursor build tip — arts-before-dev) | Design/art/lore invention inside Cursor |
@@ -324,7 +326,9 @@ Industrial defaults for a multi-title factory. Map **one primary tool family per
 | Engine | **CONFIRMED** Godot 4.x 3D (first-SKU) |
 | 3D / anim pipeline | Single path → game-ready GLB |
 | Image gen | Draft under AD GO only |
-| Mixamo / Adobe / Freesound HQ download | Human Secure Form / login only |
+| Factory skeleton / auto-rig | **Tripo only** (rig, animate, retarget via Tripo tooling) |
+| Mixamo / Adobe (any use) | **Off path** — Stephen must reopen gate; not default, fallback, or parallel ship path |
+| Freesound HQ download | Human Secure Form / login only |
 | Monetization | **LOCKED** premium-only until Stephen reopens |
 | Git tip model | **LOCKED** dual tip (design/art packs tip vs Cursor build tip) |
 | Perf budget | Defined once per SKU class at Design/Tech GO |
@@ -596,11 +600,12 @@ Measurable bars for **Release GO** (Track B6). Paper greens = NO.
 | Rule | Spec |
 |------|------|
 | **Paid API keys** | Humans hold and rotate; agents never store or own paid keys |
-| **Secure Form / paid logins** | Mixamo, Adobe, Freesound HQ, store consoles — **human login only**; agents never own these sessions |
+| **Secure Form / paid logins** | Freesound HQ, store consoles, TTS consent — **human login only**; agents never own these sessions |
+| **Tripo skeleton / rig** | Factory automation uses **Tripo** rig/animate/retarget only — not Mixamo |
 | **License ledger** | Every paid/cleared asset logged (source, scope, expiry, owner); human maintains |
 | **Handoff secrets** | No credentials in YAML/JSON SSOT or art packs |
 | **Factory restart / STOP** | Stephen (or designated human) only |
-| **Mixamo / Adobe** | Animation download/login = Stephen **1:1 Secure Form** only; no group-room workaround |
+| **Mixamo / Adobe** | **Closed for factory** — not skeleton/rig path. If Stephen explicitly reopens: download/login = **1:1 Secure Form** only ([SECURE_FORM_MIXAMO.md](templates/SECURE_FORM_MIXAMO.md)); no group-room workaround |
 | **Freesound full WAV** | HQ preview GO does not substitute for full WAV — human login; do not tip-import preview as full WAV |
 | **Plan B commissions** | Paid commission / alternate vendor paths stay **off** unless Stephen explicitly opens them |
 

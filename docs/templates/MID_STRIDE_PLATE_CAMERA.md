@@ -93,7 +93,7 @@ status: GO|NO
 why: <stride readable | coat fail at 50% side | etc.>
 paths: art_packs/<sku_id>/qa/plates/<asset_id>/
 next: <weight fix in Blender | retarget | AD re-review>
-blocked_on: <none | Mixamo 1:1 | Stephen>
+blocked_on: <none | Stephen>
 ```
 
 ---

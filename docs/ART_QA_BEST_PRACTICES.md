@@ -577,13 +577,13 @@ Execute cases as written; mark **N/A** only with `why` in scorecard. Full fillab
 | **Pass/Fail** | Fail = missing row |
 | **Severity** | **Critical** |
 
-#### ART-QA-LICENSE-002 — Mixamo / Adobe Secure Form (when used)
+#### ART-QA-LICENSE-002 — Mixamo / Adobe Secure Form (Stephen reopen only)
 
 | Field | Content |
 |-------|---------|
-| **Precondition** | Mixamo rig or animation in pack. |
-| **Steps** | 1. Confirm human Secure Form on file. 2. Confirm embed-not-redistribute policy acknowledged. 3. No ML-training use. |
-| **Expected** | Form complete; terms acknowledged (skill: `mixamo-adobe-gate`). |
+| **Precondition** | Pack contains Mixamo-sourced rig or animation **and** Stephen explicitly reopened gate (factory default = Tripo only; POL-G-107). |
+| **Steps** | 1. Confirm Stephen reopen ack on file. 2. Confirm human Secure Form complete. 3. Confirm embed-not-redistribute + no ML-training use. |
+| **Expected** | Form complete; terms acknowledged (`mixamo-adobe-gate` — off-path skill). |
 | **Evidence** | `.../qa/ART-QA-LICENSE-002_<date>_secure_form_ref.md` |
 | **Pass/Fail** | Fail = no form |
 | **Severity** | **Critical** |
@@ -650,14 +650,14 @@ Execute cases as written; mark **N/A** only with `why` in scorecard. Full fillab
 | §4 | UI / icons | ART-QA-UI-001 … 003 | — |
 | §5 | Textures / PBR | ART-QA-TEX-001 … 003 | — |
 | §6 | 3D characters | ART-QA-3D-001, 010–015 | `ai3d-to-godot-pipeline`, `game-ready-3d-guideline` |
-| §7 | Animation | ART-QA-ANIM-001 … 004 | `coat-hero-anim-polish`, `mixamo-adobe-gate` |
+| §7 | Animation | ART-QA-ANIM-001 … 004 | `coat-hero-anim-polish`, `ai3d-to-godot-pipeline` |
 | §8 | VFX | ART-QA-VFX-001 … 003 | — |
 | §9 | VO | ART-QA-VO-001 … 002 | — |
 | §10 | BGM / SFX | ART-QA-BGM-001, ART-QA-SFX-001 … 002 | `freesound-full-wav-1to1` |
 | §11 | Storyboard stills | ART-QA-2D-004 | — |
 | §12 | Locale art | ART-QA-LOCALE-001 … 003 | — |
 | §13.12 | Godot GLB import | ART-QA-GLB-001 … 003 | `ai3d-to-godot-pipeline` |
-| §13.5 / §13.10 | License / Secure Form | ART-QA-LICENSE-001 … 002 | `mixamo-adobe-gate`, `freesound-full-wav-1to1` |
+| §13.5 / §13.10 | License / Secure Form | ART-QA-LICENSE-001 … 002 | `freesound-full-wav-1to1` (002 only if Stephen reopened Mixamo) |
 | §14 step 16–17 | Pack exit | ART-QA-PACK-001 … 004 | — |
 
 ---
@@ -687,7 +687,7 @@ Copy per SKU: [templates/ART_QA_SCORECARD.md](./templates/ART_QA_SCORECARD.md).
 | DCC-only turntable as anim GO | Engine plates required | ART-QA-ANIM-001 |
 | Fake `_LOD#` meshes inside GLB | Godot import trap | ART-QA-GLB-002 |
 | Baking rarity or text into icons/textures | Loc + combinatorics | ART-QA-UI-003, LOCALE-002 |
-| Mixamo without Secure Form | Human gate | ART-QA-LICENSE-002 |
+| Agent used Mixamo for rig/anim (POL-G-107) | Tripo-only factory path | POL-G-107 / ART-QA-LICENSE-002 if reopen |
 | Shipping without LICENSE row | Master Plan art law | ART-QA-LICENSE-001 |
 | Empty mid/far env band or bare floor | ART_OUTPUT_POLICY §3 depth law | ART-QA-ENV-004 |
 
